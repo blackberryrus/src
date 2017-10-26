@@ -1,0 +1,151 @@
+/*
+    Информация разбита по задачам в которых они изменялись
+    Стили которые закомментированы нужно заменить, которые не закомментированы добавить
+*/
+
+/* Задача 27097: Исправить выбор города */
+.header-top {
+    position: relative; /*Добавить, иначе поиск местоположения заползает под битриксовую панель*/
+}
+.modal-issue {
+    z-index: 1100; /*Заменить, иначе карта пунктов самовывоза заползает под битриксовую панель*/
+}
+
+/* Задача 26868: Реализация карты товара */
+/* Было:
+.mag-zoomed img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+Нужно (не растягивать фото, получаются неверные пропорции):
+.mag-zoomed img {
+    display: block; }
+*/
+/* Было:
+[mag-thumb] img, [data-mag-thumb] img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+Нужно (центрирование фото, ограничение по размеру):
+[mag-thumb] img, [data-mag-thumb] img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;}
+ */
+
+/*
+Было:
+.catalog-detail-big-image-delivery__image
+.catalog-detail-tirs-icons__thorns
+.catalog-detail-tirs-icons__snowflake
+
+Нужно:
+.catalog-detail-icons__delivery
+.catalog-detail-icons__thorns
+.catalog-detail-icons__snowflake
+
+Здесь на страницах шины блоки:
+<div class="catalog-detail-tirs-icons">
+  <div class="catalog-detail-tirs-icons-items"><i class="catalog-detail-tirs-icons__snowflake"></i></div>
+  <div class="catalog-detail-tirs-icons-items"><i class="catalog-detail-tirs-icons__thorns"></i></div>
+</div>
+и диска:
+<div class="catalog-detail-big-image-delivery">
+    <i class="catalog-detail-big-image-delivery__image"></i>
+    <span class="catalog-detail-big-image-delivery__text">доставим бесплатно!</span>
+</div>
+заменены на однотипный т.к. и шины и диски выводятся одним компонентом с единообразным выводом:
+<div class="catalog-detail-icons">
+  <div class="catalog-detail-icons-items">
+   <i title="<? Название ?>" class="catalog-detail-icons__<?= название на англ ?>"></i>
+  </div>
+</div>
+*/
+
+/*
+Было:
+.catalog-detail-big-image-icons__logo {
+    background-image: url(../img/sprite.png);
+    background-position: -90px 0px;
+    width: 106px;
+    height: 43px;
+    display: block;
+    z-index: 3; }
+
+Нужно:
+.catalog-detail-big-image-icons__logo {
+    width: 106px;
+    height: 43px;
+    display: block;
+    z-index: 3;
+    position:relative; }
+
+Здесь убран бэкграунд, т.к. лого выводится изображением:
+было: <i class="catalog-detail-big-image-icons__logo"></i>
+стало:
+<i class="catalog-detail-big-image-icons__logo">
+  <img border="0" src="<?= адрес ?>" alt="<?= Название ?>" title="<?= Название ?>"/>
+</i>
+*/
+/* Центрирование лого производителя, ограничение по размеру:*/
+.catalog-detail-big-image-icons__logo img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+/*
+Было:
+.mag-thumb {
+    display: flex;
+    align-items: center;
+    height: auto; }
+Нужно:
+.mag-thumb {
+    display: flex;
+    align-items: center;
+    height: 100%; }
+*/
+
+/* Ниже в catalog-detail-small-image__link position: relative; cursor: pointer;, т.к. изменена верстка элемента, добавлены отдельные адреса разных размеров фото
+Было:
+<div class="catalog-detail-small-image">
+    <div class="catalog-detail-small-image-links">
+        <a class="catalog-detail-small-image__link active" href="local/templates/kolesatyt/img/photo-slide-detail-big1">
+            <img src="local/templates/kolesatyt/img/photo-slide-detail-small-1.jpg"/>
+        </a>
+    </div>
+</div>
+Стало:
+<div class="catalog-detail-small-image">
+    <div class="catalog-detail-small-image-links">
+        <a class="catalog-detail-small-image__link active" data-big-image="<?= IMAGE_BIG_SRC ?>" data-zoom-image="<?= IMAGE_ZOOM_SRC ?>">
+            <img src="<?= IMAGE_SMALL_SRC ?>"/>
+         </a>
+    </div>
+</div>
+*/
+.catalog-detail-small-image__link {
+    position: relative;
+    cursor: pointer;
+}
+/* Центрирование фото, ограничение по размеру:*/
+.catalog-detail-small-image__link img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

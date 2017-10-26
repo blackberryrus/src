@@ -1,0 +1,20 @@
+html
+	include components/head.pug
+	body#top
+		include components/header.pug
+		div.container
+			span.title-personal.h1 Личный кабинет
+			div.personal-page-order-top
+				span.personal-page-order-top__title Заказ №872962 от 09.05.2017
+				div.personal-page-order-top-btns
+					div
+						a.btn__type3.personal-page-order-top__btn(href="#") Перейти к оплате повторно
+						a.btn__type3.personal-page-order-top__btn(href="#") В список заказов
+					div
+						a.btn__type3.personal-page-order-top__btn(href="#") Выйти из личного кабинета
+			include components/personal-page-order/info-order.pug
+			include components/personal-page-order/order-list.pug
+		include components/footer.pug
+
+
+

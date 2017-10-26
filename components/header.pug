@@ -1,0 +1,462 @@
+header.hide-mobile
+	section.header-top
+		div.container
+			div.header-top-container
+				div.header-top-left
+					div.select-city
+						div.select-city-content
+							object(id="svg-city-header" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/placeholder.svg" width="100%" height="100%")
+							object(id="svg-city-header-white" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/placeholder-white.svg" width="100%" height="100%")
+							span.select-city__name Владикавказ
+							span.select-region__name Респ. Северная Осетия - Алания
+						div.header-puckup.js_showpickup_point
+							span.header-pickup__text 37 пунктов самовывоза
+					div.header-top-phones
+						div.header-top-phone-item
+							a.header-top-phone-link(href="tel:+74952681227") +7 (495) 268-12-27
+							span.header-top-phone-text Круглосуточный call-center
+				div.header-top-right
+					div.header-car-and-status
+						a.header-tire-fitting(href="#") Шиномонтаж в наличии
+						div.header-car
+							div.header-car-content
+								object(id="svg-header-car-pc" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/header-car.svg" width="100%" height="100%")
+								span.header-car-title Ваш автомобиль
+								span.header-car-name BMW M4 2016, 3.0 Coupe
+							div.header-car-popup
+								div.header-triangle
+								i.close-car
+								a.tire-selection-block-why(href="#")
+									| Почему действительно важно
+									b.tire-selection-block-why__bold  указать автомобиль
+									| ?
+									div.tire-selection-block-hover При выборе вашего автомобиля, мы автоматически подбираем подходящие к нему диски и шины. А также, наглядно продемонстрируем  как смотрятся диски на вашем авто.
+										div.header-triangle
+								div.tire-selection-block-section-selects
+									select(class="select-mark tire-selection-select" data-live-search="true" title="Марка")
+										option(value="Aston Martin") Aston Martin
+										option(value="BMW") BMW
+
+									select(class="select-model tire-selection-select" disabled title="Модель" data-live-search="true")
+
+									select(class="select-year tire-selection-select" disabled title="Год" data-live-search="true")
+
+									select(class="select-engine tire-selection-select" disabled title="Двигатель" data-live-search="true")
+
+									select(class="select-bodytype tire-selection-select" disabled title="Кузов" data-live-search="true")
+
+								div.tire-selection-block-images
+									a.btn__type1.btn__i-dont-now(href="#modalIdontnow" data-toggle="modal")
+											span.btn__type1-span Я не знаю все параметры
+									div
+										img(src="local/templates/kolesatyt/img/car-white.jpg").tire-selection-block-images__image#tire-selection-block-images__image
+									div.tire-selection-color
+										span.tire-selection-color-text Цвет:
+										div.tire-selection-color-items
+											div.tire-selection-color__item.color-white(data-color-url="local/templates/kolesatyt/img/car-white.jpg")
+											div.tire-selection-color__item.color-grey(data-color-url="local/templates/kolesatyt/img/car-grey.jpg")
+											div.tire-selection-color__item.color-bez(data-color-url="local/templates/kolesatyt/img/car-bez.jpg")
+											div.tire-selection-color__item.color-green(data-color-url="local/templates/kolesatyt/img/car-green.jpg")
+											div.tire-selection-color__item.color-red(data-color-url="local/templates/kolesatyt/img/car-red.jpg")
+											div.tire-selection-color__item.color-blue(data-color-url="local/templates/kolesatyt/img/car-blue.jpg")
+											div.tire-selection-color__item.color-black(data-color-url="local/templates/kolesatyt/img/car-black.jpg")
+								div.tire-selection-bottom
+									a.tire-selection-bottom-btn.item1(href="#")
+										i.tire-selection-bottom-btn-icon.item1
+										span подобрать шины
+									a.tire-selection-bottom-btn.item2(href="#")
+										i.tire-selection-bottom-btn-icon.item2
+										span подобрать диски
+									a.tire-selection-bottom-btn.item3(href="#")
+										i.tire-selection-bottom-btn-icon.item3
+										span шины и диски в комплекте
+								span.tire-footnote В каталоге вы сможете отфильтровать товары по заводским параметрам или для тюнинга
+						a(href="#").header-cart
+							object(id="svg-header-cart" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/big-bag-with-handles.svg" width="100%" height="100%")
+							span.header-cart-count
+								span.header-cart-count-green 15
+								|  товаров
+							span.header-cart-price на 27 555 &#8381;
+							div.header-cart-popup
+								div.header-triangle
+								span.header-cart-popup__count в корзине 15 товаров
+								span.header-cart-popup__sum на сумму 27 567 &#8381;
+								div.header-cart-popup-products
+									div.header-cart-popup-products-item
+										a.header-cart-popup-products__image(href="#")
+											img(src="local/templates/kolesatyt/img/photo-cart.png")
+										div.header-cart-popup-products-description
+											a.header-cart-popup-products__link(href="#") LegeArtis Replica Concept-INF501 9.5x21/5x114.3 ET50 D66.1 BK+plastic
+											span.header-cart-popup-products__count 4 шт.
+											span.header-cart-popup-products__price 5 095 &#8381;
+									div.header-cart-popup-products-item
+										a.header-cart-popup-products__image(href="#")
+											img(src="local/templates/kolesatyt/img/photo-cart.png")
+										div.header-cart-popup-products-description
+											a.header-cart-popup-products__link(href="#") LegeArtis Replica Concept-INF501 9.5x21/5x114.3 ET50 D66.1 BK+plastic
+											span.header-cart-popup-products__count 4 шт.
+											span.header-cart-popup-products__price 5 095 &#8381;
+								div.header-cart-popup-more-container
+									a.header-cart-popup__more(href="#") Смотреть все
+								a.header-cart-popup__btn(href="#") оформить заказ
+	section.header-middle
+		div.container
+			div.row.header-middle-container
+				div.col-lg-3.col-sm-5.header-logo
+					a(href="#")
+						img(src="local/templates/kolesatyt/img/logo.png" alt="Колеса тут")
+				div.col-sm-3.col-lg-5.header-search
+					div.header-search-ym
+						div.header-search-ym-text
+							|5 звезд на 
+							span.header-search-ym-green Я
+							|ндекс.Маркете
+						i.header-search-ym-stars
+							object(id="svg-header-star" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/star.svg" width="100%" height="100%")
+							object(id="svg-header-star" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/star.svg" width="100%" height="100%")
+							object(id="svg-header-star" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/star.svg" width="100%" height="100%")
+							object(id="svg-header-star" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/star.svg" width="100%" height="100%")
+							object(id="svg-header-star" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/star.svg" width="100%" height="100%")
+					form.header-search-form
+						input.header-search-field(type="text" placeholder="Например, 205 55 16")
+						input.header-search-submit(type="submit" value="Поиск")
+				div.col-lg-2.col-sm-5.col-md-offset-2.col-lg-offset-2.header-cart-and-account
+					div.header-status
+						object(id="svg-header-status" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/circle.svg" width="100%" height="100%")
+						object(id="svg-header-status-arrow" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/sort-down.svg" width="100%" height="100%")
+						span.header-status-text
+							|Статус
+							br
+							|заказа
+					div.header-account
+						object(id="svg-header-account" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/avatar-inside-a-circle.svg" width="100%" height="100%")
+						span.header-status-text
+						a.header-account__link.js-modal-login(href="#") Аристарх
+	section.header-menu-and-language.navbar
+		div.container
+			div.row.header-menu-container
+				div.col-lg-12.col-md-12.header-menu
+					ul.nav.navbar-nav.hide-tablet
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span шины
+						div.header-submenu
+							div.header-submenu-container
+							div.row
+								div.col-lg-4.col-md-4
+									span.header-submenu-title Подбор шин
+									div.header-menu-submenu-block
+										a.header-menu-submenu__link.active(href="#") для вашего автомобиля
+										a.header-menu-submenu__link(href="#") по параметрам шины
+										a.header-menu-submenu__link(href="#") по производителю
+								div.col-lg-4.col-md-4
+									span.header-submenu-title По сезону
+									div.header-menu-submenu-block
+										a.header-menu-submenu__link(href="#") лето
+										a.header-menu-submenu__link(href="#") зима
+										a.header-menu-submenu__link-third(href="#") по производителю
+								div.col-lg-4.col-md-4
+									span.header-submenu-title По классу авто
+									div.header-menu-submenu-block
+										a.header-menu-submenu__link(href="#") легковые
+										a.header-menu-submenu__link(href="#") грузовые
+										a.header-menu-submenu__link(href="#") легкогрузовые
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span диски
+						div.header-submenu
+							div.header-submenu-container
+							div.row
+								div.col-lg-4.col-md-4
+									span.header-submenu-title Подбор дисков
+									div.header-menu-submenu-block
+										a.header-menu-submenu__link.active(href="#") для вашего автомобиля
+										a.header-menu-submenu__link(href="#") по параметрам диска
+										a.header-menu-submenu__link(href="#") по производителю
+								div.col-lg-4.col-md-4
+									span.header-submenu-title По сезону
+									div.header-menu-submenu-block.rim
+										a.header-menu-submenu__link.rim(href="#") R13
+										a.header-menu-submenu__link.rim(href="#") R14
+										a.header-menu-submenu__link.rim(href="#") R15
+										a.header-menu-submenu__link.rim(href="#") R16
+										a.header-menu-submenu__link.rim(href="#") R17
+										a.header-menu-submenu__link.rim(href="#") R18
+										a.header-menu-submenu__link.rim(href="#") R19
+										a.header-menu-submenu__link.rim(href="#") R20
+										a.header-menu-submenu__link.rim(href="#") R21
+										a.header-menu-submenu__link.rim(href="#") R22
+								div.col-lg-4.col-md-4
+									span.header-submenu-title По классу авто
+									div.header-menu-submenu-block
+										a.header-menu-submenu__link(href="#") легковые
+										a.header-menu-submenu__link(href="#") грузовые
+										a.header-menu-submenu__link(href="#") легкогрузовые
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span инструменты
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span автохимия
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span АКЦИИ
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span пункты самовывоза
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span как выбрать
+						li.header-menu-li
+							a.header-menu-li__link(href="#")
+								span.header-menu-li__link-span как мы работаем
+					div.left-header-tablet.hide-mobile.show-tablet
+						a.left-header-tablet-menu(href="#")
+							i.left-header-tablet-menu-icon
+							span.left-header-tablet-menu-text Меню
+						form.left-header-tablet-search
+							input.left-header-tablet-search__submit(type="submit" value="")
+							input.left-header-tablet-search__input(type="text" placeholder="Поиск")
+						div.left-header-tablet-phone
+							a.header-top-phone-link(href="tel:+74952681227") +7 (495) 268-12-27
+							span.header-top-phone-text Круглосуточный call-center
+					div.tablet-menu
+						div.row
+							div.col-sm-12.tablet-menu-row-big
+								a.tablet-menu-big-link(href="#")
+									i.tirs-menu-icon
+									span.tablet-menu-big-link__span Шины
+						div.row.tablet-menu-row
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title Подбор шин
+								div.header-menu-submenu-block
+									a.header-menu-submenu__link.active(href="#") для вашего автомобиля
+									a.header-menu-submenu__link(href="#") по параметрам шины
+									a.header-menu-submenu__link(href="#") по производителю
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title По сезону
+								div.header-menu-submenu-block
+									a.header-menu-submenu__link(href="#") лето
+									a.header-menu-submenu__link(href="#") зима
+									a.header-menu-submenu__link-third(href="#") по производителю
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title По классу авто
+								div.header-menu-submenu-block
+									a.header-menu-submenu__link(href="#") легковые
+									a.header-menu-submenu__link(href="#") грузовые
+									a.header-menu-submenu__link(href="#") легкогрузовые
+						div.row
+							div.col-sm-12.tablet-menu-row-big
+								a.tablet-menu-big-link(href="#")
+									i.rim-menu-icon
+									span.tablet-menu-big-link__span Диски
+						div.row.tablet-menu-row
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title Подбор дисков
+								div.header-menu-submenu-block
+									a.header-menu-submenu__link.active(href="#") для вашего автомобиля
+									a.header-menu-submenu__link(href="#") по параметрам диска
+									a.header-menu-submenu__link(href="#") по производителю
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title По сезону
+								div.header-menu-submenu-block.rim
+									a.header-menu-submenu__link.rim(href="#") R13
+									a.header-menu-submenu__link.rim(href="#") R14
+									a.header-menu-submenu__link.rim(href="#") R15
+									a.header-menu-submenu__link.rim(href="#") R16
+									a.header-menu-submenu__link.rim(href="#") R17
+									a.header-menu-submenu__link.rim(href="#") R18
+									a.header-menu-submenu__link.rim(href="#") R19
+									a.header-menu-submenu__link.rim(href="#") R20
+									a.header-menu-submenu__link.rim(href="#") R21
+									a.header-menu-submenu__link.rim(href="#") R22
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title По классу авто
+								div.header-menu-submenu-block
+									a.header-menu-submenu__link(href="#") легковые
+									a.header-menu-submenu__link(href="#") грузовые
+									a.header-menu-submenu__link(href="#") легкогрузовые
+						div.tablet-menu-one-links
+							div.row
+								div.col-sm-4.tablet-menu-row-big
+									a.tablet-menu-big-link(href="#")
+										span.tablet-menu-big-link__span Аксессуары
+								div.col-sm-4.tablet-menu-row-big
+									a.tablet-menu-big-link(href="#")
+										span.tablet-menu-big-link__span Пункты самовывоза
+								div.col-sm-4.tablet-menu-row-big
+									a.tablet-menu-big-link(href="#")
+										span.tablet-menu-big-link__span Как мы работаем
+							div.row
+								div.col-sm-4.tablet-menu-row-big
+									a.tablet-menu-big-link(href="#")
+										span.tablet-menu-big-link__span Акции
+								div.col-sm-4.tablet-menu-row-big
+									a.tablet-menu-big-link(href="#")
+										span.tablet-menu-big-link__span Как выбрать
+						div.row.tablet-menu-row
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title Помощь
+								div.header-menu-submenu-block
+									a.header-menu-submenu__link(href="#") Самовывоз
+									a.header-menu-submenu__link(href="#") Способы доставки
+									a.header-menu-submenu__link(href="#") Способы оплаты
+									a.header-menu-submenu__link(href="#") Правила возврата
+							div.col-sm-4
+								span.header-submenu-title.table-menu-title Правила возврата
+								div.header-menu-submenu-block
+									a.header-menu-submenu__link(href="#") Обзор шин и дисков
+									a.header-menu-submenu__link(href="#") Новости автомира
+									a.header-menu-submenu__link(href="#") Образец доверенности
+									a.header-menu-submenu__link(href="#") Как подобрать шины
+									a.header-menu-submenu__link(href="#") Как подобрать диски
+					div.select-languages-container
+						div.select-languages
+							span.select-languages__text Язык:
+							span.select-languages__selected RUS / &#8381;
+						div.select-languages-popup
+							div.header-triangle.select-languages-popup-triangle
+							i.select-languages-popup__close
+							span.select-languages-popup__text Выберите страну доставки, язык и валюту
+							span.select-languages__title ДОСТАВКА В
+							select.select-languages__input
+								<option data-content="<span class='select-languages-option'><img class='select-languages-image' src='local/templates/kolesatyt/img/flag-russia.png'><span class='select-languages-option-text'>Россия</span></span>">Россия</option>
+								<option data-content="<span class='select-languages-option'><img class='select-languages-image' src='local/templates/kolesatyt/img/flag-russia.png'><span class='select-languages-option-text'>Англия</span></span>">Англия</option>
+								<option data-content="<span class='select-languages-option'><img class='select-languages-image' src='local/templates/kolesatyt/img/flag-russia.png'><span class='select-languages-option-text'>Голландия</span></span>">Голландия</option>
+							span.select-languages__title Валюта
+							select.select-languages__input
+								<option data-content="<span class='select-languages-option'><span class='select-languages__currency'>&#8381;</span><span class='select-languages-option-text'>Рубль</span></span>">Рубль</option>
+								<option data-content="<span class='select-languages-option'><span class='select-languages__currency'>&euro;</span><span class='select-languages-option-text'>Евро</span></span>">Евро</option>
+								<option data-content="<span class='select-languages-option'><span class='select-languages__currency'>&#36;</span><span class='select-languages-option-text'>Доллар</span></span>">Доллар</option>
+							span.select-languages__title Язык
+							select.select-languages__input
+								<option data-content="<span class='select-languages-option'><span class='select-languages__lang-text'>RU</span><span class='select-languages-option-text'>русский</span></span>">(русский)</option>
+								<option data-content="<span class='select-languages-option'><span class='select-languages__lang-text'>EN</span><span class='select-languages-option-text'>английский</span></span>">(английский)</option>
+							a.select-languages__btn(href="#") Применить
+header.show-mobile
+	div.panel-head-mobile
+		a.panel-head-mobile-link(href="#")
+			img(src="local/templates/kolesatyt/img/goggle-play-mobile.png")
+			span.panel-head-mobile-link__text Установить приложение
+		i.close-panel
+	div.panel-head-mobile
+		a.panel-head-mobile-link(href="#")
+			img(src="local/templates/kolesatyt/img/appstore-mobile.png")
+			span.panel-head-mobile-link__text Установить приложение
+		i.close-panel
+	a.mobile-header-logo(href="#")
+		img(src="local/templates/kolesatyt/img/logo.png")
+	a(href="tel:+74952681227").header-mobile-phone__link
+		span.header-mobile-phone__link-span +7 (495) 268-12-27
+	div.header-mobile-middle
+		i.header-mobile-icon-menu
+		a.header-cart.header-cart-mobile(href="#")
+			img(class="svg svg-header-cart" src="local/templates/kolesatyt/svg/big-bag-with-handles.svg")
+			span.header-cart-count.header-cart-count-mobile
+				span.header-cart-count-green 15
+				|  товаров
+			span.header-cart-price.header-cart-price-mobile на 27 555 &#8381;
+		div.mobile-menu
+			div.mobile-menu-top
+				a.mobile-menu-top-close(href="#")
+				div.header-account
+					object(id="svg-header-account-grey" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/avatar-inside-a-circle-grey.svg" width="100%" height="100%")
+					span.header-status-text
+					a.header-account__link.js-modal-login(href="#") Аристарх
+			div.row
+				div.col-xs-12.tablet-menu-row-big
+					a.tablet-menu-big-link(href="#")
+						i.tirs-menu-icon
+						span.tablet-menu-big-link__span Шины
+			div.row.tablet-menu-row
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title Подбор шин
+					div.header-menu-submenu-block
+						a.header-menu-submenu__link.active(href="#") для вашего автомобиля
+						a.header-menu-submenu__link(href="#") по параметрам шины
+						a.header-menu-submenu__link(href="#") по производителю
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title По сезону
+					div.header-menu-submenu-block
+						a.header-menu-submenu__link(href="#") лето
+						a.header-menu-submenu__link(href="#") зима
+						a.header-menu-submenu__link-third(href="#") по производителю
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title По классу авто
+					div.header-menu-submenu-block
+						a.header-menu-submenu__link(href="#") легковые
+						a.header-menu-submenu__link(href="#") грузовые
+						a.header-menu-submenu__link(href="#") легкогрузовые
+			div.row
+				div.col-xs-12.tablet-menu-row-big
+					a.tablet-menu-big-link(href="#")
+						i.rim-menu-icon
+						span.tablet-menu-big-link__span Диски
+			div.row.tablet-menu-row
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title Подбор дисков
+					div.header-menu-submenu-block
+						a.header-menu-submenu__link.active(href="#") для вашего автомобиля
+						a.header-menu-submenu__link(href="#") по параметрам диска
+						a.header-menu-submenu__link(href="#") по производителю
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title По сезону
+					div.header-menu-submenu-block.rim
+						a.header-menu-submenu__link.rim(href="#") R13
+						a.header-menu-submenu__link.rim(href="#") R14
+						a.header-menu-submenu__link.rim(href="#") R15
+						a.header-menu-submenu__link.rim(href="#") R16
+						a.header-menu-submenu__link.rim(href="#") R17
+						a.header-menu-submenu__link.rim(href="#") R18
+						a.header-menu-submenu__link.rim(href="#") R19
+						a.header-menu-submenu__link.rim(href="#") R20
+						a.header-menu-submenu__link.rim(href="#") R21
+						a.header-menu-submenu__link.rim(href="#") R22
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title По классу авто
+					div.header-menu-submenu-block
+						a.header-menu-submenu__link(href="#") легковые
+						a.header-menu-submenu__link(href="#") грузовые
+						a.header-menu-submenu__link(href="#") легкогрузовые
+			div.tablet-menu-one-links
+				div.row
+					div.col-xs-12.tablet-menu-row-big
+						a.tablet-menu-big-link(href="#")
+							span.tablet-menu-big-link__span Аксессуары
+					div.col-xs-12.tablet-menu-row-big
+						a.tablet-menu-big-link(href="#")
+							span.tablet-menu-big-link__span Пункты самовывоза
+					div.col-xs-12.tablet-menu-row-big
+						a.tablet-menu-big-link(href="#")
+							span.tablet-menu-big-link__span Как мы работаем
+				div.row
+					div.col-xs-12.tablet-menu-row-big
+						a.tablet-menu-big-link(href="#")
+							span.tablet-menu-big-link__span Акции
+					div.col-xs-12.tablet-menu-row-big
+						a.tablet-menu-big-link(href="#")
+							span.tablet-menu-big-link__span Как выбрать
+			div.row.tablet-menu-row
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title Помощь
+					div.header-menu-submenu-block
+						a.header-menu-submenu__link(href="#") Самовывоз
+						a.header-menu-submenu__link(href="#") Способы доставки
+						a.header-menu-submenu__link(href="#") Способы оплаты
+						a.header-menu-submenu__link(href="#") Правила возврата
+				div.col-xs-12
+					span.header-submenu-title.table-menu-title Правила возврата
+					div.header-menu-submenu-block
+						a.header-menu-submenu__link(href="#") Обзор шин и дисков
+						a.header-menu-submenu__link(href="#") Новости автомира
+						a.header-menu-submenu__link(href="#") Образец доверенности
+						a.header-menu-submenu__link(href="#") Как подобрать шины
+						a.header-menu-submenu__link(href="#") Как подобрать диски
+	div.header-car.header-car-mobile
+		div.mobile-header-car
+			object(id="svg-header-car" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/header-car.svg" width="100%" height="100%")
+			span.header-car-title Ваш автомобиль
+			span.header-car-name BMW M4 2016, 3.0 Coupe
+		form.mobile-menu-search
+			input.mobile-menu-search__input(href="#" placeholder="Поиск" type="text")
+			input.mobile-menu-search__submit(value="" type="submit")

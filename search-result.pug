@@ -1,0 +1,50 @@
+html
+  include components/head.pug
+  body#top
+    include components/header.pug
+    div.container
+        div.row.search-result
+          div.col-lg-12.catalog-selection-top
+            span.catalog-selection-top__title Результат поиска: Alcasta
+        div.row
+          div.col-lg-12
+            div.personal-page-mobile-item.search-result-content
+              span.personal-page-mobile-item-title Шины 0 шт.
+              div.catalog-detail-mobile-div
+              span.personal-page-mobile-item-title Диски 2 шт.
+              div.catalog-detail-mobile-div
+                div.catalog-sort.search-result-catalog-sort
+                  span.catalog-sort__span Сортировать:
+                  select(class="select-sort")
+                    option(value="по возрастанию цены") по возрастанию цены
+                    option(value="по убыванию цены") по убыванию цены
+                    option(value="по популярности") по популярности
+                div.mobile-catalog-item
+                  div.mobile-catalog-item-content
+                    a.mobile-catalog-item-image(href="#")
+                      img(src="local/templates/kolesatyt/img/photo.png")
+                    div.mobile-catalog-item-info
+                      span.mobile-catalog-item-info__mini Vissol, литой
+                      a.mobile-catalog-item-info-brand__link(href="#") MR139 7x16/5x112 ET37 D66.6
+                      span.mobile-catalog-item-info__mini Серая полировка
+                      span.mobile-catalog-item-info__delivery Доставим сегодня, от 400 руб
+                      span.mobile-catalog-item-info__price 3 472 &#8381;
+                  div.mobile-catalog-item-buttons
+                    a.mobile-catalog-item-buttons__add-to-cart(href="#") Купить
+                    a.mobile-catalog-item-buttons__more(href="#") Примерить
+                div.mobile-catalog-item
+                  div.mobile-catalog-item-content
+                    a.mobile-catalog-item-image(href="#")
+                      img(src="local/templates/kolesatyt/img/photo.png")
+                    div.mobile-catalog-item-info
+                      span.mobile-catalog-item-info__mini Vissol, литой
+                      a.mobile-catalog-item-info-brand__link(href="#") MR139 7x16/5x112 ET37 D66.6
+                      span.mobile-catalog-item-info__mini Серая полировка
+                      span.mobile-catalog-item-info__delivery Доставим сегодня, от 400 руб
+                      span.mobile-catalog-item-info__price 3 472 &#8381;
+                  div.mobile-catalog-item-buttons
+                    a.mobile-catalog-item-buttons__add-to-cart(href="#") Купить
+                    a.mobile-catalog-item-buttons__more(href="#") Примерить
+              span.personal-page-mobile-item-title Аксессуары 0 шт.
+              div.catalog-detail-mobile-div
+  include components/footer.pug

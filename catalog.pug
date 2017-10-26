@@ -1,0 +1,67 @@
+html
+	include components/head.pug
+	body#top
+		include components/header.pug
+		include components/breadcrumps.pug
+		include components/catalog/area-banner1.pug
+		include components/catalog/catalog-selection.pug
+		div.container
+			div.row
+				include components/catalog/filter.pug
+				include components/catalog/catalog-content.pug
+			include components/catalog/catalog-bottom.pug
+		include components/modal-points-issue.pug
+		div#modalCart.modal.fade(role="dialog")
+			div.modal-dialog.modal-search-city
+				i.close-popup(data-dismiss="modal")
+				span.modal-search-city__title.modal-cart__title Товар добавлен в корзину
+				span.modal-cart__mini-text Всего в вашей корзине 6 товаров на сумму 11 657 &#8381;
+				div.modal-cart-item
+					a.modal-cart-item-image(href="#")
+						img.modal-cart-item-image__image(src="local/templates/kolesatyt/img/tire.jpg")
+					div.modal-cart-item-right
+						a.modal-cart-item-name(href="#") MR139 7x16/5x112 ET37 D66.6
+						div.modal-cart-item-right-prop-line
+							div.modal-cart-item-right-prop-line__title Артикул:
+							div.modal-cart-item-right-prop-line__description 000.12.12
+						div.modal-cart-item-right-prop-line
+							div.modal-cart-item-right-prop-line__title Цена за 1 шт.:
+							div.modal-cart-item-right-prop-line__description 11 657 &#8381;
+						div.modal-cart-item-right-prop-line
+							div.modal-cart-item-right-prop-line__title Стоимость:
+							div.modal-cart-item-right-prop-line__description 11 657 &#8381;
+						div.modal-cart-item-right-prop-line
+							div.modal-cart-item-right-prop-line__title Количество:
+							div.modal-cart-item-right-prop-line__description 4 шт.
+				div.modal-cart-buttons
+					a.modal-cart-buttons__link(href="#") Продолжить покупки
+					a.cart-accessories-item__btn.cart-popup-accessories-item__btn(href="#") Оформить заказ
+				span.modal-cart__title-access Дополните вашу покупку аксессуарами
+				div.popup-cart-accessories
+					div.cart-accessories-item
+						div.cart-accessories-item-content
+							a.cart-accessories-item__image(href="#")
+								img(src="local/templates/kolesatyt/img/access.png")
+							a.cart-accessories-item__link(href="#") Влажные салфетки для авто Wet Wipes
+							span.cart-accessories-item__price 3 472 &#8381;
+						a.cart-accessories-item__btn.cart-popup-accessories-item__btn(href="#") Купить
+					div.cart-accessories-item
+						div.cart-accessories-item-content
+							a.cart-accessories-item__image(href="#")
+								img(src="local/templates/kolesatyt/img/access.png")
+							a.cart-accessories-item__link(href="#") Влажные салфетки для авто Wet Wipes
+							span.cart-accessories-item__price 3 472 &#8381;
+						a.cart-accessories-item__btn.cart-popup-accessories-item__btn(href="#") Купить
+					div.cart-accessories-item
+						div.cart-accessories-item-content
+							a.cart-accessories-item__image(href="#")
+								img(src="local/templates/kolesatyt/img/access.png")
+							a.cart-accessories-item__link(href="#") Влажные салфетки для авто Wet Wipes
+							span.cart-accessories-item__price 3 472 &#8381;
+						a.cart-accessories-item__btn.cart-popup-accessories-item__btn(href="#") Купить
+		include components/modals.pug
+		include components/footer.pug
+
+
+
+

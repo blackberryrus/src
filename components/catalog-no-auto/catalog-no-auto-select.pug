@@ -1,0 +1,37 @@
+span.catalog-noauto-select-auto-title Выбрать авто
+div.tire-selection-block-section.catalog-noauto-select
+    a.tire-selection-block-why(href="#")
+        | Почему действительно важно
+        b.tire-selection-block-why__bold  указать автомобиль
+        | ?
+        div.tire-selection-block-hover При выборе вашего автомобиля, мы автоматически подбираем подходящие к нему диски и шины. А также, наглядно продемонстрируем  как смотрятся диски на вашем авто.
+            div.header-triangle
+    div.tire-selection-block-section-selects
+        select(class="select-mark tire-selection-select" data-live-search="true" title="Марка")
+            option(value="Aston Martin") Aston Martin
+            option(value="BMW") BMW
+
+        select(class="select-model tire-selection-select" disabled title="Модель" data-live-search="true")
+
+        select(class="select-year tire-selection-select" disabled title="Год" data-live-search="true")
+
+        select(class="select-engine tire-selection-select" disabled title="Двигатель" data-live-search="true")
+
+        select(class="select-bodytype tire-selection-select" disabled title="Кузов" data-live-search="true")
+
+    div.tire-selection-block-images
+        div
+            img(src="local/templates/kolesatyt/img/car-white.jpg").catalog-no-auto__image#tire-selection-block-images__image
+        div.tire-selection-color
+            span.tire-selection-color-text Цвет:
+            div.tire-selection-color-items
+                div.tire-selection-color__item.color-white(data-color-url="local/templates/kolesatyt/img/car-white.jpg")
+                div.tire-selection-color__item.color-grey(data-color-url="local/templates/kolesatyt/img/car-grey.jpg")
+                div.tire-selection-color__item.color-bez(data-color-url="local/templates/kolesatyt/img/car-bez.jpg")
+                div.tire-selection-color__item.color-green(data-color-url="local/templates/kolesatyt/img/car-green.jpg")
+                div.tire-selection-color__item.color-red(data-color-url="local/templates/kolesatyt/img/car-red.jpg")
+                div.tire-selection-color__item.color-blue(data-color-url="local/templates/kolesatyt/img/car-blue.jpg")
+                div.tire-selection-color__item.color-black(data-color-url="local/templates/kolesatyt/img/car-black.jpg")
+    div
+        a.checkout-link__next(href="#") Подобрать
+    span.tire-footnote В каталоге вы сможете отфильтровать товары по заводским параметрам или для тюнинга

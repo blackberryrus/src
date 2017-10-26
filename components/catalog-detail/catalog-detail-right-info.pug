@@ -1,0 +1,223 @@
+div.row
+    div.col-lg-12.col-sm-12
+        div.catalog-detail-rating
+        span.catalog-detail-name
+            |диск
+            b.catalog-detail-name__bold  Legeartis replica ns81
+            |  в москве
+        span.catalog-detail__article Код 9167832
+div.row
+    div.col-lg-8.col-sm-8
+        div.catalog-detail-price
+            span.catalog-detail__price 8 080 &#8381;
+            span.catalog-detail__price-multi x
+            select.catalog-detail__price-count
+                option 1
+                option 2
+                option 3
+                option 4
+            span.catalog-detail__price-equally =
+            span.catalog-detail__price-total 32 320
+            span.catalog-detail__price-rouble &#8381;
+        div.catalog-detail-best-price-container
+            a.catalog-detail__best-price.guarantee(href="#modalBestPrice" data-toggle="modal")
+                img.catalog-detail__best-price-guarantee-img(src="local/templates/kolesatyt/img/certificate_small.png" srcset="local/templates/kolesatyt/img/certificate.png 2x")
+                i Гарантия лучшей цены
+        div.catalog-detail-best-price-container
+            a.catalog-detail__best-price.credit(href="#modalCredit" data-toggle="modal")
+                object(id="svg-detail-coin" type="image/svg+xml" class="svg-detail-coin" data="local/templates/kolesatyt/svg/coin.svg" width="100%" height="100%")
+                i Online кредит
+                |  500 р/мес
+        div.catalog-detail-best-price-container
+            span.catalog-min-delivery
+                | Уменьшить стоимость доставки
+                span(class="tooltip-grey" data-toggle="tooltip" title="Купите 4 шт. шины или диска")
+        div.catalog-detail-goods-stock
+            img.svg.catalog-detail-goods-stock__icon.status1(src="local/templates/kolesatyt/svg/warehouse.svg")
+            img.svg.catalog-detail-goods-stock__icon.status2(src="local/templates/kolesatyt/svg/warehouse2.svg")
+            img.svg.catalog-detail-goods-stock__icon.status3(src="local/templates/kolesatyt/svg/warehouse3.svg")
+            span.catalog-detail-goods-stock__title Товар в наличии
+            div.catalog-detail-goods-stock__div
+                |На складе > 10 шт.
+                br
+                |в магазинах города 9 шт.
+                a(href="#modalStores" data-toggle="modal").link-store-popup Наличие на складах
+        div.catalog-detail-delivery-and-payment-mobile.hide-desktope.hide-tablet.show-mobile
+            a(href="#")
+                img(src="local/templates/kolesatyt/svg/cargo-truck.svg" class="svg svg-detail-delivery")
+                span Варианты доставки
+            div.catalog-detail-delivery-and-payment-mobile-div
+                div.catalog-detail-delivery-block
+                    span.catalog-detail-delivery__text Доставим в г. Москва за 520 руб, к 26.04.2017 (ср)
+                    a.catalog-detail-delivery__link(href="#") Как получить бесплатно?
+                div.catalog-detail-delivery-block
+                    span.catalog-detail-delivery__text Бесплатно забрать с самовывоза
+                    a.catalog-detail-delivery__link.scroll(href="#map") Смотреть точки выдачи на карте
+            a(href="#")
+                img(src="local/templates/kolesatyt/svg/leather-wallet.svg" class="svg detail-delivery-wallet")
+                span Способы оплаты
+            div.catalog-detail-delivery-and-payment-mobile-div
+                div.catalog-detail-payment-block
+                    div.catalog-detail-payment-col
+                        div.catalog-detail-payment-item
+                            img.catalog-detail-payment-item__icon1(src="local/templates/kolesatyt/img/payment-i1-small.png" srcset="local/templates/kolesatyt/img/payment-i1.png 2x")
+                            span.catalog-detail-payment-item__name
+                                | Наличными
+                                br
+                                | при получении
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/credit-card.svg" class="svg catalog-detail-payment-item__icon4")
+                            span.catalog-detail-payment-item__name
+                                | Картой
+                                br
+                                | в пункте выдачи
+                    div.catalog-detail-payment-col
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/agreement.svg" class="svg catalog-detail-payment-item__icon2")
+                            span.catalog-detail-payment-item__name
+                                | Безналичный
+                                br
+                                | расчет
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/discount-on-payment.svg" class="svg catalog-detail-payment-item__icon5")
+                            span.catalog-detail-payment-item__name
+                                | Моментальный
+                                br
+                                | кредит онлайн
+                    div.catalog-detail-payment-col
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/point-of-service.svg" class="svg catalog-detail-payment-item__icon3")
+                            span.catalog-detail-payment-item__name
+                                | Картой при
+                                br
+                                | получении
+            a(href="#")
+                span Дополнительные услуги
+            div.catalog-detail-delivery-and-payment-mobile-div
+                div.catalog-detail-more-services-block
+                    div.catalog-detail-more-services-block-item
+                        label.catalog-detail-more-services-label
+                            input(type="checkbox")
+                            span.catalog-detail-more-services__text Заказать колесов сборе
+                        label.catalog-detail-more-services-label
+                            input(type="checkbox")
+                            span.catalog-detail-more-services__text Шиномонтаж в г. Москва
+                        label.catalog-detail-more-services-label
+                            input(type="checkbox")
+                            span.catalog-detail-more-services__text Мобильный шиномонтаж
+                            span(class="tooltip-grey" data-toggle="tooltip" title="Какое-то небольшое описание, которое поможет разобраться с данной услугой")
+                    div.catalog-detail-more-services-block-item
+                        label.catalog-detail-more-services-label
+                            input(type="checkbox")
+                            span.catalog-detail-more-services__text Новая услуга 1
+                        label.catalog-detail-more-services-label
+                            input(type="checkbox")
+                            span.catalog-detail-more-services__text Новая услуга 2
+                        label.catalog-detail-more-services-label
+                            input(type="checkbox")
+                            span.catalog-detail-more-services__text Новая услуга 3
+        ul.catalog-detail-delivery-and-payment.nav-tabs.hide-mobile
+            li(class="active")
+                a(href="#tab-delivery" data-toggle="tab")
+                    img(src="local/templates/kolesatyt/svg/cargo-truck.svg" class="svg svg-detail-delivery")
+                    span Варианты доставки
+            li.tab-separate /
+            li
+                a(href="#tab-payment" data-toggle="tab")
+                    img(src="local/templates/kolesatyt/svg/leather-wallet.svg" class="svg detail-delivery-wallet")
+                    span Способы оплаты
+        div.catalog-detail-delivery-and-payment.tab-content.hide-mobile
+            div(id="tab-delivery" class="tab-pane active")
+                div.catalog-detail-delivery-block
+                    span.catalog-detail-delivery__text Доставим в г. Москва за 520 руб, к 26.04.2017 (ср)
+                    a.catalog-detail-delivery__link(href="#") Как получить бесплатно?
+                div.catalog-detail-delivery-block
+                    span.catalog-detail-delivery__text Бесплатно забрать с самовываоза
+                    a.catalog-detail-delivery__link.scroll(href="#map") Смотреть точки выдачи на карте
+            div(id="tab-payment" class="tab-pane")
+                div.catalog-detail-payment-block
+                    div.catalog-detail-payment-col
+                        div.catalog-detail-payment-item
+                            img.catalog-detail-payment-item__icon1(src="local/templates/kolesatyt/img/payment-i1-small.png" srcset="local/templates/kolesatyt/img/payment-i1.png 2x")
+                            span.catalog-detail-payment-item__name
+                                |Наличными
+                                br
+                                |при получении
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/credit-card.svg" class="svg catalog-detail-payment-item__icon4")
+                            span.catalog-detail-payment-item__name
+                                | Картой
+                                br
+                                | в пункте выдачи
+                    div.catalog-detail-payment-col
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/agreement.svg" class="svg catalog-detail-payment-item__icon2")
+                            span.catalog-detail-payment-item__name
+                                | Безналичный
+                                br
+                                | расчет
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/discount-on-payment.svg" class="svg catalog-detail-payment-item__icon5")
+                            span.catalog-detail-payment-item__name
+                                | Моментальный
+                                br
+                                | кредит онлайн
+                    div.catalog-detail-payment-col
+                        div.catalog-detail-payment-item
+                            img(src="local/templates/kolesatyt/svg/point-of-service.svg" class="svg catalog-detail-payment-item__icon3")
+                            span.catalog-detail-payment-item__name
+                                | Картой при
+                                br
+                                | получении
+        div.catalog-detail-more-services.hide-mobile
+            span.catalog-detail-more-services__title Дополнительные услуги
+            div.catalog-detail-more-services-block
+                div.catalog-detail-more-services-block-item
+                    label.catalog-detail-more-services-label
+                        input(type="checkbox")
+                        span.catalog-detail-more-services__text Заказать колесов сборе
+                    label.catalog-detail-more-services-label
+                        input(type="checkbox")
+                        span.catalog-detail-more-services__text Шиномонтаж в г. Москва
+                    label.catalog-detail-more-services-label
+                        input(type="checkbox")
+                        span.catalog-detail-more-services__text Мобильный шиномонтаж
+                        span(class="tooltip-grey" data-toggle="tooltip" title="Какое-то небольшое описание, которое поможет разобраться с данной услугой")
+                div.catalog-detail-more-services-block-item
+                    label.catalog-detail-more-services-label
+                        input(type="checkbox")
+                        span.catalog-detail-more-services__text Новая услуга 1
+                    label.catalog-detail-more-services-label
+                        input(type="checkbox")
+                        span.catalog-detail-more-services__text Новая услуга 2
+                    label.catalog-detail-more-services-label
+                        input(type="checkbox")
+                        span.catalog-detail-more-services__text Новая услуга 3
+
+    div.col-lg-4.col-sm-4
+        a.catalog-item__tocart-detail(href="#") Купить
+        span.catalog-item-free-return
+            img.catalog-item-free-return__icon(src="local/templates/kolesatyt/img/free-return-small.png" srcset="local/templates/kolesatyt/img/free-return.png 2x")
+            |Свободный возврат в теч. 14 дн.
+        div.catalog-item-like-and-chart
+            a.catalog-item-like(href="#")
+                img(src="local/templates/kolesatyt/svg/favorite.svg" class="svg catalog-item-like-icon")
+            a.catalog-item-chart(href="#")
+        a.catalog-item-show-tirs(href="#") показать подходящие шины
+        a.catalog-item-order-tire(href="#") заказать кованный диск
+        div.catalog-detail-socials
+            span.catalog-detail-socials__text Поделиться в соц сетях
+            div.catalog-detail-socials-links-block
+                div.catalog-detail-socials-links
+                    a.catalog-detail-socials__link(href="#")
+                        img(src="local/templates/kolesatyt/svg/twitter.svg", alt="twitter", class="svg catalog-detail__share-social")
+                    a.catalog-detail-socials__link(href="#")
+                        img(src="local/templates/kolesatyt/svg/facebook.svg", alt="facebook", class="svg catalog-detail__share-social")
+                    a.catalog-detail-socials__link(href="#")
+                        img(src="local/templates/kolesatyt/svg/vk.svg", alt="vk", class="svg catalog-detail__share-social")
+                    a.catalog-detail-socials__link(href="#")
+                        img(src="local/templates/kolesatyt/svg/instagram.svg", alt="instagram", class="svg catalog-detail__share-social")
+                    a.catalog-detail-socials__link(href="#")
+                        img(src="local/templates/kolesatyt/svg/odnoklassniki-logo.svg", alt="odnoklassniki", class="svg catalog-detail__share-social")
+                    a.catalog-detail-socials__link(href="#")
+                        img(src="local/templates/kolesatyt/svg/google-plus-social-logotype.svg", alt="goggle-plus", class="svg catalog-detail__share-social")

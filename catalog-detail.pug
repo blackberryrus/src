@@ -1,0 +1,30 @@
+html
+	include components/head.pug
+	body#top
+		div.notifications-block
+			div.notification-item
+				i.close-notification
+				i.notification-two-people
+				span.notification__text 375 чел. просматривали этот товар за неделю
+			div.notification-item
+				i.close-notification
+				i.notification-one-people
+				span.notification__text 1 чел. купил этот товар сегодня
+		include components/header.pug
+		include components/breadcrumps.pug
+		div.container
+			div.row.catalog-detail-slider-and-info
+				div.col-lg-5
+					include components/catalog-detail/catalog-detail-slider.pug
+				div.col-lg-6.col-lg-offset-1
+					include components/catalog-detail/catalog-detail-right-info.pug
+			include components/catalog-detail/catalog-detail-tabs.pug
+			include components/catalog-detail/catalog-detail-interesting.pug
+		include components/catalog-detail/catalog-detail-contacts.pug
+		include components/modal-points-issue.pug
+		include components/footer.pug
+		include components/modals.pug
+
+
+
+

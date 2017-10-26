@@ -1,0 +1,61 @@
+html
+    include components/head.pug
+    body#top
+        include components/header.pug
+        div.container
+            div.row
+                div.col-lg-12.col-md-12
+                    div.steps-cart
+                        span.steps-cart-item.step1 1. Ваша корзина
+                        span.steps-cart-item.step2 2. Оформление заказа
+                        span.steps-cart-item.active 3. Покупка совершена
+            div.row
+                div.col-lg-12
+                    h1.cart-title Покупка совершена
+            div.row
+                div.col-lg-12
+                    div.info-order-item.info-order1
+                        div.info-order1-item1
+                            img(src="local/templates/kolesatyt/img/info-order1.jpg")
+                        div.info-order1-item2
+                            b В благодарность за заказ
+                            p.info-order1-item2-p
+                                |Вам предоставляется возможность выбрать один из предложенных
+                                b &nbsp;подарков-скидок&nbsp;
+                                |в магазинах наших партнеров
+                            a.btn__type4(href="#") Получить скидку
+                        div.info-order1-item3
+                            img(src="local/templates/kolesatyt/img/info-order2.jpg")
+            div.row
+                div.col-lg-12
+                    div.info-order-item.info-order2
+                        div.info-order2-item1
+                            img(src="local/templates/kolesatyt/img/info-order3.jpg")
+                        div.info-order2-item2
+                            h2.info-order2-h2 Заказ сформирован
+                            p
+                                |Заказ
+                                b &nbsp;№553377&nbsp;
+                                |на сумму
+                                b &nbsp;33 400 руб.&nbsp;
+                                |успешно создан.
+                            p
+                                |В ближайшее время он будет обработан нашими менеджерами.
+                                br
+                                |Оплата заказа: картой онлайн
+                            p
+                                | Cтатус заказа вы сможете узнать по бесплатному тел.
+                                b &nbsp;8 800 100-22-90&nbsp;
+            div.row
+                div.col-lg-12
+                    div.info-order-item.info-order3
+                        div.info-order2-item1
+                            img(src="local/templates/kolesatyt/img/info-order4.jpg")
+                        div.info-order2-item2
+                            h2.info-order2-h2 Оплата получена
+                            p
+                                | Благодарим вас за то, что вы приобрели товар
+                                br
+                                | в интернет-магазине KOLESATYT.RU
+                            p Будем рады сотрудничать с вами дальше.
+        include components/footer.pug

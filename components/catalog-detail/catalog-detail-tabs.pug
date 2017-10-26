@@ -1,0 +1,203 @@
+div.row
+    div.col-lg-8.col-md-
+        div.row.hide-mobile
+            div.col-lg-12.col-sm-12
+                ul.catalog-detail-tabs.nav-tabs
+                    li.active
+                        a(href="#all" data-toggle="tab") Все характеристики
+                    li
+                        a(href="#3d" data-toggle="tab") Примерка 3D
+                    li
+                        a(href="#2d" data-toggle="tab") Примерка 2D
+                    li
+                        a(href="#reviews" data-toggle="tab") Отзывы
+                    li
+                        a(href="#analogs" data-toggle="tab") Аналоги
+        div.row.catalog-detail-tabs-content-mobile.show-mobile
+            div.col-lg-12
+                div.personal-page-mobile-item
+                    span.personal-page-mobile-item-title Характеристики
+                    div.catalog-detail-mobile-div
+                        div.catalog-detail-characteristics-list
+                            div.catalog-detail-characteristics-name Тип:
+                            div.catalog-detail-characteristics-decription
+                                a.catalog-detail-characteristics-list__link(href="#") Литые
+                        div.catalog-detail-characteristics-list
+                            div.catalog-detail-characteristics-name Материал:
+                            div.catalog-detail-characteristics-decription Алюминиевый сплав
+                        div.catalog-detail-characteristics-list
+                            div.catalog-detail-characteristics-name Цвет:
+                            div.catalog-detail-characteristics-decription
+                                div.catalog-detail-characteristics-color
+                                    a.catalog-detail-characteristics-color__image(href="#")
+                                        img(src="local/templates/kolesatyt/img/tire-mini.png")
+                                    span.catalog-detail-characteristics-color__name(href="#") Серебристый
+                        div.catalog-detail-characteristics-list
+                            div.catalog-detail-characteristics-name Варианты цветов:
+                            div.catalog-detail-characteristics-decription
+                                div.catalog-detail-characteristics-color
+                                    a.catalog-detail-characteristics-color__image(href="#")
+                                        img(src="local/templates/kolesatyt/img/tire-mini.png")
+                                    a.catalog-detail-characteristics-color__name(href="#") Черный матовый
+                        div.catalog-detail-characteristics-list
+                            div.catalog-detail-characteristics-name Тип:
+                            div.catalog-detail-characteristics-decription
+                                a.catalog-detail-characteristics-list__link(href="#") Литые
+                        div.catalog-detail-characteristics-list
+                            div.catalog-detail-characteristics-name Материал:
+                            div.catalog-detail-characteristics-decription Алюминиевый сплав
+                    span.personal-page-mobile-item-title.catalog-detail-mobile-title2d Подробное описание
+                    div.catalog-detail-mobile-div
+                        span.tab-2d-name БМВ 2 серии 2015 с двигателем 218I хэтчбэк
+                        div.tab-2d-btns
+                            a.tab-2d-btns-auto-edit(href="#")
+                                span.tab-2d-btns-auto-edit__span Изменить авто
+                            a.tab-2d-btns-auto-show-tirs(href="#") подобрать подходящие диски
+                        div.tab-2d-apply
+                            span.tab-2d-apply__text(style="display: none") диски подходят к вашему авто
+                            span.tab-2d-not-apply__text
+                                | диски
+                                b &nbsp;не подходят&nbsp;
+                                br
+                                | к вашему авто
+                        img.tab-2d__image(src="local/templates/kolesatyt/img/car-tab.png")
+                    span.personal-page-mobile-item-title Отзывы
+                    div
+                    span.personal-page-mobile-item-title Аналоги
+                    div
+        div.row.catalog-detail-tabs-content.hide-mobile
+            div.col-lg-12.tab-content.col-sm-12
+                div(id="all" class="tab-pane active row")
+                    div.col-lg-12.col-sm-12
+                        div.row.catalog-detail-characteristics-list
+                            div.col-lg-5.col-sm-7 Тип:
+                            div.col-lg-7.col-sm-5
+                                a.catalog-detail-characteristics-list__link(href="#") Литые
+                        div.row.catalog-detail-characteristics-list
+                            div.col-lg-5.col-sm-7 Материал:
+                            div.col-lg-7.col-sm-5 Алюминиевый сплав
+                        div.row.catalog-detail-characteristics-list
+                            div.col-lg-5.col-sm-7 Цвет:
+                            div.col-lg-7.col-sm-5
+                                div.catalog-detail-characteristics-color
+                                    a.catalog-detail-characteristics-color__image(href="#")
+                                        img(src="local/templates/kolesatyt/img/tire-mini.png")
+                                    span.catalog-detail-characteristics-color__name(href="#") Серебристый
+                        div.row.catalog-detail-characteristics-list
+                            div.col-lg-5.col-sm-7 Варианты цветов:
+                            div.col-lg-7.col-sm-5
+                                div.catalog-detail-characteristics-color
+                                    a.catalog-detail-characteristics-color__image(href="#")
+                                        img(src="local/templates/kolesatyt/img/tire-mini.png")
+                                    a.catalog-detail-characteristics-color__name(href="#") Черный матовый
+                        div.row.catalog-detail-characteristics-list
+                            div.col-lg-5.col-sm-7 Тип:
+                            div.col-lg-7.col-sm-5
+                                a.catalog-detail-characteristics-list__link(href="#") Литые
+                        div.row.catalog-detail-characteristics-list
+                            div.col-lg-5.col-sm-7 Материал:
+                            div.col-lg-7.col-sm-5 Алюминиевый сплав
+                div(id="3d" class="tab-pane") Примерка 3D
+                div(id="2d" class="tab-pane row")
+                    div.col-lg-12.col-sm-12.tab-2d
+                        span.tab-2d-name БМВ 2 серии 2015 с двигателем 218I хэтчбэк
+                        div.tab-2d-btns.col-lg-3.col-sm-4
+                            a.tab-2d-btns-auto-edit(href="#")
+                                span.tab-2d-btns-auto-edit__span Изменить авто
+                            a.tab-2d-btns-auto-show-tirs(href="#") подобрать подходящие диски
+                        div.tab-2d-apply.col-lg-2.col-sm-3
+                            span.tab-2d-apply__text(style="display: none") диски подходят к вашему авто
+                            span.tab-2d-not-apply__text
+                                |диски
+                                b &nbsp;не подходят&nbsp;
+                                br
+                                |к вашему авто
+                        img.tab-2d__image(src="local/templates/kolesatyt/img/car-tab.png")
+                div(id="reviews" class="tab-pane") Отзывы
+                div(id="analogs" class="tab-pane") Аналоги
+        div.row.catalog-detail-interesting
+            div.col-lg-12.col-sm-12
+                span.catalog-detail-interesting__title Интересное о товаре
+                p Диски Replica B80 – оптимальный вариант для установки на многие современные модели автомобилей. Они созданы с применением ультрасовременных технологий и соответствуют актуальным техническим стандартам, используемым многими автопроизводителями.
+                p Replica B80 имеют сбалансированные показатели веса и основных размеров. Благодаря этому их установка способна придать автомобилю неповторимый внешний вид, но не ухудшить его динамические характеристики и управляемость. Такие компоненты позволяют сохранить исключительно высокий уровень безопасности транспортного средства.
+        div.row.catalog-detail-video
+            div.col-lg-12.col-sm-12
+                div.videoreviews-block
+                    iframe(src="https://www.youtube.com/embed/z8Ywo1Z1IIU" frameborder="0" allowfullscreen)
+            div.col-lg-12
+                span.catalog-detail-interesting__title Видеообзор диска Legeartis Replica
+                p При производстве «Legeartis Replica» учитываются параметры, заданные заводами- производителями автомобилей, что позволяет устанавливать их вместо оригинальных (OEM) дисков и сохранять гарантию на машину.
+                p При производстве "Legeartis Replica" учитываются параметры, заданные заводами- производителями автомобилей, что позволяет устанавливать их.
+    div.col-lg-3.col-lg-offset-1
+        div.catalog-detail-features
+            span.catalog-detail-features__title Преимущества KOLESATYT
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/wheel.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Большой ассортимент
+                    span.catalog-detail-features__item-description
+                        | Более 3 000 моделей дисков и 1 000 моделей шин с подробным описанием и фотографиями на сайте.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/wallet-with-bill.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Без предоплаты
+                    span.catalog-detail-features__item-description
+                        | Мы доверяем нашим клиентам. Вы можете заказывать любой товар и оплачивать при получении.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/rouble-symbol.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Цены от производителя
+                    span.catalog-detail-features__item-description
+                        | Нашел диски по более выгодной цене? Покажи нам и мы продадим по двойной разницей в твою пользу.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/car.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Онлайн примерка дисков
+                    span.catalog-detail-features__item-description
+                        | Примерь диски на машину до покупки на сайте! Заодно мы проверим совместимость с вашим авто.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/box.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Весь товар в каталоге — в наличии
+                    span.catalog-detail-features__item-description
+                        | Весь товар, указанный на сайте в наличии у нас на складе. Заказывай и мы доставим в ближайшее время.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/worldwide.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Пункты самовывоза по всей России
+                    span.catalog-detail-features__item-description
+                        | КОЛЕСАТУТ доставит куда угодно! Пункты самовывоза товара по всей России и в ближнем зарубежье.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/thumb-up.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Высокие оценки наших покупателей
+                    span.catalog-detail-features__item-description
+                        | Пять звезд на ЯндексМаркет! Мы делаем все возможное для вашего удобства.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/circular-wall-clock.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Быстрая доставка
+                    span.catalog-detail-features__item-description
+                        | Нужно срочно? Закажи с пометкой «быстрая доставка» и получи товар в ближайшее время..
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/manager-profile.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Высокий уровень обслуживания
+                    span.catalog-detail-features__item-description
+                        | В КОЛЕСАТУТ работают лучшие. Компетентные менеджеры проконсультируют по любым вопросам.
+            div.catalog-detail-features__item
+                img(class="svg catalog-detail-features__item-icon" src="local/templates/kolesatyt/svg/network.svg")
+                div.catalog-detail-features__item-text
+                    span.catalog-detail-features__item-title
+                        | Свободный возврат
+                    span.catalog-detail-features__item-description
+                        | Заказал не то, что хотел или просто передумал? Ничего страшного, верни товар и получи деньги обратно.

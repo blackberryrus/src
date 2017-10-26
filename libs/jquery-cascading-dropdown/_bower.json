@@ -1,0 +1,39 @@
+{
+  "name": "jquery-cascading-dropdown",
+  "version": "1.2.7",
+  "homepage": "https://github.com/dnasir/jquery-cascading-dropdown",
+  "authors": [
+    "Dzulqarnain Nasir <dzul1983@gmail.com>"
+  ],
+  "description": "A simple and lighweight jQuery plugin for creating cascading dropdowns.",
+  "main": [
+    "dist/jquery.cascadingdropdown.js",
+    "dist/jquery.cascadingdropdown.min.js",
+    "dist/jquery.cascadingdropdown.min.js.map"
+  ],
+  "keywords": [
+    "jquery",
+    "cascading",
+    "dropdown"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^1.11.2"
+  },
+  "_release": "1.2.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.7",
+    "commit": "5fa2d46d116bf67f5119425424fce1ddc7f8c3e0"
+  },
+  "_source": "https://github.com/dnasir/jquery-cascading-dropdown.git",
+  "_target": "^1.2.7",
+  "_originalSource": "jquery-cascading-dropdown",
+  "_direct": true
+}

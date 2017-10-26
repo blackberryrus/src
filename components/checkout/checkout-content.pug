@@ -1,0 +1,1468 @@
+div.row
+    div.col-lg-12.col-md-12
+        h1.cart-title.checkout Оформление заказа
+        div.cart-checkout-top
+            a.cart-checkout-btn-authorize(href="#")
+                span.cart-checkout-btn-authorize__span Авторизоваться
+            span.checkout-authotize-text Авторизуйтесь, чтобы заполнить поля данными с последней покупки.
+ul.checkout-content-tabs.nav-tabs.row
+    li.active.col-lg-6.col-md-6.col-sm-6.col-xs-6.checkout-tab
+        a(href="#checkout-tab1" data-toggle="tab")
+            i.checkout-tab-fiz-icon
+            span Физическое лицо
+    li.col-lg-6.col-md-6.col-sm-6.col-xs-6.checkout-tab
+        a(href="#checkout-tab2" data-toggle="tab")
+            i.checkout-tab-ur-icon
+            span Юридическое лицо
+div.row.checkout-content
+    div.col-lg-12.col-md-12.tab-content
+        div.tab-pane.active.row#checkout-tab1
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                div.row.row-checkout-input
+                    div.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-lg-offset-1.col-md-offset-1
+                        span.checkout-contacts-title фио
+                        input(type="text" class="checkout-contacts-input" placeholder="Иванов Иван Иванович")
+                    div.col-lg-2.col-md-2.col-sm-4.col-xs-12
+                        span.checkout-contacts-title номер телефона
+                        input(type="text" class="checkout-contacts-input phone" placeholder="+7 (___)___-__-__")
+                        input(type="text" class="checkout-contacts-input checkout-contacts-input-hide phone" placeholder="+7 (___)___-__-__")
+                        span.checkout-add-number Добавить запасной
+                    div.col-lg-4.col-md-4.col-sm-4.col-xs-12
+                        span.checkout-contacts-title электронная почта
+                        input(type="email" class="checkout-contacts-input" placeholder="Например, test@test.ru")
+                div.row.show-mobile.hide-desktope.hide-tablet
+                    span.checkout-title-for-tab.col-xs-12 Доставка
+                    div.checkout-title-tab.col-xs-12
+                        ul.checkout-delivery-tabs.nav-tabs
+                            li.active.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery1-d1" data-toggle="tab")
+                                    i.checkout-delivery1-icon
+                                    span.checkout-delivery__span Курьером до подъезда
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery2-d1" data-toggle="tab")
+                                    i.checkout-delivery2-icon
+                                    span.checkout-delivery__span Самовывоз
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery3-d1" data-toggle="tab")
+                                    i.checkout-delivery3-icon
+                                    span.checkout-delivery__span Шиномонтаж
+                        div.checkout-delivery-content.tab-content
+                            div.tab-pane.active#checkout-delivery1-d1
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-delivery-address
+                                    span.checkout-delivery-title__span Адрес доставки
+                                    input.checkout-delivery-title__input(type="text" placeholder="Начните вводить улицу, затем выберите из списка")
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                div.delivery-company-mobile
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+
+                            div.tab-pane#checkout-delivery2-d1
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company-mobile
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                            div.tab-pane#checkout-delivery3-d1
+                                div.checkout-mobile-tire
+                                    label.checkout-mobile-tire-label
+                                        input(type="checkbox")
+                                        i.checkout-mobile-tire-icon
+                                        div.checkout-mobile-tire-text
+                                            span.checkout-mobile-tire__title Мобильный шиномонтаж
+                                                a(href="#" class="tooltip-grey" data-toggle="tooltip" title="Какое-то небольшое описание, которое поможет разобраться с данной услугой")
+                                            span.checkout-mobile-tire__text При доставке курьером, доступен мобильный шиномонтаж.
+                                            a.checkout-mobile-tire__link(href="#") Схема работы мобильного шиномонтажа
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company-mobile
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                    span.checkout-title-for-tab.col-xs-12 Оплата
+                    div.type-payments.col-xs-12
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon1
+                            div.type-payments-text
+                                span.type-payments-text__name Наличными при получении
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon2
+                            div.type-payments-text
+                                span.type-payments-text__name Картой в пункте выдачи
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon3
+                            div.type-payments-text
+                                span.type-payments-text__name Безналичный расчет
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon4
+                            div.type-payments-text
+                                span.type-payments-text__name Картой при получении
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon5
+                            div.type-payments-text
+                                span.type-payments-text__name Моментальный кредит онлайн
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                div.row.hide-mobile
+                    div.col-lg-6.col-md-6.col-lg-offset-1.col-md-offset-1
+                        ul.checkout-delivery-tabs.nav-tabs
+                            li.active.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery1" data-toggle="tab")
+                                    i.checkout-delivery1-icon
+                                    span.checkout-delivery__span
+                                        |Курьером
+                                        br
+                                        |до подъезда
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery2" data-toggle="tab")
+                                    i.checkout-delivery2-icon
+                                    span.checkout-delivery__span Самовывоз
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery3" data-toggle="tab")
+                                    i.checkout-delivery3-icon
+                                    span.checkout-delivery__span Шиномонтаж
+                        div.checkout-delivery-content.tab-content
+                            div.tab-pane.active#checkout-delivery1
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-delivery-address
+                                    span.checkout-delivery-title__span Адрес доставки
+                                    input.checkout-delivery-title__input(type="text" placeholder="Начните вводить улицу, затем выберите из списка")
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                div.delivery-company
+                                    div.delivery-company-row.delivery-company-row-title
+                                        div.delivery-company-col служба доставки
+                                        div.delivery-company-col срок доставки
+                                        div.delivery-company-col стоимость
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col
+                                                input(type="radio" name="delivery")
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col
+                                                input(type="radio" name="delivery")
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col
+                                                input(type="radio" name="delivery")
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+
+                            div.tab-pane#checkout-delivery2
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company
+                                    div.delivery-company-row.delivery-company-row-title
+                                        div.delivery-company-col.col1 Адрес доставки
+                                        div.delivery-company-col.col2 служба доставки
+                                        div.delivery-company-col.col3 срок доставки
+                                        div.delivery-company-col.col4 стоимость
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                            div.tab-pane#checkout-delivery3
+                                div.checkout-mobile-tire
+                                    label.checkout-mobile-tire-label
+                                        input(type="checkbox")
+                                        i.checkout-mobile-tire-icon
+                                        div.checkout-mobile-tire-text
+                                            span.checkout-mobile-tire__title Мобильный шиномонтаж
+                                                a(href="#" class="tooltip-grey" data-toggle="tooltip" title="Какое-то небольшое описание, которое поможет разобраться с данной услугой")
+                                            span.checkout-mobile-tire__text При доставке курьером, доступен мобильный шиномонтаж.
+                                            a.checkout-mobile-tire__link(href="#") Схема работы мобильного шиномонтажа
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company
+                                    div.delivery-company-row.delivery-company-row-title
+                                        div.delivery-company-col.col1 Адрес доставки
+                                        div.delivery-company-col.col2 служба доставки
+                                        div.delivery-company-col.col3 срок доставки
+                                        div.delivery-company-col.col4 стоимость
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                    div.col-lg-3.col-md-3.col-lg-offset-1.col-md-offset-1
+                        div.row.delivery-payment-name-container
+                            div.col-lg-8.col-md-8.col-sm-4
+                                span.delivery-payment-name
+                                    i.payment-title-icon
+                                    span Способ оплаты
+                        div.type-payments
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon1
+                                div.type-payments-text
+                                    span.type-payments-text__name Наличными при получении
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon2
+                                div.type-payments-text
+                                    span.type-payments-text__name Картой в пункте выдачи
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon3
+                                div.type-payments-text
+                                    span.type-payments-text__name Безналичный расчет
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon4
+                                div.type-payments-text
+                                    span.type-payments-text__name Картой при получении
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon5
+                                div.type-payments-text
+                                    span.type-payments-text__name Моментальный кредит онлайн
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+        div.tab-pane.row#checkout-tab2
+            div.col-lg-12.col-md-12
+                div.row.entity-rows
+                    div.col-lg-4.col-sm-6.col-xs-12.col-lg-offset-1.col-md-4.col-md-offset-1
+                        div.row.entity-row
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.checkout-delivery-title__span БИК
+                                input.checkout-delivery-title__input(type="text")
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.entity-row-text.checkout-bik-text Введите БИК и остальные поля заполнятся автоматич. из базы данных
+                        div.row.entity-row
+                            div.col-lg-12.col-md-12.col-xs-12
+                                span.checkout-delivery-title__span Название организации
+                                input.checkout-delivery-title__input(type="text")
+                        div.row.entity-row
+                            div.col-lg-12.col-md-12.col-xs-12
+                                span.checkout-delivery-title__span Юридический адрес
+                                input.checkout-delivery-title__input#legal-address(type="text")
+                        div.row.entity-row
+                            div.col-lg-12.col-md-12.col-xs-12
+                                span.checkout-delivery-title__span.checkout-delivery-title__span-entity Фактический адрес
+                                    span.checkout-delivery-title__span-link#copy-address скопировать из "Юридический адрес"
+                                input.checkout-delivery-title__input(type="text")
+                        div.row.entity-row
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.checkout-delivery-title__span ИНН
+                                input.checkout-delivery-title__input(type="text")
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.checkout-delivery-title__span КПП
+                                input.checkout-delivery-title__input(type="text")
+                        div.row.entity-row
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.checkout-delivery-title__span ОГРН
+                                input.checkout-delivery-title__input(type="text")
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.checkout-delivery-title__span Банк получателя
+                                input.checkout-delivery-title__input(type="text")
+                        div.row.entity-row
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.checkout-delivery-title__span Кор/счет
+                                input.checkout-delivery-title__input(type="text")
+                            div.col-lg-6.col-md-6.col-xs-12
+                                span.checkout-delivery-title__span Расчетный счет
+                                input.checkout-delivery-title__input(type="text")
+                    div.col-lg-4.col-sm-6.col-xs-12.col-lg-offset-2.col-md-4.col-md-offset-2
+                        div.row.entity-row
+                            div.col-lg-12.col-md-12.col-xs-12
+                                span.checkout-delivery-title__span Название организации
+                                input.checkout-delivery-title__input(type="text")
+                        div.row.entity-row.entity-row-number
+                            div.col-lg-6.col-md-6.col-xs-12.entity-row-number-col
+                                span.checkout-delivery-title__span Номер телефона
+                                input.checkout-delivery-title__input.phone(type="text" placeholder="+7 (___)___-__-__")
+                                input.checkout-delivery-title__input.checkout-delivery-title__input-hide.phone(type="text" placeholder="+7 (___)___-__-__")
+                                span.entity-row-number-col-add Добавить запасной
+                        div.row.entity-row.entity-row-email
+                            div.col-lg-12.col-md-12.col-xs-12
+                                span.checkout-delivery-title__span Электронная почта
+                                input.checkout-delivery-title__input.entity-row-email__input(type="email" placeholder="Например, test@test.ru")
+                            div.col-lg-12.col-md-12.col-xs-12
+                                label.cart-table-checkbox
+                                    input(type="checkbox")
+                                    span.cart-table-checkbox-span Я согласен получать информацию об акциях и новинках от KOLESATYT.RU по электронной почте.
+                        div.row.entity-row.entity-row-number
+                            div.col-lg-12.col-md-12.col-xs-12
+                                span.checkout-delivery-title__span Откуда вы про нас узнали?
+                                select(class="checkout-date-select checkout-date-select-entity")
+                                    option(value="Сайт") Сайт
+                                    option(value="Сайт") Сайт
+                                    option(value="Сайт") Сайт
+                                    option(value="Сайт") Сайт
+                div.row.show-mobile.hide-desktope.hide-tablet
+                    span.checkout-title-for-tab.col-xs-12 Доставка
+                    div.checkout-title-tab.col-xs-12
+                        ul.checkout-delivery-tabs.nav-tabs
+                            li.active.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery11" data-toggle="tab")
+                                    i.checkout-delivery1-icon
+                                    span.checkout-delivery__span Курьером до подъезда
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery12" data-toggle="tab")
+                                    i.checkout-delivery2-icon
+                                    span.checkout-delivery__span Самовывоз
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery13" data-toggle="tab")
+                                    i.checkout-delivery3-icon
+                                    span.checkout-delivery__span Шиномонтаж
+                        div.checkout-delivery-content.tab-content
+                            div.tab-pane.active#checkout-delivery11
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-delivery-address
+                                    span.checkout-delivery-title__span Адрес доставки
+                                    input.checkout-delivery-title__input(type="text" placeholder="Начните вводить улицу, затем выберите из списка")
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                div.delivery-company-mobile
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+
+                            div.tab-pane#checkout-delivery12
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company-mobile
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                            div.tab-pane#checkout-delivery13
+                                div.checkout-mobile-tire
+                                    label.checkout-mobile-tire-label
+                                        input(type="checkbox")
+                                        i.checkout-mobile-tire-icon
+                                        div.checkout-mobile-tire-text
+                                            span.checkout-mobile-tire__title Мобильный шиномонтаж
+                                                a(href="#" class="tooltip-grey" data-toggle="tooltip" title="Какое-то небольшое описание, которое поможет разобраться с данной услугой")
+                                            span.checkout-mobile-tire__text При доставке курьером, доступен мобильный шиномонтаж.
+                                            a.checkout-mobile-tire__link(href="#") Схема работы мобильного шиномонтажа
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company-mobile
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                    label.checkout-delivery-company-item-mobile
+                                        div.checkout-delivery-company-item-mobile__title
+                                            input(type="radio" name="delivery")
+                                            div.delivery-company-name
+                                                img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                span.delivery-company-name__span стандарт
+                                        div
+                                            span Адрес доставки: г. Москва, ул. Зеленая, дом 38
+                                        div
+                                            span Срок доставки: 15 - 20 дней
+                                        div
+                                            span Стоимость: 500 &#8381; до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                    span.checkout-title-for-tab.col-xs-12 Оплата
+                    div.type-payments.col-xs-12
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon1
+                            div.type-payments-text
+                                span.type-payments-text__name Наличными при получении
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon2
+                            div.type-payments-text
+                                span.type-payments-text__name Картой в пункте выдачи
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon3
+                            div.type-payments-text
+                                span.type-payments-text__name Безналичный расчет
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon4
+                            div.type-payments-text
+                                span.type-payments-text__name Картой при получении
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                        label.type-payments-label
+                            input(type="radio" name="type-payments")
+                            div.type-paymants-icon
+                                i.type-payments-icon5
+                            div.type-payments-text
+                                span.type-payments-text__name Моментальный кредит онлайн
+                                span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                div.row.hide-mobile
+                    div.col-lg-6.col-md-6.col-lg-offset-1.col-md-offset-1
+                        ul.checkout-delivery-tabs.nav-tabs
+                            li.active.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery1-d2" data-toggle="tab")
+                                    i.checkout-delivery1-icon
+                                    span.checkout-delivery__span
+                                        | Курьером
+                                        br
+                                        | до подъезда
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery2-d2" data-toggle="tab")
+                                    i.checkout-delivery2-icon
+                                    span.checkout-delivery__span Самовывоз
+                            li.checkout-delivery-tab
+                                a.checkout-delivery-tab-link(href="#checkout-delivery3-d2" data-toggle="tab")
+                                    i.checkout-delivery3-icon
+                                    span.checkout-delivery__span Шиномонтаж
+                        div.checkout-delivery-content.tab-content
+                            div.tab-pane.active#checkout-delivery1-d2
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-delivery-address
+                                    span.checkout-delivery-title__span Адрес доставки
+                                    input.checkout-delivery-title__input(type="text" placeholder="Начните вводить улицу, затем выберите из списка")
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                div.delivery-company
+                                    div.delivery-company-row.delivery-company-row-title
+                                        div.delivery-company-col служба доставки
+                                        div.delivery-company-col срок доставки
+                                        div.delivery-company-col стоимость
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col
+                                                input(type="radio" name="delivery")
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col
+                                                input(type="radio" name="delivery")
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col
+                                                input(type="radio" name="delivery")
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+
+                            div.tab-pane#checkout-delivery2-d2
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.checkout-date
+                                    span.checkout-delivery-title__span ЖЕЛАЕМАЯ ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    div.checkout-date-and-time
+                                        div.checkout-date
+                                            div.input-group.date.datetimepicker
+                                                input.form-control.checkout-delivery-title__input(type="text")
+                                                span.input-group-addon
+                                        div.checkout-time
+                                            span.checkout-time__span с
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                            span.checkout-time__span до
+                                            select(class="checkout-date-select")
+                                                option(value="10:00") 10:00
+                                                option(value="11:00") 11:00
+                                                option(value="12:00") 12:00
+                                                option(value="13:00") 13:00
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company
+                                    div.delivery-company-row.delivery-company-row-title
+                                        div.delivery-company-col.col1 Адрес доставки
+                                        div.delivery-company-col.col2 служба доставки
+                                        div.delivery-company-col.col3 срок доставки
+                                        div.delivery-company-col.col4 стоимость
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                            div.tab-pane#checkout-delivery3-d2
+                                div.checkout-mobile-tire
+                                    label.checkout-mobile-tire-label
+                                        input(type="checkbox")
+                                        i.checkout-mobile-tire-icon
+                                        div.checkout-mobile-tire-text
+                                            span.checkout-mobile-tire__title Мобильный шиномонтаж
+                                                a(href="#" class="tooltip-grey" data-toggle="tooltip" title="Какое-то небольшое описание, которое поможет разобраться с данной услугой")
+                                            span.checkout-mobile-tire__text При доставке курьером, доступен мобильный шиномонтаж.
+                                            a.checkout-mobile-tire__link(href="#") Схема работы мобильного шиномонтажа
+                                div.checkout-delivery-city
+                                    span.checkout-delivery-title__span Город получения заказа
+                                    div.checkout-delivery-city-container
+                                        select(class="checkout-delivery-city-select" data-live-search="true")
+                                            option(value="Астрахань") Астрахань
+                                            option(value="Москва") Москва
+                                            option(value="Санкт-Петербург") Санкт-Петербург
+                                            option(value="Ярославль") Ярославль
+                                div.comment-delivery
+                                    span.comment-delivery__text Добавить комментарий к доставке
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                span.isue-point-title Выберите удобный пункт выдачи товара
+                                div.delivery-company
+                                    div.delivery-company-row.delivery-company-row-title
+                                        div.delivery-company-col.col1 Адрес доставки
+                                        div.delivery-company-col.col2 служба доставки
+                                        div.delivery-company-col.col3 срок доставки
+                                        div.delivery-company-col.col4 стоимость
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                    label.delivery-company-col-label
+                                        div.delivery-company-row
+                                            div.delivery-company-col.col1
+                                                input(type="radio" name="delivery")
+                                                a.delivery-company-col-address(href="#") ул. Бусиновская Горка, дом 2
+                                            div.delivery-company-col.col2
+                                                div.delivery-company-name
+                                                    img(src="local/templates/kolesatyt/img/logo-delivery.png")
+                                                    span.delivery-company-name__span стандарт
+                                            div.delivery-company-col.delivery-company-time.col3 15 - 20 дней
+                                            div.delivery-company-col.delivery-company-price.col4
+                                                span.delivery-company-price__rouble 500 &#8381;
+                                                span.delivery-company-price__text до подъезда
+                                div.delivery-bottom
+                                    span.delivery-bottom__span.delivery-bottom__span-comment Добавить комментарий к заказу
+                                    span.delivery-bottom__span.delivery-bottom__span-time Звонить мне в определенное время
+                                div.delivery-bottom-fields
+                                    textarea.comment-delivery__textarea(placeholder="Введите комментарий")
+                                    div.checkout-time.checkout-time-bottom
+                                        span.checkout-time__span с
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                                        span.checkout-time__span до
+                                        select(class="checkout-date-select")
+                                            option(value="10:00") 10:00
+                                            option(value="11:00") 11:00
+                                            option(value="12:00") 12:00
+                                            option(value="13:00") 13:00
+                    div.col-lg-3.col-md-3.col-lg-offset-1.col-md-offset-1
+                        div.row.delivery-payment-name-container
+                            div.col-lg-8.col-md-8
+                                span.delivery-payment-name
+                                    i.payment-title-icon
+                                    span Способ оплаты
+                        div.type-payments
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon1
+                                div.type-payments-text
+                                    span.type-payments-text__name Наличными при получении
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon2
+                                div.type-payments-text
+                                    span.type-payments-text__name Картой в пункте выдачи
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon3
+                                div.type-payments-text
+                                    span.type-payments-text__name Безналичный расчет
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon4
+                                div.type-payments-text
+                                    span.type-payments-text__name Картой при получении
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+                            label.type-payments-label
+                                input(type="radio" name="type-payments")
+                                div.type-paymants-icon
+                                    i.type-payments-icon5
+                                div.type-payments-text
+                                    span.type-payments-text__name Моментальный кредит онлайн
+                                    span.type-payments-text__text Показательный пример – художественная видимость многопланово иллюстрирует определенный сет.
+div.row.checkout-info-bottom
+    div.col-lg-12.col-md-12
+        span.checkout-info-bottom-text
+            |Ваш заказ будет доставлен в период
+            b &nbsp;с 25.12.2016 по 20.01.2017
+            |, стоимость с учетом доставки
+            b &nbsp;4 000 руб.
+            a.checkout-info-bottom__link(href="#") Посмотреть состав заказа
+div.cart-table.cart-table-checkout
+    div.cart-table-row.cart-table-row-titles
+        div.cart-table-col1
+            span.cart-table-title код
+        div.cart-table-col2
+            span.cart-table-title товар
+        div.cart-table-col4
+            span.cart-table-title наличие
+        div.cart-table-col5
+            span.cart-table-title стоимость
+    div.cart-table-container
+        div.cart-table-row.cart-table-row-internal
+            div.cart-table-col1
+                span.cart-table-article 0081246
+            div.cart-table-col2
+                div.cart-table-product
+                    div.cart-table-product__image.cart-table-product__image-checkout(href="#")
+                        img(src="local/templates/kolesatyt/img/cart-image.png")
+                    div
+                        span.cart-table-product__link.cart-table-product__link-checkout Шина Nokian Hakkapeliitta 8 suv
+                        span.cart-table-product__color Цвет: Черный
+            div.cart-table-col4
+                span.cart-table-instock__span В резерве
+                span.cart-table-instock-text
+                    |Товар поступит на склад
+                    b.cart-table-instock-text__bold  22.02.2017
+                    |, далее будет отправлен отдельным заказом
+            div.cart-table-col5
+                div.cart-table-price-and-delete
+                    div.cart-table-price
+                        span.cart-table__price 8 080 &#8381;
+                        span.cart-table__price-multi x
+                        span.cart-table__price 1
+                        span.cart-table__price-equally =
+                        span.cart-table__price-total 32 320
+                        span.cart-table__price-rouble &nbsp;&#8381;
+            div.cart-table-col6
+                label.cart-table-checkbox
+                    input(type="checkbox")
+                    span.cart-table-checkbox-span
+                        |Заказать шиномонтаж в
+                        a.cart-table-checkbox-span__city(href="#") &nbsp;г. Владикавказ
+                        |&nbsp;2000&#8381;
+        hr.table-cart-separate
+        div.cart-table-row.cart-table-row-internal
+            div.cart-table-col1
+                span.cart-table-article 0081246
+            div.cart-table-col2
+                div.cart-table-product
+                    div.cart-table-product__image.cart-table-product__image-checkout(href="#")
+                        img(src="local/templates/kolesatyt/img/cart-image.png")
+                    div
+                        span.cart-table-product__link.cart-table-product__link-checkout Шина Nokian Hakkapeliitta 8 suv
+                        span.cart-table-product__color Цвет: Черный
+            div.cart-table-col4
+                span.cart-table-instock__span В резерве
+                span.cart-table-instock-text
+                    | Товар поступит на склад
+                    b.cart-table-instock-text__bold  22.02.2017
+                    | , далее будет отправлен отдельным заказом
+            div.cart-table-col5
+                div.cart-table-price-and-delete
+                    div.cart-table-price
+                        span.cart-table__price 8 080 &#8381;
+                        span.cart-table__price-multi x
+                        span.cart-table__price 1
+                        span.cart-table__price-equally =
+                        span.cart-table__price-total 32 320
+                        span.cart-table__price-rouble &nbsp;&#8381;
+            div.cart-table-col6
+                label.cart-table-checkbox
+                    input(type="checkbox")
+                    span.cart-table-checkbox-span
+                        | Заказать шиномонтаж в
+                        a.cart-table-checkbox-span__city(href="#") &nbsp;г. Владикавказ
+                        | &nbsp;2000&#8381;
+        hr.table-cart-separate
+        div.cart-table-row.cart-table-row-internal
+            div.cart-table-col1
+                span.cart-table-article 0081246
+            div.cart-table-col2
+                div.cart-table-product
+                    div.cart-table-product__image.cart-table-product__image-checkout(href="#")
+                        img(src="local/templates/kolesatyt/img/cart-image.png")
+                    div
+                        span.cart-table-product__link.cart-table-product__link-checkout Шина Nokian Hakkapeliitta 8 suv
+                        span.cart-table-product__color Цвет: Черный
+            div.cart-table-col4
+                span.cart-table-instock__span В резерве
+                span.cart-table-instock-text
+                    | Товар поступит на склад
+                    b.cart-table-instock-text__bold  22.02.2017
+                    | , далее будет отправлен отдельным заказом
+            div.cart-table-col5
+                div.cart-table-price-and-delete
+                    div.cart-table-price
+                        span.cart-table__price 8 080 &#8381;
+                        span.cart-table__price-multi x
+                        span.cart-table__price 1
+                        span.cart-table__price-equally =
+                        span.cart-table__price-total 32 320
+                        span.cart-table__price-rouble &nbsp;&#8381;
+            div.cart-table-col6
+                label.cart-table-checkbox
+                    input(type="checkbox")
+                    span.cart-table-checkbox-span
+                        | Заказать шиномонтаж в
+                        a.cart-table-checkbox-span__city(href="#") &nbsp;г. Владикавказ
+                        | &nbsp;2000&#8381;
+    div.cart-table-row.cart-table-row-internal
+        div.cart-table-row.cart-table-row-internal
+            div.cart-table-col1
+                span.cart-table-article 0081246
+            div.cart-table-col2
+                div.cart-table-product
+                    div.cart-table-product__image.cart-table-product__image-checkout(href="#")
+                        img(src="local/templates/kolesatyt/img/cart-image.png")
+                    div
+                        span.cart-table-product__link.cart-table-product__link-checkout Шина Nokian Hakkapeliitta 8 suv
+                        span.cart-table-product__color Цвет: Черный
+            div.cart-table-col4
+                span.cart-table-instock__span В резерве
+                span.cart-table-instock-text
+                    | Товар поступит на склад
+                    b.cart-table-instock-text__bold  22.02.2017
+                    | , далее будет отправлен отдельным заказом
+            div.cart-table-col5
+                div.cart-table-price-and-delete
+                    div.cart-table-price
+                        span.cart-table__price 8 080 &#8381;
+                        span.cart-table__price-multi x
+                        span.cart-table__price 1
+                        span.cart-table__price-equally =
+                        span.cart-table__price-total 32 320
+                        span.cart-table__price-rouble &nbsp;&#8381;
+            div.cart-table-col6
+                label.cart-table-checkbox
+                    input(type="checkbox")
+                    span.cart-table-checkbox-span
+                        | Заказать шиномонтаж в
+                        a.cart-table-checkbox-span__city(href="#") &nbsp;г. Владикавказ
+                        | &nbsp;2000&#8381;
+div.row
+    div.col-lg-12.col-md-12
+        a.checkout-link__next(href="#") оформить заказ
+div.row
+    div.col-lg-12.col-md-12.checkout-return-container
+        span.checkout-return ВОЗВРАТ или ОБМЕН шин и дисков в течение 14 ДНЕЙ
+        a(href="#" class="tooltip-grey" data-toggle="tooltip" title="Какое-то небольшое описание, которое поможет разобраться с данной услугой")

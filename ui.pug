@@ -1,0 +1,120 @@
+html
+    include components/head.pug
+    script(src="local/templates/kolesatyt/js/libs.min.js")
+
+    body
+        div.container
+            div.content-ui
+                h1.h1 Заголовок 1
+                h2.h2 Заголовок 2
+            hr
+            div.content-ui
+                div
+                    label.radiobutton
+                        input(type="radio" name="radio")
+                        span Радиокнопка
+                div
+                    label.radiobutton
+                        input(type="radio" checked="checked" name="radio")
+                        span Радиокнопка
+            hr
+            div.content-ui
+                div
+                    label.checkbox
+                        input(type="checkbox" name="radio")
+                        span Чекбокс
+                div
+                    label.checkbox
+                        input(type="checkbox" checked="checked" name="radio")
+                        span Чекбокс
+            hr
+            div.content-ui
+                select.select-default
+                    option Выбор 1
+                    option Выбор 2
+                    option Выбор 3
+                    option Выбор 4
+                    option Выбор 5
+                    option Выбор 6
+            hr
+            div.content-ui
+                div
+                    a.btn__type1(href="#")
+                        span.btn__type1-span Тип кнопки 1
+                div
+                    a.btn__type2(href="#") Тип кнопки 2
+                div
+                    a.btn__type3(href="#") Тип кнопки 3
+                div
+                    a.btn__type4(href="#") Тип кнопки 4
+            hr
+            div.content-ui
+                div.table
+                    div.row.table-row
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 1
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 2
+                    div.row.table-row
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 1
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 2
+                    div.row.table-row
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 1
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 2
+                    div.row.table-row
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 1
+                        div.col-lg-6.col-md-6.col-sm-6.col-xs-12.table-column Ячейка 2
+            hr
+            div.content-ui
+                a(href="#" data-toggle="modal" data-target="#modal-default") Ссылка на попап
+                div#modal-default.modal.fade(role="dialog")
+                    div.modal-dialog-default
+                        i.close-popup(data-dismiss="modal")
+                        p
+                            | Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32
+                            | Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже. Также даны разделы 1.10.32 и 1.10.33 "de Finibus Bonorum et Malorum" Цицерона и их английский перевод, сделанный H. Rackham, 1914 год.
+            hr
+            div.content-ui
+                div#carousel-default.carousel.slide.slider-dedault(data-interval="3000" data-ride="carousel")
+                    ol.carousel-indicators
+                        li(data-target="#carousel-default" data-slide-to="0" class="active")
+                        li(data-target="#carousel-default" data-slide-to="1")
+                        li(data-target="#carousel-default" data-slide-to="2")
+                    div.carousel-inner
+                        div.active.item
+                            img(src="local/templates/kolesatyt/img/slide-default.jpg")
+                        div.item
+                            img(src="local/templates/kolesatyt/img/slide-default.jpg")
+                        div.item
+                            img(src="local/templates/kolesatyt/img/slide-default.jpg")
+            hr
+            div.content-ui
+                div.range-select-container
+                    div.range-select
+                        div.range-select-div
+                            span.range-select-span от
+                            input(type="text" name="pricefrom" class="range-select-price" id="pricefrom" value="")
+                        div.range-select-div
+                            span.range-select-span до
+                            input(type="text" name="priceto" class="range-select-price" id="priceto" value="")
+                    input(type="text" id="range" name="range" value="")
+            hr
+            div.content-ui
+                a(href="#" data-toggle="tooltip" class="tooltip-link" title="Какая-то небольшая подсказка. Можно использовать вместе с текстом")
+            hr
+            div.content-ui
+                ul.nav-tabs.default-tabs
+                    li.active
+                        a(href="#tab1" data-toggle="tab") Таб 1
+                    li
+                        a(href="#tab2" data-toggle="tab") Таб 2
+                    li
+                        a(href="#tab3" data-toggle="tab") Таб 3
+                div.tab-content
+                    div.tab-pane.active#tab1
+                        span Таб1
+                    div.tab-pane#tab2
+                        span Таб2
+                    div.tab-pane#tab3
+                        span Таб3
+
+    script(src="local/templates/kolesatyt/js/common-programmer.js")
+    script(src="local/templates/kolesatyt/js/common.js")

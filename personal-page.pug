@@ -1,0 +1,30 @@
+html
+	include components/head.pug
+	body#top
+		include components/header.pug
+		div.container
+			span.title-personal Личный кабинет
+			div.personal-page-mobile.show-mobile
+				include components/personal-page/personal-page-mobile.pug
+			div.row.row-personal-top.hide-mobile
+				div.col-lg-10.col-md-10
+					ul.catalog-detail-tabs.nav-tabs.personal-tabs
+						li.active
+							a(href="#list-order" data-toggle="tab") Список заказов
+						li
+							a(href="#personal" data-toggle="tab") Личные данные
+						li
+							a(href="#favorites" data-toggle="tab") Избранные товары
+				a.catalog-item-order-tire.personal-exit(href="#") Выйти из личного кабинета
+			div.row.hide-mobile
+				div.col-lg-12.tab-content.col-sm-12
+					div(id="list-order" class="tab-pane tab-personal active")
+						include components/personal-page/list-orders.pug
+					div(id="personal" class="tab-pane tab-personal")
+						include components/personal-page/personal-info.pug
+					div(id="favorites" class="tab-pane tab-personal")
+						include components/personal-page/favorites.pug
+		include components/footer.pug
+
+
+

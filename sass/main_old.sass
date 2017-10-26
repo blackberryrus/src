@@ -1,0 +1,7867 @@
+@import "../bootstrap/_bootstrap"
+
+@import "../libs/slick-carousel/slick/slick.scss"
+@import "../libs/jquery.form-styler/jquery.formstyler"
+@import "../libs/bootstrap-select/dist/css/bootstrap-select"
+@import "../libs/ion.rangeSlider/css/ion.rangeSlider"
+@import "../libs/ion.rangeSlider/css/ion.rangeSlider.skinHTML5"
+@import "../libs/jquery-scrollbar/jquery.scrollbar"
+@import "../libs/jquery-scrollbar/jquery.scrollbar"
+@import "../libs/magnificent/src/css/mag"
+@import "../libs/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker"
+
+@import "tools/_base.sass"
+@import "tools/_sprite.sass"
+@import "tools/_vars.sass"
+
+body
+  display: flex
+  flex-direction: column
+
+iframe
+  border: none !important
+
+.container
+  flex: 1 0 auto
+
+.modal-backdrop
+  display: none
+
+.jq-radio
+  width: 20px
+  height: 20px
+  min-width: 20px
+  border: 1px solid #c2c2c2
+  box-shadow: none
+  background: #fff
+  margin: 0
+  outline: none
+  position: relative
+  margin-right: 9px
+  top: auto
+  &.focused
+    border: 1px solid #c2c2c2
+
+.bootstrap-datetimepicker-widget table td.disabled, .bootstrap-datetimepicker-widget table td.disabled:hover
+  color: #aaaaaa !important
+
+.jq-radio.checked .jq-radio__div
+  background-color: #303030
+  margin: 0
+  position: absolute
+  top: 50%
+  margin-top: -5px
+  left: 50%
+  margin-left: -5px
+
+.jq-checkbox
+  width: 22px
+  height: 22px
+  min-width: 22px
+  border: 1px solid #c2c2c2
+  box-shadow: none
+  background: #fff
+  margin: 0
+  outline: none
+  position: relative
+  margin-right: 9px
+  top: auto
+  cursor: pointer
+  border-radius: 0
+  &.focused
+    border: 1px solid #c2c2c2
+  &.checked
+    &:before
+      content: ''
+      position: absolute
+      @include sprite($checkbox)
+      top: 50%
+      margin-top: -6px
+      left: 50%
+      margin-left: -8px
+  & .jq-checkbox__div
+    display: none
+
+h1
+  margin-top: 0
+
+.h2-container
+  text-align: center
+  position: relative
+  margin: 100px 0 30px 0
+  &:before
+    content: ''
+    width: 100%
+    height: 1px
+    background: #cfcfcf
+    display: block
+    top: 50%
+    position: absolute
+    margin-top: -1px
+  &.videoreviews
+    margin-bottom: 80px
+
+p, ul
+  font-size: 17px
+  color: $c60
+
+h2
+  display: inline-block
+  background: white
+  font-family: $latoBlack
+  color: #0c141c
+  text-transform: uppercase
+  position: relative
+  padding: 0 30px
+  font-size: 26px
+  margin-top: 0
+  margin-bottom: 0
+
+h3
+  text-transform: uppercase
+  font-family: $latoBlack
+  margin: 0
+  margin-bottom: 40px
+
+.show-mobile
+  display: none
+
+.show-tablet
+  display: block
+
+.header-top
+  padding-top: 9px
+  padding-bottom: 13px
+  background-color: #f2f2f2
+  position: relative
+
+.header-top-container
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.header-top-left
+  display: flex
+  align-items: center
+
+.header-top-phones
+  margin-left: 15px
+
+.header-top-right
+  display: flex
+  align-items: center
+
+.select-city
+  display: flex
+
+.header-puckup
+  margin-top: 5px
+  &:hover
+    .header-pickup__text
+      opacity: 1
+      text-decoration: underline
+
+.select-city-content
+  cursor: pointer
+  position: relative
+  padding-left: 30px
+  margin-right: 10px
+  &.active
+    z-index: 150
+    color: rgba(255, 255, 255, 0.4)
+    & .select-city__name
+      color: #fff
+      &:before
+        @include sprite($mini-arrow-status)
+        transform: rotate(180deg)
+    #svg-city-header
+      display: none
+    #svg-city-header-white
+      display: block
+
+#svg-city-header
+  position: absolute
+  left: 0
+  top: 50%
+  margin-top: -14px
+  width: 20px
+  height: 28px
+
+#svg-city-header-white
+  position: absolute
+  left: 0
+  top: 50%
+  margin-top: -14px
+  width: 20px
+  height: 28px
+  display: none
+
+.select-city__name
+  font-family: $latoSemibold
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.40)
+  cursor: pointer
+  position: relative
+  &:hover
+    border-bottom-color: transparent
+  &:before
+    @include sprite($mini-arrow)
+    content: ''
+    position: absolute
+    right: -12px
+    top: 50%
+    margin-top: -1px
+
+.select-region__name
+  display: block
+  color: $c60
+  font-size: 14px
+
+.header-top-phone-link
+  font-family: $latoSemibold
+  color: $c30
+  font-size: 20px
+  display: block
+  text-decoration: none
+  &:hover
+    text-decoration: none
+    color: #303030
+
+.header-top-phone-text
+  color: $c60
+  font-size: 14px
+
+.header-car
+  position: relative
+  padding-left: 75px
+  border-left: 1px solid #d5d5d5
+  padding-right: 16px
+  transition: 0.2s
+  cursor: pointer
+
+.header-car-popup
+  display: none
+  position: absolute
+  background: white
+  width: 380px
+  right: -20px
+  top: 50px
+  padding: 25px
+  z-index: 5
+  box-shadow: -1px 3px 8px rgba(0, 1, 2, 0.3)
+  &.active
+    display: block
+  & .tire-selection-bottom
+    flex-wrap: wrap
+    margin: 0
+    width: 100%
+    & .tire-selection-bottom-btn
+      margin: 0
+      margin-bottom: 17px
+      text-transform: uppercase
+      line-height: 20px
+  & .tire-selection-select
+    margin-bottom: 15px
+
+.close-car
+  @include sprite($close-cart)
+  position: absolute
+  display: block
+  right: 13px
+  top: 13px
+  transition: 0.2s
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+
+#svg-header-car
+  position: absolute
+  left: 20px
+  top: 50%
+  margin-top: -12px
+  width: 39px
+  height: 24px
+
+#svg-header-car-pc
+  position: absolute
+  left: 20px
+  top: 50%
+  margin-top: -12px
+  width: 39px
+  height: 24px
+
+.svg-detail-coin
+  width: 20px
+  position: absolute
+  height: 20px
+  left: -35px
+  top: 50%
+  margin-top: -8px
+
+
+.header-car-name
+  color: $c30
+  font-size: 14px
+  display: block
+  font-family: $latoSemibold
+
+.header-car-title
+  color: $c60
+  font-size: 14px
+
+.header-car-and-status
+  display: flex
+  justify-content: flex-end
+
+.header-status
+  padding-right: 42px
+  padding-left: 52px
+  position: relative
+  cursor: pointer
+  display: flex
+  align-items: center
+
+#svg-header-status
+  position: absolute
+  left: 30px
+  top: 50%
+  margin-top: -15px
+  width: 8px
+  height: 30px
+
+#svg-header-status-arrow
+  position: absolute
+  right: 30px
+  top: 50%
+  margin-top: -2px
+  width: 6px
+  height: 4px
+
+.header-status-text
+  color: #fff
+  font-size: 14px
+  line-height: 14px
+
+.header-middle
+  padding-top: 30px
+  padding-bottom: 30px
+  background: #0f263d
+
+.header-middle-container
+  display: flex
+  align-items: center
+
+.header-search-form
+  display: flex
+  margin: 0
+
+.header-search-submit
+  width: 94px
+  height: 40px
+  background: #6a9c1d
+  border: none
+  color: white
+  text-transform: uppercase
+  font-size: 14px
+  transition: 0.2s
+  margin-left: 3px
+  &:hover
+    background: #7cb12b
+
+.header-search-field
+  flex-grow: 1
+  background: #3b4e60
+  color: #fff
+  border: none
+  font-size: 16px
+  padding: 0 16px
+
+.header-cart-count
+  display: block
+  color: $c60
+  font-size: 14px
+
+.header-cart
+  padding-left: 63px
+  padding-right: 20px
+  position: relative
+  cursor: pointer
+  border-right: 1px solid #d5d5d5
+  border-left: 1px solid #d5d5d5
+  &:hover
+    .header-cart-popup
+      display: block
+
+#svg-header-cart
+  position: absolute
+  left: 16px
+  top: 50%
+  margin-top: -20px
+  width: 33px
+  height: 38px
+
+.header-cart-count-green
+  background: #6a9c1d
+  color: #fff
+  display: inline-block
+  text-align: center
+  min-width: 27px
+  border-radius: 8px
+  font-size: 14px
+  margin-right: 3px
+  height: 18px
+  padding: 0 2px
+
+.header-cart-price
+  font-size: 14px
+  color: $c60
+  padding-top: 3px
+  position: relative
+  &:after
+    @include sprite($mini-arrow-cart)
+    content: ''
+    position: absolute
+    right: -10px
+    top: 50%
+    margin-top: -2px
+
+.header-cart-and-account
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  position: relative
+
+.header-account
+  position: relative
+  display: flex
+
+.header-account__link
+  color: #fff
+  font-size: 14px
+  position: relative
+  padding-left: 38px
+  &:hover
+    text-decoration: underline
+    color: #fff
+
+#svg-header-account
+  position: absolute
+  left: 0px
+  top: 50%
+  margin-top: -13px
+  width: 28px
+  height: 28px
+
+#svg-header-account-grey
+  position: absolute
+  left: 0px
+  top: 50%
+  margin-top: -18px
+  width: 28px
+  height: 28px
+
+.header-menu-and-language
+  margin-bottom: 0
+  min-height: auto
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  position: relative
+
+.header-menu
+  list-style: none
+  margin-top: 0
+  margin-bottom: 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.header-menu-li
+  padding-top: 10px
+  padding-bottom: 22px
+
+  &:hover
+    & + .header-submenu
+      opacity: 1
+      visibility: visible
+
+.header-menu-li__link
+  text-transform: uppercase
+  color: $c30
+  font-size: 14px
+  padding: 0 !important
+  padding-right: 30px !important
+  margin-top: 10px
+  &.active .header-menu-li__link-span
+    border-top: 4px solid #0f263d
+  &:hover .header-menu-li__link-span
+    background: transparent !important
+    border-top: 4px solid #0f263d
+
+.header-menu-li__link-span
+  border-top: 4px solid transparent
+  padding-top: 10px !important
+
+.select-languages
+  text-align: right
+  position: relative
+  float: right
+  min-width: 110px
+
+.select-languages__text
+  color: $c60
+  font-size: 14px
+  margin-right: 10px
+
+.select-languages__selected
+  font-size: 14px
+  padding-right: 10px
+  position: relative
+  cursor: pointer
+  font-weight: bold
+  &:after
+    @include sprite($mini-arrow)
+    content: ''
+    position: absolute
+    right: 0px
+    top: 50%
+    margin-top: -2px
+
+.header-search
+  margin-top: -18px
+
+.header-search-ym
+  color: #fff
+  font-size: 13px
+  display: flex
+
+.header-search-ym-green
+  color: #6a9c1d
+
+.header-search-ym-stars
+  //@include sprite($stars-ym)
+  display: inline-block
+  margin-left: 10px
+  margin-top: 2px
+
+#svg-header-star
+  height: 12px
+  width: 12px
+
+.tire-selection
+  background: url(../img/background-tire-selection.jpg) center center
+  background-size: cover
+  padding: 80px 0 80px 0
+
+.tire-selection-block-names
+  margin: 0
+  padding: 0
+  display: flex
+
+.tire-selection-block-names-element
+  width: 33.33%
+  background: rgba(106, 156, 29, 0.68)
+  list-style: none
+  text-align: center
+  cursor: pointer
+  font-family: $latoLight
+  color: #fff
+  line-height: 18px
+  font-size: 16px
+  padding: 8px 0 10px 0
+  transition: 0.2s
+  &2
+    margin: 0 1px
+  &:hover
+    background: rgba(106, 156, 29, 0.80)
+  &.active
+    background: #6a9c1d
+
+.tire-selection-block-names-element1__icon
+  @include sprite($tire-selection-mini-icon1)
+  display: block
+  margin: 0 auto
+
+.tire-selection-block-names-element2__icon
+  @include sprite($tire-selection-mini-icon2)
+  display: block
+  margin: 0 auto
+
+.tire-selection-block-names-element3__icon
+  @include sprite($tire-selection-mini-icon3)
+  display: block
+  margin: 0 auto
+
+.tire-selection-block-names-element-icon-container
+  height: 32px
+  display: flex
+  align-items: center
+  margin-bottom: 7px
+  justify-content: center
+
+.tire-selection-block-section
+  background: #fff
+  display: none
+  padding: 20px 30px
+  &.active
+    display: block
+
+.tire-selection-block-why
+  color: $c60
+  font-size: 16px
+  text-decoration: none
+  margin-bottom: 12px
+  display: block
+  line-height: 19px
+  position: relative
+  text-decoration: underline
+  &__bold
+    font-family: $latoHeavy
+    font-size: 18px
+  &:hover
+    color: $c60
+    & .tire-selection-block-hover
+      display: block
+
+.tire-selection-block-hover
+  position: absolute
+  width: 100%
+  left: 0
+  background: white
+  z-index: 50
+  padding: 20px
+  box-shadow: 0 5px 10px rgba(0, 1, 2, 0.6)
+  top: 30px
+  text-decoration: none
+  display: none
+  & .header-triangle
+    right: 45%
+
+.tire-selection-line-big.bootstrap-select.btn-group
+  width: 100% !important
+  & .dropdown-toggle
+    border: 1px solid #cecece
+    color: $c60 !important
+    border-radius: 0
+    & .caret
+      right: 15px !important
+  &:hover
+    & .dropdown-toggle
+      border: 1px solid #cecece
+      color: #000 !important
+      border-radius: 0
+      color: $c60 !important
+  & .dropdown-menu
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.57)
+    border-radius: 0
+    padding: 0
+    & a
+      outline: none !important
+    & li.selected
+      & a
+        background-color: #6a9c1d !important;
+        color: #fff
+
+.tire-selection-line-small.bootstrap-select.btn-group
+  width: 48% !important
+  & .dropdown-toggle
+    border: 1px solid #cecece
+    color: $c60 !important
+    border-radius: 0
+    & .caret
+      right: 15px !important
+  &:hover
+    & .dropdown-toggle
+      border: 1px solid #cecece
+      color: #000 !important
+      border-radius: 0
+      color: $c60 !important
+  & .dropdown-menu
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.57)
+    border-radius: 0
+    padding: 0
+    & a
+      outline: none !important
+    & li.selected
+      & a
+        background-color: #6a9c1d !important;
+        color: #fff
+
+.tire-selection-line
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+
+.tire-selection-radios
+  margin-top: 40px
+  display: flex
+  justify-content: space-around
+
+.tire-selection-radios-label
+  display: flex
+  align-items: center
+  cursor: pointer
+  & .jq-radio.checked .jq-radio__div
+    background-color: #6a9c1d
+    box-shadow: none
+
+.tire-selection-buttons-bottom
+  display: flex
+  justify-content: center
+  margin-top: 75px
+  & .tire-selection-bottom-btn
+    max-width: 245px
+
+.tire-selection-block-names-element-icon > img
+  width: 32px
+
+.tire-selection-radios-label-span
+  font-size: 16px
+  line-height: 16px
+  font-weight: normal
+  color: $c60
+
+.tire-selection-content-lines
+  margin: 0 auto
+  margin-top: 40px
+  margin-bottom: 40px
+  max-width: 515px
+
+.tire-selection-select
+  margin-right: 25px
+  width: auto !important
+  &.open
+    background: none
+
+.tire-selection-select.focused .jq-selectbox__select
+  border: none
+
+.tire-selection-select .jq-selectbox__select
+  border: none
+  background: none
+  box-shadow: none
+  padding: 0
+
+.tire-selection-select .jq-selectbox__trigger
+  display: none
+
+.tire-selection-select .jq-selectbox__select-text
+  width: 105% !important
+  color: #41648c
+  font-style: italic
+  font-size: 16px
+  border-bottom: 2px dashed #c8b8c4
+  line-height: 20px
+
+.tire-selection-select a:hover
+  background: #85bb32 !important
+  color: #fff !important
+
+.tire-selection-select .jq-selectbox__dropdown
+  width: 150px !important
+  border-radius: 0
+
+.tire-selection-select.disabled .jq-selectbox__select
+  background: none
+
+.tire-selection-select.disabled .jq-selectbox__select-text
+  color: $c60
+
+.tire-selection-select .jq-selectbox__dropdown li
+  padding: 3px 10px 3px
+  font-size: 12px
+
+.tire-selection-block-section-selects
+  margin-bottom: 20px
+  .dropdown-toggle
+    border: none
+    padding: 0
+    outline: none
+    &:hover
+      background: #fff
+    &:focus
+      outline: none !important
+
+.tire-selection-block-images__image
+  display: block
+  margin: 0 auto
+  margin-bottom: 20px
+
+.tire-selection-color__item
+  width: 12px
+  height: 12px
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3)
+  display: inline-block
+  cursor: pointer
+  margin: 0 4px
+  &.color-white
+    background: #ededed
+  &.color-grey
+    background: #c6a8a8
+  &.color-bez
+    background: #f2b577
+  &.color-green
+    background: #64c343
+  &.color-red
+    background: #c40d0f
+  &.color-blue
+    background: #2b4e79
+  &.color-black
+    background: #000000
+
+.tire-selection-color
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  margin-top: 10px
+
+.tire-selection-color-text
+  font-size: 14px
+  display: inline-block
+  margin-right: 10px
+  color: #303030
+
+.tire-selection-bottom
+  display: flex
+  justify-content: space-between
+
+.tire-selection-bottom-btn
+  background: #6a9c1d
+  color: white
+  font-size: 15px
+  height: 55px
+  padding: 12px 28px 12px 28px
+  align-items: center
+  display: flex
+  line-height: 16px
+  transition: 0.2s
+  position: relative
+  flex-basis: 200px
+  flex-grow: 1
+  &.item2
+    margin: 0 20px
+  &:hover
+    background: #7cb12b
+    text-decoration: none
+    color: #fff
+  &:visited, &:active, &:focus
+    text-decoration: none
+    color: #fff
+
+.tire-selection-bottom-btn-icon
+  display: block
+  margin-right: 20px
+  & > img
+    width: 26px
+  &.item1
+    @include sprite($tire-selection-bottom-icon1)
+    display: block
+    margin-right: 20px
+    min-width: 26px
+  &.item2
+    @include sprite($tire-selection-bottom-icon2)
+    display: block
+    margin-right: 20px
+    min-width: 26px
+  &.item3
+    @include sprite($tire-selection-bottom-icon3)
+    display: block
+    margin-right: 20px
+    min-width: 26px
+
+.js-backdrop
+  &:before
+    content: ''
+    width: 64px
+    height: 64px
+    background: url(http://belkevicha.beget.tech/5.gif)
+    display: block
+    position: absolute
+    z-index: 20
+    left: 50%
+    margin-left: -32px
+
+.tire-footnote
+  display: block
+  margin-top: 10px
+  color: $c30
+  font-size: 14px
+  line-height: 15px
+  position: relative
+  padding-left: 10px
+  &:before
+    content: '*'
+    position: absolute
+    left: 0px
+    color: $c30
+    font-size: 14px
+    line-height: 15px
+
+.tire-selection-container
+  display: flex
+  align-items: center
+
+.about-text-slider-item
+  display: flex
+  margin-bottom: 30px
+  &:last-child
+    margin: 0
+
+.carousel.fade
+  opacity: 1
+
+.carousel.fade .item
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  opacity: 0
+  transition: opacity .8s
+
+.carousel.fade .item.active
+  position: relative
+  opacity: 1
+
+.about-text-icon
+  margin-right: 50px
+
+.about-text-slider-description
+  font-size: 18px
+  color: #ffffff
+  opacity: 0.9
+  line-height: 22px
+  font-family: $latoLight
+
+.about-text-slider-indicators
+
+.about-text-slider-title
+  color: #ffffff
+  font-family: Georgia, Arial, sans-serif
+  display: block
+  font-style: italic
+  font-size: 22px
+  line-height: 22px
+  margin-bottom: 10px
+
+.about-text-slider-indicators
+  right: -16px
+  width: 16px
+  margin: 0
+  left: auto
+  top: 50%
+  height: 50px
+  margin-top: -25px
+  & li
+    margin-bottom: 21px !important
+    display: block !important
+    width: 16px !important
+    height: 16px !important
+    position: relative
+    background: transparent !important
+    border: 1px solid transparent !important
+    &:before
+      content: ''
+      left: 1px
+      top: 1px
+      position: absolute
+      border-radius: 50%
+      background-color: #FFF
+      opacity: 0.3
+      width: 12px
+      height: 12px
+    &.active
+      border: 1px solid #fff !important
+      &:before
+        content: ''
+        opacity: 1 !important
+        width: 8px !important
+        height: 8px !important
+        left: 3.5px
+        top: 3px
+
+.popular-model-container
+  margin-bottom: 100px
+
+.popular-product-tabs
+  list-style: none
+  margin: 0
+  padding: 0
+  display: flex
+  margin-bottom: 40px
+
+.popular-product-tabs-name
+  text-transform: uppercase
+  width: 110px
+  font-size: 12px
+  color: $c60
+  border: 1px solid $c60
+  height: 30px
+  display: flex
+  cursor: pointer
+  margin-right: 22px
+  text-align: center
+  align-items: center
+  justify-content: center
+  transition: 0.2s
+  &:hover
+    background: #6a9c1d
+    border-color: transparent
+    color: white
+  &.active
+    color: #6a9c1d
+    border: 1px solid #6a9c1d
+    &:hover
+      background: #fff;
+      color: #6a9c1d
+
+.popular-product-block__image
+  transition: 0.2s
+  display: block
+  padding-bottom: 28px
+
+.popular-product-block-item
+  min-width: 165px
+  max-width: 165px
+  position: relative
+//margin: 0 80px
+
+.popular-product-block-link__big
+  display: block
+  color: #606060
+  font-size: 16px
+  text-align: center
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+.popular-product-block-link__small
+  font-size: 15px
+  color: #303030
+  text-align: center
+  display: block
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+.popular-product-block-icons
+  display: block
+
+.popular-product-block-icons__item
+  width: 39px
+  margin: 0 auto
+  margin-bottom: 10px
+  display: block
+  &.sun
+    & .st0
+      fill: #FFA219 !important
+  &.ships
+    & .st0
+      fill: #df4749
+    & .st1
+      fill: #000
+  &.spring
+    & .st0
+      fill: #699FC0 !important
+    & .st2
+      fill: #FFA219 !important
+
+.popular-icon
+  height: 39px
+
+.catalog-detail-big-image-delivery
+  & .popular-product-block-icons__item.sun
+    & .st0
+      fill: #303030 !important
+  & .popular-product-block-icons__item.allweather
+    & .st0
+      fill: #303030 !important
+    & .st2
+      fill: #303030 !important
+  & .popular-product-block-icons__item.snowflake
+    & .st0
+      fill: #303030 !important
+  & .popular-product-block-icons__item.ships
+    & .st0
+      fill: #303030 !important
+    & .st1
+      fill: #606060 !important
+
+.popular-product-block-icons__sun-ice
+  @include sprite($icon-rite-sun-ice)
+  display: block
+  margin-bottom: 10px
+
+.popular-product-block-icons__thorns
+  @include sprite($icon-rite-thorns)
+  display: block
+  margin-bottom: 10px
+
+.popular-product-block-icons
+  position: absolute
+  top: 0
+  right: 0
+
+.popular-product-block-item
+  &:hover
+    .popular-product-block__image
+      opacity: 0.8
+    a
+      text-decoration: none
+
+.popular-product-block-items
+  display: flex
+  justify-content: space-between
+
+.popular-product-block
+  display: none
+  &.active
+    display: block
+
+.popular-produt__link-all
+  display: flex
+  margin-top: 50px
+  width: 100%
+  align-items: center
+  height: 40px
+  border: 2px solid $c60
+  justify-content: center
+  color: $c60
+  text-transform: uppercase
+  transition: 0.2s
+  font-family: $latoBold
+  font-size: 14px
+  opacity: 0.4
+  &:hover
+    background: rgba(96, 96, 96, 0.70)
+    color: #fff
+    border-color: transparent
+    text-decoration: none
+    opacity: 1
+
+.baner-container
+  margin-bottom: 100px
+  margin-top: 100px
+
+.container-news
+  margin-bottom: 100px
+
+.news-item
+  margin-bottom: 57px
+  &:last-child
+    margin: 0
+
+.news-item-header
+  display: flex
+  border-top: 1px solid #d4baba
+  margin-bottom: 40px
+
+.news-item-header-date
+  background: #84c225
+  color: white
+  text-align: center
+  width: 86px
+  min-width: 85px
+  height: 75px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: center
+  flex-direction: column
+  font-size: 16px
+  margin-right: 40px
+
+.news-item-header-date__span
+  display: block
+
+.news-item-header__link
+  font-size: 20px
+  color: #000
+  display: block
+  padding-top: 15px
+  font-family: $latoBold
+  line-height: 25px
+  &:hover
+    text-decoration: none
+
+.news-item__text
+  color: $c60
+  font-size: 18px
+  margin-bottom: 20px
+  min-height: 100px
+
+.news-count__reviews
+  padding-left: 27px
+  color: #8b8b8b
+  font-size: 14px
+  position: relative
+  &:before
+    content: ''
+    @include sprite($eyes)
+    position: absolute
+    display: block
+    left: 0
+    top: 50%
+    margin-top: -7px
+
+.container-videoreviews
+  margin-bottom: 95px
+
+.videoreviews-block
+  position: relative
+  padding-bottom: 56.25%
+  /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  padding-top: 30px
+  height: 0
+  overflow: hidden
+
+.videoreviews-block iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.videoreviews-socials
+  display: flex
+  margin-top: 20px
+  align-items: center
+
+.videoreviews-social-item
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.footer-social
+  height: 25px
+  display: block
+  width: 25px
+  margin-right: 14px
+
+.footer-social g
+  fill: #606060
+
+.videoreviews__b
+  font-size: 20px
+  color: #020c16
+  font-family: "Lato-Black", Arial, sans-serif
+
+.videoreviews__all-video
+  color: #6a9c1d
+  margin-top: -25px
+  font-size: 16px
+  display: block
+  text-align: right
+  text-decoration: underline
+  font-style: italic
+  font-family: "Georgia", Arial, sans-serif
+  &:hover
+    color: #6a9c1d
+    text-decoration: none
+
+.about-accordeon
+  margin-top: 55px
+
+.about-accordeon-header
+  position: relative
+  margin-bottom: -1px
+  border-bottom: 1px solid #e7e7e7
+  &:hover
+    .about-accordeon-header__text
+      color: #84c225
+
+.about-accordeon-header__link
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  &:after
+    content: ''
+    @include sprite($accordeon-arrows)
+    position: absolute
+    right: 20px
+    top: 50%
+    margin-top: -10px
+    transform: rotate(180deg)
+  &.collapsed
+    &:after
+      transform: rotate(0deg)
+
+.about-accordeon__item
+  border: 1px solid #e7e7e7
+  border-radius: 0
+  margin-bottom: -1px
+
+.about-accordeon-header
+  padding: 5px 20px
+  display: flex
+  align-items: center
+  position: relative
+
+.about-accordeon-header__number
+  font-size: 40px
+  color: #84c225
+  font-style: italic
+  font-family: $georgia
+  margin-right: 37px
+  margin-top: -8px
+
+.about-accordeon-header__text
+  color: #2c2c2c
+  font-size: 20px
+  font-family: $latoBold
+
+footer
+  margin-top: 115px
+  margin-bottom: 30px
+
+.footer-link__bold
+  font-size: 14px
+  font-family: $latoBold
+  color: $c30
+  display: block
+  margin-bottom: 25px
+  text-transform: uppercase
+  &:hover
+    color: $c30
+
+.row-checkout-add-number
+  margin-bottom: 10px
+
+.footer-link__normal
+  display: block
+  font-size: 16px
+  color: $c60
+  &:hover
+    color: $c60
+
+.footer-phones
+  display: flex
+  margin-bottom: 21px
+
+.footer-phones-item
+  margin-right: 20px
+
+.footer-phones-item__phone
+  display: block
+  color: $c30
+  font-weight: bold
+  &:hover
+    text-decoration: none
+    color: $c30
+
+.footer-phones-item__mail
+  color: #41648d
+  font-size: 16px
+
+.footer-phones-item__mail
+  display: block
+
+.footer-socials_text
+  font-size: 14px
+  color: $c30
+  margin-bottom: 5px
+  display: block
+
+.footer-socials-items
+  display: flex
+  margin-bottom: 23px
+
+.tire-selection-block-section-selects .dropdown-menu
+  width: 200px
+  border-radius: 0
+  overflow: hidden
+  border: none
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.57)
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle
+  background: none
+  border: none
+  box-shadow: none
+  border-radius: 0
+
+.bootstrap-select.btn-group .dropdown-toggle .caret
+  //position: absolute
+  right: -15px !important
+//top: 50%
+//margin-top: -2px
+
+.tire-selection-block-section-selects .dropdown-menu .active a
+  background-color: #6a9c1d !important
+
+.tire-selection-block-section-selects a
+  outline: none
+  &:focus
+    outline: none
+
+.tire-selection-block-section-selects .form-control
+  border-radius: 0 !important
+  outline: none !important
+  border: none
+  border-bottom: 1px solid #ccc
+  box-shadow: none
+  padding: 0
+  margin-bottom: 10px
+  height: 24px
+  font-style: italic
+  & a
+    padding: 3px 10px !important
+  &:focus
+    outline: none
+    border-bottom: 1px solid #ccc
+    box-shadow: none
+
+.tire-selection-block-section-selects .dropdown-toggle
+  border-radius: 0
+  color: #41648c !important
+  font-style: italic
+  font-size: 16px
+  border-bottom: 1px dashed rgba(65, 100, 140, 0.40) !important
+  position: relative
+  & .bs-caret
+    opacity: 0.4
+
+.tire-selection-block-section-selects .dropdown-toggle .filter-option
+  width: 105% !important
+
+.tire-selection-select.open .dropdown-toggle
+  border-bottom: 2px dashed
+
+.about-icon
+  width: 80px
+  height: 80px
+  & path
+    fill: #b7e76d;
+
+#svg-selection-car
+  width: 32px
+  height: 32px
+  cursor: pointer
+  & path
+    fill: #fff
+
+#svg-selection-whell
+  width: 32px
+  height: 32px
+  cursor: pointer
+  & path
+    fill: #fff
+
+.nav > li > a:hover, .nav > li > a:focus
+  background: #fff !important
+
+.container-breadcrumps
+  margin-top: 29px
+  margin-bottom: 29px
+
+.container-breadcrumps__link
+  display: inline-block
+  color: $c60
+  opacity: 0.8
+  font-size: 14px
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+  &:after
+    content: '/'
+    display: inline-block
+    margin: 0 5px
+    color: #000
+
+.container-breadcrumps__span
+  display: inline-block
+  color: #000
+  font-size: 14px
+
+.area-baner
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.container-catalog-selection
+  margin-bottom: 72px
+
+.catalog-selection-top
+  display: flex
+  align-items: center
+  margin-top: 25px
+  margin-bottom: 33px
+
+.catalog-selection-top__title
+  color: #0c141c
+  font-size: 26px
+  font-weight: bold
+  text-transform: uppercase
+
+.catalog-selection-top__link-btn
+  border: 1px solid rgba(96, 96, 96, 0.53)
+  color: $c60
+  text-transform: uppercase
+  font-size: 12px
+  padding: 7px 26px 7px 11px
+  line-height: 12px
+  margin-left: 20px
+  transition: 0.2s
+  position: relative
+  &:hover
+    text-decoration: none
+    border: 1px solid rgba(96, 96, 96, 1)
+  &:before
+    content: ''
+    @include sprite($arrow-back)
+    position: absolute
+    right: 11px
+    top: 50%
+    margin-top: -5.5px
+
+.catalog-selection-name-auto
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+.catalog-selection-name-auto-edit
+  border: 1px solid rgba(96, 96, 96, 0.4)
+  padding: 7px 20px 7px 20px
+  line-height: 12px
+  margin-right: 30px
+  transition: 0.2s
+  position: relative
+  &:hover
+    text-decoration: none
+    background: rgba(106, 156, 29, 1)
+    border: 1px solid rgba(106, 156, 29, 0.4)
+    & .catalog-selection-name-auto-edit__span
+      border-color: transparent
+      color: #fff
+
+  .catalog-selection-name-auto-edit__span
+    border-bottom: 1px dashed
+    color: #606060
+    text-transform: uppercase
+    font-size: 12px
+
+.catalog-selection-name-auto__item
+  color: $c60
+  font-size: 20px
+  font-weight: bold
+  line-height: 34px
+
+.catalog-selection-image-car
+  border: 2px solid #e7e7e7
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: 300px
+
+.catalog-selection-title-parameter
+  color: #020c16
+  display: block
+  font-size: 20px
+  font-weight: bold
+  margin-bottom: 12px
+
+.catalog-selection-parameters-block
+  display: flex
+  justify-content: space-between
+  margin-bottom: 26px
+  margin-top: -8px
+
+.catalog-selection-parameter-item
+  display: flex
+  align-items: center
+  margin-bottom: 4px
+
+.catalog-selection-parameter__name
+  min-width: 114px
+  color: $c60
+  font-size: 14px
+  text-transform: uppercase
+  margin-right: 20px
+
+.catalog-selection-parameter__value
+  font-size: 16px
+  color: $c30
+
+.catalog-selection-parameters-all
+  width: 296px
+  height: 106px
+  border: 2px solid #e7e7e7
+  background-color: #ffffff
+  padding: 30px 22px 0 152px
+  color: $c60
+  font-size: 18px
+  line-height: 20px
+  position: relative
+  transition: 0.2s
+  margin-top: 8px
+  &:hover
+    text-decoration: none
+    border-color: rgba(106, 156, 29, 0.4)
+  &:before
+    content: ''
+    position: absolute
+    background: url(../img/img-btn.png)
+    width: 115px
+    height: 77px
+    left: 20px
+    top: 50%
+    margin-top: -38px
+
+.catalog-selection-radius-list-item
+  margin-bottom: 80px
+
+.catalog-selection-radius-list-item
+  display: inline-block
+  width: 19.4%
+  margin-bottom: 20px
+
+.catalog-selection-radius-list-item__name
+  font-size: 16px
+  font-weight: bold
+  display: block
+  margin-bottom: 10px
+
+.catalog-selection-radius-list-item__text
+  font-size: 14px
+
+.catalog-selection-radius-extended__link
+  color: $c60
+  font-size: 14px
+  line-height: 16px
+  text-decoration: underline
+  display: block
+  margin-top: 37px
+  &:hover
+    text-decoration: none
+
+.filter-title
+  font-size: 20px
+  display: block
+  color: #020c16
+  font-weight: 700
+  line-height: 26px
+  margin-bottom: 30px
+
+.filter-item__name
+  font-size: 18px
+  color: #0c141c
+  display: flex
+  align-items: baseline
+  position: relative
+  cursor: pointer
+  margin-bottom: 13px
+  &:before
+    content: ''
+    position: absolute
+    @include sprite($filter-arrow)
+    right: 0
+    top: 50%
+    margin-top: -5px
+    position: absolute
+  &_hide
+    &:before
+      transform: rotate(180deg)
+
+.filter-question
+  @include sprite($quastion)
+  display: block
+  margin-left: 5px
+
+.filter-item-label
+  display: flex
+  cursor: pointer
+
+.filter-radio-text__title
+  display: block
+  font-size: 16px
+  color: $c30
+  font-weight: 400
+
+.filter-radio-text__description
+  display: block
+  font-size: 16px
+  color: $c60
+  font-weight: 400
+  line-height: 20px
+
+.filter-item-label
+  margin-bottom: 20px
+
+.filter-item
+  &:after
+    content: " "
+    display: table
+  &:before
+    content: " "
+    display: table
+    clear: both
+
+.filter-item__checkbox-size
+  width: 46px
+  height: 46px
+  border: 1px solid #606060
+  background: #fff
+  top: auto
+  position: relative
+  border-radius: 0
+  margin: 0
+  &.checked
+    border: 2px solid #303030
+    & + .filter-item-text__size-disk
+      color: $c30
+      font-weight: 700
+    &:before
+      display: none
+  & .jq-checkbox__div
+    display: none
+
+.filter-item
+  padding-bottom: 20px
+  & .filter-item-label-size:first-child
+    margin-left: 0
+  & .filter-item-label-size:nth-child(5n)
+    margin-left: 0
+
+.filter-item-label-size
+  position: relative
+  display: inline-block
+  text-align: center
+  width: 25%
+
+.filter-item-content-size-disk
+  display: flex
+  flex-wrap: wrap
+
+.filter-item-text__size-disk
+  position: absolute
+  left: 0
+  right: 0
+  text-align: center
+  font-weight: normal
+  color: $c60
+  top: 50%
+  margin-top: -12px
+
+.filter-item-content-size-disk
+  overflow: hidden
+
+.filter-item-content-delivery
+  display: flex
+  flex-wrap: wrap
+
+.filter-item-label-delivery
+  width: 50%
+  font-weight: normal
+  font-size: 16px
+  margin-bottom: 10px
+
+.range-select
+  display: flex
+  margin-bottom: 20px
+
+.range-select-span
+  color: #606060
+  font-size: 16px
+  margin: 0 8px
+
+.range-select-price
+  width: 81px
+  border: 1px solid #8d8d8d
+  height: 32px
+  padding-left: 17px
+  font-size: 16px
+  color: #303030
+
+.range-select
+
+.irs
+  & .irs-slider
+    left: 0%
+    width: 32px
+    height: 22px
+    border-radius: 11px
+    background: rgb(96, 96, 96)
+    border: none
+    box-shadow: none
+    top: -6px
+  & .irs-line
+    background: #e0dddd
+    height: 10px
+    border-radius: 2px
+    border: none
+    top: 0
+  & .irs-bar
+    background: rgb(96, 96, 96)
+    border: none
+    top: 0
+  & .irs-from
+    top: 25px
+    position: absolute
+    left: 0 !important
+    color: #606060
+    background: none
+    font-size: 14px
+    visibility: visible !important
+  & .irs-to
+    top: 25px
+    position: absolute
+    left: 0 !important
+    right: 0 !important
+    color: #606060
+    background: none
+    font-size: 14px
+    text-align: right
+    visibility: visible !important
+  & .irs-single
+    display: none !important
+
+.filter-item-content
+  & .filter-item-label:last-child
+
+.filter-item-content-color
+  display: flex
+  flex-wrap: wrap
+
+.filter-item-label-color
+  width: 50%
+  align-items: center
+
+.filter-item-color__text
+  display: flex
+  align-items: center
+
+.filter-item-color-text__name
+  font-size: 13px
+  color: $c60
+  line-height: 13px
+  font-weight: 400
+  word-wrap: break-word
+  width: 55px
+
+.not-checkbox
+  display: none
+  &:checked
+    & + .filter-color
+      border: 2px solid #6a9c1d
+
+.filter-color
+  width: 22px
+  min-width: 22px
+  height: 22px
+  margin-right: 9px
+  border-radius: 50%
+  display: inline-block
+  border: 2px solid transparent
+  cursor: pointer
+  &.checked
+    border: 2px solid #6a9c1d
+    &::before
+      display: none
+  &.white
+    background-color: #eeeeee
+  &.black
+    background-color: #000000
+  &.silver
+    background-color: #a3a3a3
+  &.blue
+    background-color: #0d68a2
+  &.red
+    background-color: #bc0f12
+  &.orange
+    background-color: #e5920f
+  &.yellow
+    background-color: #e8dc1f
+
+.filter-item__name-count
+  display: inline-block
+
+.filter-item__name-count
+  display: inline-block
+  margin-left: 10px
+  color: #8b8b8b
+
+.filter-item-label-brand
+  width: 49%
+  align-items: center
+  display: inline-flex
+
+.filter-item-brand__text
+  color: $c60
+  font-size: 16px
+  font-weight: 400
+  padding-right: 10px
+
+.filter-item__name + .filter-item-content-brand-container
+  display: none
+
+.filter-item-content-brand
+  max-height: 390px !important
+
+.filter-btn
+  width: 100%
+  background-color: #0f263d
+  text-transform: uppercase
+  font-size: 14px
+  color: #fff
+  border: none
+  padding: 13px 0px
+  transition: 0.2s
+  cursor: pointer
+  line-height: 14px
+  margin-top: 50px
+  margin-bottom: 19px
+  &:hover
+    background: #183a5d
+
+.filter-clear
+  display: block
+  text-align: center
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: 500
+  color: $c60
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.catalog-title
+  font-size: 20px
+  color: #0c141c
+  font-weight: 900
+  padding-bottom: 20px
+  border-bottom: 1px solid #8b8b8b
+  display: block
+  margin-bottom: 14px
+
+.catalog-title-car
+  color: $c60
+
+.catalog-title-count
+  font-size: 20px
+  color: $c60
+  padding-left: 3px
+  font-family: 'Lato-Light', Arial
+
+.select-sort
+  outline: none !important
+  font-size: 16px
+  font-style: italic
+  font-family: Georgia, Arial, sans-serif
+  border: none
+  width: auto !important
+  & .bs-caret
+    display: none
+  & button
+    outline: none !important
+    color: $c60
+    border: none
+    position: relative
+    padding-top: 0
+    padding-bottom: 0
+    padding-right: 0 !important
+    & .pull-left
+      position: relative
+      &:before
+        content: ''
+        @include sprite($mini-arrow)
+        display: block
+        top: 50%
+        position: absolute
+        right: 0px
+        margin-top: -1px
+    &:active, &:focus
+      outline: none !important
+  & .dropdown-menu
+    outline: none !important
+    & > li > a
+      outline: none !important
+  & .filter-option
+    max-width: 160px !important
+    width: auto !important
+    padding-right: 15px
+
+.catalog-sort__span
+  font-weight: 400
+  font-size: 16px
+  color: $c60
+
+.catalog-sort
+  display: flex
+  align-items: center
+  margin-bottom: 35px
+  & > noindex
+    display: flex
+    align-items: center
+    margin-bottom: 35px
+
+.open-guarant
+  font-style: italic
+  border-bottom: 1px dashed
+  margin-bottom: 10px
+  display: inline-block
+  color: #606060
+  &:hover
+    border-bottom: 1px dashed transparent
+
+.garand-modal-italic
+  display: block
+  font-size: 20px
+  color: #303030
+  margin: 40px 0 43px
+  font-style: italic
+
+.garant-modal-image__image
+  min-width: 260px
+  margin-left: 40px
+
+.garant-modal-text-and-image
+  display: flex
+  line-height: 1.3
+
+.price-complect-label
+  margin-bottom: 0
+  margin-left: 30px
+  display: flex
+  align-items: center
+  cursor: pointer
+
+.price-complect-label__span
+  font-size: 16px
+  font-weight: 400
+  color: $c60
+
+.catalog-item__buttons
+  display: none
+  position: absolute
+  z-index: 10
+  background: white
+  width: 100%
+  left: 0
+  &:hover
+    display: block
+
+.catalog-item
+  background-color: #ffffff
+  position: relative
+  margin-bottom: 80px
+  &:hover
+    .catalog-item-info-big
+      border-left: 2px solid #e7e7e7
+      border-right: 2px solid #e7e7e7
+      border-top: 2px solid #e7e7e7
+    .catalog-item__buttons, .catalog-icons-product, .catalog-item-favorite-container, .catalog-item-chart-container
+      display: block
+    .catalog-item__persent
+      display: none
+
+  .catalog-item-info-big
+    border-left: 2px solid #fff
+    border-right: 2px solid #fff
+    border-top: 2px solid #fff
+
+.catalog-item__image
+  display: block
+  text-align: center
+  padding-top: 22px
+  padding-bottom: 20px
+
+.catalog-icons-product
+  position: absolute
+  right: 12px
+  top: 12px
+  text-align: center
+  & > i
+    margin: 0 auto
+    margin-bottom: 10px
+
+.popular-product-block-icons__item
+  &.allweather
+    & .st0
+      fill: #699FC0 !important
+    & .st1
+      fill: transparent !important
+  &.snowflake
+    & .st0
+      fill: #699FC0 !important
+  &.spring
+    & .st1
+      fill: #fff !important
+
+.catalog-item__best-price
+  display: block
+  @include sprite($best-price)
+  //position: absolute
+  //top: 12px
+  //right: 12px
+  //display: none
+  outline: none !important
+  &.catalog-detail
+    display: block
+    position: relative
+    cursor: pointer
+    top: 0px
+    right: 0
+    margin: 0 auto
+
+.catalog-item-favorite-container
+  position: absolute
+  top: 12px
+  left: 12px
+  width: 39px
+  height: 39px
+  border: 1px solid #8b8b8b
+  border-radius: 50%
+  background: #fff
+  cursor: pointer
+  display: none
+  &:hover
+    opacity: 0.8
+
+.catalog-item__favorite
+  display: block
+  @include sprite($favorite)
+  position: absolute
+  top: 50%
+  margin-top: -11px
+  left: 50%
+  margin-left: -11px
+
+.catalog-item-chart-container
+  position: absolute
+  display: none
+  top: 61px
+  left: 12px
+  width: 39px
+  height: 39px
+  border: 1px solid #8b8b8b
+  border-radius: 50%
+  background: #fff
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+
+.catalog-item__chart
+  display: block
+  @include sprite($analysis-chart)
+  position: absolute
+  top: 50%
+  margin-top: -11.5px
+  left: 50%
+  margin-left: -10px
+
+.catalog-item-info
+  padding: 0 20px
+
+.catalog-item-info-model
+  min-height: auto
+
+.catalog-row
+  display: flex
+  flex-wrap: wrap
+  &::before
+    content: normal
+  &::after
+    content: normal
+
+.catalog-item__articles
+  display: block
+  font-size: 14px
+  color: #e00b0e
+  margin-bottom: 10px
+  font-family: 'Lato-Light', Arial
+
+.catalog-item__brand
+  font-size: 14px
+  color: $c60
+  display: block
+
+.catalog-item__link
+  font-size: 16px
+  font-weight: 400
+  text-decoration: underline
+  color: $c60
+  display: block
+  margin-bottom: 5px
+  height: 44px
+  overflow: hidden
+  &:hover
+    text-decoration: none
+
+.catalog-item__color
+  display: block
+  font-size: 16px
+  color: $c60
+  margin-bottom: 12px
+  height: 40px
+  overflow: hidden
+
+.catalog-item__delivery
+  font-weight: bold
+  font-size: 14px
+  display: block
+  color: $c60
+  margin-bottom: 12px
+
+.catalog-item__price
+  font-size: 26px
+  color: $c30
+  display: block
+  padding-bottom: 10px
+  position: relative
+  &.old
+    display: inline-block
+    &:before
+      content: ''
+      position: absolute
+      height: 1px
+      background: $c30
+      left: 0
+      width: 100%
+      top: 16px
+  &.new
+    display: inline-block
+    color: #bd0609
+    margin-left: 24px
+
+.catalog-item__persent
+  position: absolute
+  color: #bc0f12
+  font-size: 22px
+  left: 10px
+  top: 10px
+
+.catalog-item__store
+  font-size: 16px
+  display: block
+  color: $c60
+  padding-bottom: 20px
+  padding-left: 20px
+  padding-right: 20px
+  border-left: 2px solid #e7e7e7
+  border-right: 2px solid #e7e7e7
+
+.catalog-item__tocart
+  display: block
+  text-align: center
+  background-color: #6a9c1d
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  padding: 15px 0
+  transition: 0.2s
+  &:hover
+    background: #7eb727
+    text-decoration: none
+
+.catalog-item__tocart-detail
+  display: block
+  text-align: center
+  background-color: #6a9c1d
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  padding: 15px 0
+  transition: 0.2s
+  margin-bottom: 6px
+  margin-top: 8px
+  &:hover
+    background: #7eb727
+    text-decoration: none
+
+.catalog-item__toauto
+  display: block
+  text-align: center
+  font-size: 14px
+  color: #6a9c1d
+  text-transform: uppercase
+  padding: 14px 0
+  transition: 0.2s
+  border: 1px solid #6a9c1d
+  &:hover
+    text-decoration: none
+    opacity: 0.8
+
+.big-banner-link
+  transition: 0.2s
+  display: block
+  margin-bottom: 80px
+  &:hover
+    opacity: 0.8
+
+.catalog-pagination__link
+  width: 40px
+  padding: 11px 0
+  background-color: #0f263d
+  display: inline-block
+  color: #ffffff
+  vertical-align: middle
+  font-size: 18px
+  line-height: 18px
+  margin: 0 5px
+  text-align: center
+  transition: 0.2s
+  &:hover
+    text-decoration: none
+    background: #143454
+
+.catalog-pagination__link_active
+  width: 40px
+  padding: 10px 0
+  border: 1px solid #606060
+  background-color: #fff
+  display: inline-block
+  color: $c60
+  vertical-align: middle
+  font-size: 18px
+  line-height: 18px
+  margin: 0 5px
+  text-align: center
+  transition: 0.2s
+  &:hover
+    text-decoration: none
+    border-color: #000
+    color: #000
+    font-weight: bold
+
+.catalog-bottom-container-pagination
+  border-top: 1px solid #8b8b8b
+  padding-top: 30px
+  padding-left: 0
+  padding-right: 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.catalog-pagination__prev
+  display: inline-block
+  position: relative
+  width: 40px
+  height: 40px
+  margin-right: 50px
+  vertical-align: middle
+  transition: 0.2s
+  &:before
+    content: ''
+    position: absolute
+    @include sprite($arrow-pagination)
+    left: 0
+    top: 50%
+    margin-top: -7px
+
+.catalog-pagination__next
+  display: inline-block
+  position: relative
+  width: 40px
+  height: 40px
+  margin-left: 50px
+  vertical-align: middle
+  transition: 0.2s
+  &:before
+    content: ''
+    position: absolute
+    @include sprite($arrow-pagination)
+    right: 0
+    top: 50%
+    margin-top: -7px
+    transform: rotate(180deg)
+
+.catalog-show-more
+  border: 1px solid $c60
+  padding: 7px 78px 7px 78px
+  line-height: 12px
+  transition: 0.2s
+  position: relative
+  color: $c60
+  text-transform: uppercase
+  font-size: 12px
+  text-decoration: none
+  &:hover
+    text-decoration: none
+    background: #6a9c1d
+    color: #fff
+    border: 1px solid rgba(96, 96, 96, 0.51)
+
+.catalog-top-scroll
+  transition: 0.2s
+  display: inline-block
+  text-align: center
+  margin-top: 15px
+  &:hover
+    opacity: 0.8
+    text-decoration: none
+
+.catalog-top-scroll__text
+  display: block
+  text-decoration: none
+  font-size: 14px
+  text-transform: uppercase
+  color: $c60
+  margin-top: 10px
+
+.catalog-bottom-search
+  height: 97px
+  border: 2px solid #e7e7e7
+  background-color: #ffffff
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 80px
+
+.catalog-bottom-search__text
+  font-size: 20px
+  font-weight: bold
+  color: $c30
+
+.catalog-bottom-search__button
+  background-color: #6a9c1d
+  font-size: 14px
+  text-transform: uppercase
+  text-decoration: none
+  color: #fff
+  display: block
+  padding: 18px 54px
+  margin-left: 100px
+  line-height: 14px
+  &:hover
+    text-decoration: none
+    background: #7cb12b
+
+.catalog-bottom-text
+  padding: 0
+  margin-top: 100px
+  font-size: 18px
+  color: $c60
+
+.modal
+  background: rgba(30, 42, 63, 0.86)
+
+.modal-tryon
+  width: 1046px
+  margin-top: 0
+  border-radius: 0
+
+.modal-tryon-content
+  padding: 60px 133px
+  background: #fff
+
+.close-popup
+  @include sprite($close)
+  display: block
+  position: absolute
+  top: 32px
+  right: 25px
+  cursor: pointer
+  transition: 0.2s
+  z-index: 20
+  &:hover
+    opacity: 0.8
+
+.modal-tryon__name-car
+  display: block
+  font-size: 26px
+  color: $c30
+  font-weight: bold
+  margin-bottom: 70px
+
+.modal-tryon__car
+  display: block
+  margin: 0 auto
+
+.modal-tryon-product-block
+  margin-top: 70px
+  border-top: 1px solid #ccc
+  padding-top: 40px
+
+.modal-tryon-product-block-image
+  text-align: center
+  position: relative
+  padding-top: 30px
+
+.modal-tryon-product__best-price
+  display: block
+  @include sprite($best-price)
+  position: absolute
+  top: 12px
+  right: 12px
+
+.modal-tryon-product__link
+  font-size: 20px
+  color: $c30
+  font-weight: bold
+  display: block
+  margin-bottom: 5px
+
+.modal-tryon-product__brand
+  font-size: 14px
+  color: $c60
+  display: block
+  margin-bottom: 30px
+
+.modal-tryon-product-cart
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 40px
+
+.modal-tryon-product-cart__price
+  font-size: 26px
+  color: $c30
+  display: block
+  position: relative
+
+.modal-tryon-product-cart__btn
+  background-color: #6a9c1d
+  font-size: 14px
+  text-transform: uppercase
+  text-decoration: none
+  color: #fff
+  display: block
+  padding: 18px 66px
+  line-height: 14px
+  &:hover
+    text-decoration: none
+    background: #7cb12b
+
+.modal-tryon-product-cart-favorite-container
+  width: 39px
+  height: 39px
+  border: 1px solid #8b8b8b
+  border-radius: 50%
+  background: #fff
+  cursor: pointer
+  position: relative
+  &:hover
+    opacity: 0.8
+
+.modal-tryon-product-cart__favorite
+  display: block
+  @include sprite($favorite)
+  position: absolute
+  top: 50%
+  margin-top: -11px
+  left: 50%
+  margin-left: -11px
+
+.modal-tryon-product__delivery
+  display: block
+  font-size: 16px
+  color: $c60
+  font-weight: bold
+  margin-bottom: 10px
+
+.modal-tryon-product__article
+  display: block
+  font-size: 14px
+  color: $c60
+  margin-bottom: 5px
+
+.modal-tryon-product__color
+  display: block
+  font-size: 16px
+  color: $c60
+  margin-bottom: 5px
+
+.modal-tryon-product__store
+  display: block
+  font-size: 16px
+  color: $c60
+  margin-bottom: 5px
+
+.header-pickup__text
+  font-size: 14px
+  color: $c60
+  line-height: 16px
+  display: block
+  border-left: 1px solid rgba(96, 96, 96, 0.25)
+  border-right: 1px solid rgba(96, 96, 96, 0.25)
+  opacity: 0.8
+  padding-left: 15px
+  position: relative
+  cursor: pointer
+  padding-top: 3px
+  padding-bottom: 3px
+  max-width: 112px
+  margin-left: 15px
+  &:after
+    @include sprite($mini-arrow-cart)
+    content: ''
+    position: absolute
+    right: 14px
+    top: 10px
+
+.header-tire-fitting
+  font-size: 14px
+  color: $c60
+  line-height: 16px
+  display: block
+  border-left: 1px solid rgba(96, 96, 96, 0.25)
+  opacity: 0.8
+  padding-left: 15px
+  width: 120px
+  padding-right: 15px
+  display: flex
+  align-items: center
+  &:hover
+    opacity: 1
+    text-decoration: underline
+
+.header-cart-popup
+  width: 380px
+  box-shadow: 0 5px 10px rgba(0, 1, 2, 0.6)
+  background-color: #ffffff
+  padding: 27px 30px 30px 30px
+  position: absolute
+  right: 0
+  top: 53px
+  z-index: 150
+  cursor: default
+  display: none
+  &:hover
+    display: block
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    left: 0
+    width: 100%
+    height: 30px
+    top: -20px
+
+.header-triangle
+  width: 20px
+  height: 20px
+  transform: rotate(45deg)
+  box-shadow: -1px 3px 8px rgba(0, 1, 2, 0.3)
+  position: absolute
+  top: -9px
+  background: #fff
+  right: 50px
+  &:after
+    content: ''
+    height: 22px
+    width: 45px
+    background: white
+    position: absolute
+    transform: rotate(-45deg)
+    top: 9px
+    padding-left: 0px
+    left: -8px
+
+.header-cart-popup__count
+  display: block
+  font-size: 14px
+  color: $c30
+  text-transform: uppercase
+  font-weight: bold
+
+.header-cart-popup__sum
+  font-size: 14px
+  color: $c30
+
+.header-cart-popup-products
+  padding-top: 15px
+  border-top: 1px solid #e5e5e5
+  margin-top: 12px
+
+.header-cart-popup-products-item
+  display: flex
+  margin-bottom: 10px
+  align-items: center
+
+.header-cart-popup-products__image
+  min-width: 40px
+  max-width: 40px
+  margin-right: 20px
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.header-cart-popup-products-description
+  flex-grow: 1
+
+.header-cart-popup-products__link
+  font-size: 14px
+  color: $c60
+  line-height: 18px
+  display: block
+
+.header-cart-popup-products__count
+  display: inline-block
+  font-size: 14px
+  color: $c30
+  margin-right: 9px
+
+.header-cart-popup-products__price
+  display: inline-block
+  font-size: 16px
+  color: $c30
+  font-weight: bold
+
+.header-cart-popup-more-container
+  text-align: center
+  margin-bottom: 20px
+
+.header-cart-popup__more
+  font-size: 14px
+  color: #41648d
+  font-style: italic
+  line-height: 20px
+  font-family: Georgia, Arial, sans-serif
+  border-bottom: 1px dashed
+  text-align: center
+  &:hover
+    text-decoration: none
+    border-color: transparent
+
+.header-cart-popup__btn
+  background-color: #6a9c1d
+  font-size: 14px
+  text-transform: uppercase
+  text-decoration: none
+  color: #fff
+  display: block
+  text-align: center
+  padding: 18px 0px
+  width: 220px
+  margin: 0 auto
+  line-height: 14px
+  &:hover
+    text-decoration: none
+    background: #7cb12b
+
+.select-languages-popup
+  background: #fff
+  box-shadow: 0 5px 10px rgba(0, 1, 2, 0.6)
+  position: absolute
+  width: 246px
+  padding: 30px 20px
+  right: 0
+  top: 30px
+  z-index: 10
+  text-align: left
+  display: none
+  &.active
+    display: block
+
+.select-languages-popup-triangle
+  right: 15px
+
+.select-languages-popup__text
+  font-size: 16px
+  color: $c30
+  line-height: 20px
+  margin-bottom: 25px
+  display: block
+
+.select-languages-popup__close
+  @include sprite($close-cart)
+  display: block
+  position: absolute
+  z-index: 11
+  right: 10px
+  top: 7px
+  cursor: pointer
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.bootstrap-select.btn-group.select-languages__input
+  width: 206px !important
+  margin-bottom: 13px
+  & button
+    width: 100%
+    height: 33px
+    border: 1px solid #c2c2c2 !important
+    background-color: #ffffff
+    border-radius: 0
+    padding: 4px 12px
+    &:hover
+      border: 1px solid #c2c2c2
+  & .dropdown-toggle
+    & .caret
+      right: 5px !important
+  & .dropdown-menu
+    & .select-languages-option
+      padding-top: 5px
+      padding-bottom: 5px
+    & li a
+      outline: none !important
+
+.select-languages-option
+  display: flex
+  align-items: center
+
+.select-languages-image
+  margin-right: 10px
+
+.select-languages-option-text
+  font-size: 16px
+  color: $c60
+
+.select-languages__title
+  font-size: 12px
+  text-transform: uppercase
+  line-height: 22px
+  color: $c60
+  display: block
+  margin-bottom: 2px
+
+.select-languages__currency
+  display: inline-block
+  width: 19px
+  font-size: 18px
+  font-weight: bold
+  color: $c60
+  line-height: 14px
+
+.select-languages__lang-text
+  display: inline-block
+  width: 31px
+  font-size: 18px
+  font-weight: bold
+  color: $c60
+  line-height: 14px
+
+.select-languages__btn
+  display: block
+  font-size: 14px
+  color: #ffffff
+  text-transform: uppercase
+  background-color: #0f263d
+  text-align: center
+  padding: 16px 0
+  margin-top: 20px
+  transition: 0.2s
+  &:hover
+    background: #183a5d
+    text-decoration: none
+
+.select-languages-container
+  position: relative
+  cursor: pointer
+
+.modal-search-city
+  width: 913px
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.45)
+  background-color: #ffffff
+  padding: 60px 133px
+  position: relative
+  line-height: 30px
+
+.modal-search-city__title
+  font-size: 26px
+  color: #161b21
+  font-weight: bold
+  display: block
+  margin-bottom: 35px
+
+.overlay-city
+  background: rgba(30, 42, 63, 0.98);
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 100
+  display: none
+  &.active
+    display: block
+
+.list-cities
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 110
+  padding-top: 9px;
+  padding-bottom: 13px;
+  display: none
+  &.active
+    display: block
+
+.list-cities-input-container
+  position: relative
+  margin-top: 10px
+
+.list-cities__input
+  background: transparent
+  border: 1px solid #ffffff
+  width: 100%
+  height: 32px
+  padding-left: 50px
+  color: #fff
+  font-size: 16px
+  font-style: italic
+  font-family: Georgia, Arial, sans-serif
+
+.list-cities__btn
+  @include sprite($search-loop-green)
+  border: none
+  background-color: transparent
+  position: absolute
+  top: 6px
+  left: 11px
+  cursor: pointer
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.list-cities-tabs
+  border-bottom: none !important
+  margin-top: 10px
+  & li
+    &.active .list-cities-tabs__link
+      background-color: #6a9c1d !important
+      color: #fff !important
+
+.list-cities-tabs__link
+  width: 86px
+  background-color: rgba(241, 241, 241, 0.8) !important
+  margin-right: 0 !important
+  font-size: 12px
+  text-transform: uppercase
+  border-radius: 0 !important
+  border: none !important
+  color: $c60 !important
+  text-align: center
+  padding: 7.5px 0 !important
+
+.list-city-tab-content
+  margin-top: 60px
+
+.list-city-item
+  display: flex
+  margin-bottom: 44px
+
+.list-city-item__letter
+  min-width: 37px
+  max-width: 37px
+  font-size: 20px
+  color: #6a9c1d
+  font-family: Georgia, Arial, sans-serif
+  font-style: italic
+
+.list-city-item-cities__element
+  font-size: 14px
+  display: block
+  color: rgba(255, 255, 255, 0.6)
+  text-decoration: underline
+  line-height: 26px
+  &:hover
+    text-decoration: none
+
+.list-city-item-cities__element_green
+  font-size: 14px
+  display: block
+  color: #6a9c1d
+  text-decoration: underline
+  line-height: 26px
+  &:hover
+    text-decoration: none
+
+.list-cities-content
+  position: relative
+
+.close-popup-list-cities
+  top: 20px
+
+.letters-city-tabs
+  border-bottom: none !important
+  margin-bottom: 17px
+  & .active .letters-city-tabs__link
+    color: #6a9c1d !important
+    font-weight: bold
+
+.letters-city-tabs__link
+  font-size: 16px
+  padding: 0 !important
+  border: none !important
+  color: $c60 !important
+  margin-right: 11px !important
+
+.letters-city-tabs-content__link
+  display: block
+  font-size: 16px
+  color: $c60
+  font-family: Georgia, Arial, sans-serif
+  font-style: italic
+  line-height: 16px
+  margin-bottom: 2px
+
+.letters-city-tabs-content
+  margin-bottom: 30px
+
+.modal-search-city__text
+  display: block
+  font-size: 16px
+  color: $c30
+  margin-bottom: 10px
+
+.modal-search-city-input-container
+  position: relative
+
+.modal-search-city__input
+  width: 100%
+  height: 32px
+  border: 1px solid #cccccc
+  background-color: #ffffff
+  color: $c60
+  font-style: italic
+  font-family: Georgia, Arial, sans-serif
+  font-size: 16px
+  padding-left: 50px
+
+.modal-search-city__submit
+  @include sprite($search-loop-grey)
+  position: absolute
+  background-color: transparent
+  border: none
+  cursor: pointer
+  transition: 0.2s
+  top: 6px
+  left: 12px
+  &:hover
+    opacity: 0.8
+
+.catalog-detail-slider-and-info
+  margin-top: 50px
+  position: relative
+  margin-bottom: 75px
+
+.stores-list-inline .modal-issue-map-col
+  position: relative
+  &:before
+    display: block
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    cursor: pointer
+    z-index: 5
+    content: ''
+    position: absolute
+  &.active
+    &:before
+      display: none
+
+.catalog-detail-big-image
+  text-align: center
+  position: relative
+  height: 505px
+  margin-bottom: 30px
+  cursor: url(../img/plus1.png), pointer
+  & img
+    max-height: 100%
+  &:before
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    content: ''
+    z-index: 5
+  &.active
+    cursor: url(../img/minus1.png), pointer
+    &:before
+      display: none
+
+.catalog-detail-tirs-icons__thorns
+  display: block
+  @include sprite($thorns)
+
+.catalog-detail-tirs-icons__snowflake
+  display: block
+  @include sprite($snowflake)
+
+.catalog-detail-big-image-delivery
+  position: absolute
+  width: 75px
+  top: 0
+  right: 0
+  z-index: 3
+  transition: 0.2s
+  & > .popular-product-block-icons__item
+    margin: 0 auto
+    margin-top: 10px
+    & path
+      fill: #303030
+
+.svg-detail-delivery
+  height: 19px
+  width: 30px
+  margin-right: 8px
+  fill: #606060
+
+.catalog-detail-delivery-and-payment .active .svg-detail-delivery
+  fill: #303030
+
+.modaltypesize
+  width: 100% !important
+  max-width: 1100px
+
+.popup-typesize-image
+  margin: 0 auto
+  display: block
+
+.catalog-detail-tirs-icons
+  position: absolute
+  z-index: 2
+  right: 0
+  top: 0
+
+.catalog-detail-tirs-icons-items
+  margin-bottom: 20px
+
+.catalog-detail-description-tirs-name
+  display: block
+  font-size: 20px
+  color: $c60
+  font-weight: bold
+  margin-bottom: 37px
+
+.catalog-detail-description-tirs-item
+  display: flex
+  margin-bottom: 30px
+
+.catalog-detail-description-tirs-title
+  display: block
+  text-transform: uppercase
+  font-size: 14px
+  color: $c60
+  margin-bottom: 30px
+
+.catalog-detail-description-tirs-item-col
+  background: rgba(241, 241, 241, 0.9)
+  display: flex
+  align-items: center
+  line-height: 20px
+  font-size: 18px
+  color: $c60
+
+.catalog-detail-description-tirs-item-image
+  border-radius: 50%
+  width: 130px
+  position: relative
+  &:before
+    position: absolute
+    background: white
+    top: 0px
+    width: 50%
+    left: -10px
+    display: block
+    content: ''
+    bottom: 0px
+
+.catalog-detail-description-tirs-item-image__img
+  border: 2px solid rgba(139, 139, 139, 0.92)
+  border-radius: 50%
+  position: relative
+  z-index: 3
+
+.catalog-detail-big-image-delivery__image
+  @include sprite($free-delivery)
+  display: block
+
+.catalog-detail-big-image-delivery__text
+  font-size: 12px
+  font-weight: 800;
+  color: $c60
+  text-align: left
+  display: block
+  line-height: 14px
+
+.catalog-detail-big-image-icons
+  position: absolute
+  left: 0
+  bottom: 35px
+  z-index: 3
+  transition: 0.2s
+
+.catalog-detail-big-image-icons__guarantee
+  @include sprite($guarantee)
+  display: block
+  margin-bottom: 13px
+
+.catalog-detail-big-image-icons__logo
+  width: 106px
+  height: 43px
+  display: block
+  z-index: 3
+  position: relative
+  & img
+    max-width: 100%
+    max-height: 100%
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+[mag-theme="default"].mag-zoomed-bg, [data-mag-theme="default"].mag-zoomed-bg
+  background: #fff
+
+.mag-thumb
+  display: flex
+  align-items: center
+  height: 100%
+  & > img
+    height: auto !important
+
+.mag-zoomed
+  & > img
+    height: auto !important
+
+.mag-zoomed img
+  display: block
+  width: auto
+  height: auto
+
+[mag-thumb] img, [data-mag-thumb] img
+  display: block
+  max-width: 100%
+  max-height: 100%
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  width: auto
+  height: auto
+
+.catalog-detail-small-image__link
+  display: inline-block
+  margin-right: 20px
+  padding: 5px
+  border: 2px solid $c60
+  opacity: 0.4
+  width: 114px
+  height: 114px
+  transition: 0.2s
+  position: relative
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+  &.active
+    opacity: 1
+    border: 2px solid $c30
+  &-slider
+    margin: 0
+    opacity: 0.4
+  & img
+    max-width: 100%
+    max-height: 100%
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+.catalog-detail-small-image
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-top: 1px solid #8b8b8b
+  padding-top: 20px
+
+.catalog-detail-small-image-slider
+  border-top: 1px solid #8b8b8b
+  padding-top: 20px
+  height: 141px
+  //overflow: hidden
+  z-index: 10
+  & .slick-slide
+    text-align: center
+    outline: none
+    & a
+      outline: none
+  & .slick-prev
+    @include sprite($slider-detail-thumb-arrow)
+    color: transparent
+    position: absolute
+    border: none
+    z-index: 1
+    top: 15px
+    left: 0
+    transition: 0.2s
+    opacity: 1
+    &:hover
+      opacity: 0.9
+  & .slick-next
+    @include sprite($slider-detail-thumb-arrow)
+    color: transparent
+    position: absolute
+    border: none
+    z-index: 1
+    top: 15px
+    right: 0
+    transform: rotate(180deg)
+    transition: 0.2s
+    opacity: 1
+    &:hover
+      opacity: 0.9
+
+.catalog-detail-small-image__btn
+  transition: 0.2s
+  &:hover
+    opacity: 0.6
+
+.catalog-detail-big-image-arrows__prev
+  @include sprite($arrow-detail-image)
+  display: block
+  z-index: 10
+  position: absolute
+  top: 50%
+  margin-top: -50px
+  left: 0
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.catalog-detail-big-image-arrows__next
+  @include sprite($arrow-detail-image)
+  display: block
+  z-index: 10
+  position: absolute
+  top: 50%
+  margin-top: -50px
+  right: 0
+  transition: 0.2s
+  transform: rotate(180deg)
+  &:hover
+    opacity: 0.8
+
+.catalog-detail-more-colors__link
+  display: inline-block
+  margin-top: 24px
+  position: relative
+  color: $c60
+  font-size: 16px
+  font-weight: 400
+  line-height: 20px
+  border-bottom: 1px dashed
+  margin-bottom: 22px
+  cursor: pointer
+  &:hover
+    border-color: transparent
+  &:before
+    content: ''
+    display: block
+    @include sprite($mini-arrow)
+    position: absolute
+    right: -10px
+    top: 50%
+    margin-top: -1px
+
+.catalog-detail-more-colors__item
+  display: inline-block
+  margin-right: 10px
+  padding: 5px
+  border: 1px solid $c60
+  width: 114px
+  height: 114px
+  transition: 0.2s
+  margin-bottom: 5px
+  &:hover
+    opacity: 0.8
+
+.catalog-detail-more-colors-list
+  display: none
+
+.catalog-detail-rating
+  width: 100% !important
+  margin-bottom: 13px
+  margin-top: -5px
+
+.catalog-detail-name
+  font-size: 26px
+  color: #0c141c
+  line-height: 34px
+  text-transform: uppercase
+  margin-bottom: 6px
+  display: block
+  font-family: 'Lato-Light', Arial, sans-serif
+
+.catalog-detail-name__bold
+  font-family: 'Lato-Black', Arial, sans-serif
+
+.catalog-detail__article
+  font-size: 16px
+  display: block
+  color: #e00b0e
+  margin-bottom: 25px
+
+.catalog-detail-price
+  font-size: 32px
+  font-weight: 300
+  color: $c30
+  display: flex
+  align-items: center
+  font-family: 'Lato-Light', Arial
+
+.catalog-detail__price-multi
+  font-size: 19px
+  color: $c60
+  margin: 0 14px
+
+.catalog-detail__price-equally
+  font-size: 19px
+  color: $c60
+  margin-left: 25px
+  margin-right: 18px
+
+.catalog-detail__price-count
+  width: auto !important
+  & .dropdown-toggle
+    margin: 0 !important
+    padding: 0 !important
+    border: none !important
+  & .filter-option
+    font-size: 32px
+    color: $c30 !important
+    font-family: 'Lato-Light', Arial
+  & .bs-caret
+    opacity: 0.8 !important
+    color: $c60 !important
+  & li
+    outline: none !important
+    & a
+      outline: none !important
+      font-size: 24px
+
+.catalog-detail__price-count.btn-group .dropdown-toggle .caret
+  right: -10px !important
+
+.catalog-detail__price-total
+  font-size: 32px
+  font-weight: 600
+  color: $c30
+
+.catalog-detail__price-rouble
+
+.catalog-detail-price
+  margin-bottom: 5px
+
+.catalog-detail-best-price-container
+  margin-bottom: 8px
+  opacity: 0.8
+
+.catalog-detail__best-price
+  border-bottom: 1px dashed rgba(96, 96, 96, 0.40)
+  font-size: 14px
+  color: $c60
+  font-family: Georgia, Arial, sans-serif
+  margin-bottom: 14px
+  position: relative
+  margin-left: 35px
+  outline: none !important
+  &:hover
+    text-decoration: none
+    border-color: transparent
+
+.catalog-detail__best-price-guarantee-img
+  left: -32px
+  top: 50%
+  margin-top: -10px
+  position: absolute
+  display: block
+  width: 14px
+
+.detail-delivery-wallet
+  width: 21px
+  height: 22px
+  margin-right: 8px
+  fill: #606060
+
+li.active
+  & .detail-delivery-wallet
+    fill: #303030
+
+.catalog-detail-goods-stock
+  margin-top: 46px
+  padding-left: 35px
+  position: relative
+
+.catalog-detail-goods-stock__icon
+  width: 22px
+  height: 20px
+  position: absolute
+  left: 0
+  top: 0
+  &.status1
+    display: none
+  &.status2
+    display: none
+  &.status3
+    display: block
+  &.status4
+    display: none
+
+.catalog-detail-goods-stock__title
+  font-size: 16px
+  color: $c60
+  border-bottom: 1px dashed
+  position: relative
+  margin-bottom: 40px
+  &:before
+    content: ''
+    @include sprite($goods-in-stock)
+
+  &:after
+    content: ''
+    @include sprite($mini-arrow)
+    position: absolute
+    right: -11px
+    top: 50%
+  &:hover
+    text-decoration: none
+    border-color: transparent
+    cursor: pointer
+
+.catalog-detail-goods-stock__div
+  font-size: 16px
+  color: #606060
+  line-height: 20px
+  padding-top: 10px
+  display: none
+
+.catalog-detail-delivery-and-payment__delivery-icon
+  @include sprite($truck-grey)
+  display: block
+  margin-right: 8px
+
+.catalog-detail-delivery-and-payment__payment-icon
+  @include sprite($wallet-grey)
+  display: block
+  margin-right: 8px
+  margin-top: -5px
+
+.catalog-detail-delivery-and-payment
+  margin-bottom: 30px
+  &.nav-tabs
+    border: none
+    margin: 0
+    padding: 0
+    margin-top: 33px
+    width: 100%
+    & > li
+      float: none
+      border: none
+      list-style: none
+      display: inline-block
+      cursor: pointer
+      vertical-align: middle
+      & > a
+        border: none
+        cursor: pointer
+        font-size: 20px
+        color: #8b8b8b
+        font-weight: 700
+        display: flex
+        align-items: center
+        line-height: 24px
+        & > span
+          border-bottom: 1px solid rgba(0, 0, 0, 0)
+        &:hover
+          text-decoration: none
+          & > span
+            border-bottom: 1px solid rgba(0, 0, 0, 0.17)
+      &.active
+        & > a
+          border: none
+          cursor: pointer
+          font-weight: bold
+          color: #020c16
+        & .catalog-detail-delivery-and-payment__delivery-icon
+          @include sprite($truck-black)
+          display: block
+          margin-right: 8px
+        & .catalog-detail-delivery-and-payment__payment-icon
+          @include sprite($wallet-black)
+          display: block
+          margin-right: 8px
+  &.tab-content
+    margin-top: 10px
+
+.tab-separate
+  font-size: 12px
+  color: #020c16
+  font-weight: 700
+  margin: 0 5px
+
+.catalog-detail-delivery__text
+  display: block
+  font-size: 16px
+  color: $c60
+
+.catalog-detail-delivery-block
+  margin-bottom: 15px
+
+.catalog-detail-delivery__link
+  font-family: Georgia, Arial, sans-serif
+  font-size: 14px
+  font-style: italic
+  display: inline-block
+  border-bottom: 1px dashed rgba(96, 96, 96, 0.40)
+  color: $c60
+  opacity: 0.8
+  &:hover
+    border-color: transparent
+    text-decoration: none
+
+.catalog-detail-payment-item__icon1
+  display: block
+  margin-top: 3px
+
+.catalog-detail-payment-item__icon2
+  display: block
+  width: 24px
+  height: 33px
+  margin-top: 3px
+
+.catalog-detail-payment-item__icon3
+  display: block
+  width: 20px
+  margin-top: 3px
+  height: 34px
+
+.catalog-detail-payment-item__icon4
+  display: block
+  width: 26px
+  margin-top: 3px
+  height: 19px
+
+.catalog-detail-payment-item__icon5
+  display: block
+  width: 25px
+  margin-top: 3px
+  height: 22px
+
+.catalog-detail-payment-block
+  display: flex
+
+.catalog-detail-payment-col
+  margin-right: 30px
+
+.catalog-detail-payment-item
+  display: flex
+  flex-wrap: wrap
+  margin-top: 17px
+  align-items: flex-start
+
+.catalog-detail-payment-item__name
+  font-size: 13px
+  color: #2c2c2c
+  line-height: 16px
+  margin-left: 10px
+  opacity: 0.8
+
+.catalog-detail-more-services__title
+  font-size: 20px
+  font-weight: 700
+  display: block
+  color: #020c16
+
+.catalog-detail-more-services-label
+  display: flex
+  cursor: pointer
+  align-items: center
+  font-weight: normal
+  margin-top: 15px
+
+.catalog-detail-more-services__text
+  line-height: 16px
+  font-size: 16px
+  color: $c60
+
+.catalog-detail-more-services-block
+  display: flex
+  width: 100%
+
+.catalog-detail-more-services-block-item
+  margin-right: 45px
+
+.tooltip-grey
+  @include sprite($quastion-grey)
+  display: inline-block
+  margin-left: 4px
+  min-width: 14px
+
+.tooltip-gray
+  @include sprite($quastion)
+  display: inline-block
+  min-width: 14px
+
+.catalog-item-free-return
+  display: flex
+  margin-top: 11px
+  font-size: 14px
+  color: $c60
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 20px
+  opacity: 0.8
+
+.catalog-min-delivery
+  font-size: 14px
+
+.catalog-item-free-return__icon
+  @include sprite($free-return)
+  display: block
+  min-width: 28px
+  margin-right: 2px
+
+.catalog-item-like
+  width: 39px
+  height: 39px
+  border: 1px solid #8b8b8b
+  border-radius: 50%
+  cursor: pointer
+  display: inline-block
+  position: relative
+  transition: 0.2s
+  margin-right: 20px
+  &:hover
+    opacity: 0.8
+  &:before
+    @include sprite($favorite)
+    position: absolute
+    content: ''
+    top: 50%
+    margin-top: - 11px
+    left: 50%
+    margin-left: -11px
+  &.active
+    border: 1px solid #f34242
+    background: #f34242
+    & .catalog-item-like-icon
+      & .st0
+        fill: #fff
+
+.catalog-item-like-icon
+  width: 23px
+  height: 22px
+  position: absolute
+  content: ''
+  top: 50%
+  margin-top: -11px
+  left: 50%
+  margin-left: -11px
+
+.catalog-item-chart
+  width: 39px
+  height: 39px
+  border: 1px solid #8b8b8b
+  border-radius: 50%
+  cursor: pointer
+  display: inline-block
+  position: relative
+  transition: 0.2s
+  margin-right: 20px
+  &:hover
+    opacity: 0.8
+  &:before
+    @include sprite($analysis-chart)
+    position: absolute
+    content: ''
+    top: 50%
+    margin-top: -11.5px
+    left: 50%
+    margin-left: -10px
+
+.catalog-item-show-tirs
+  border: 1px solid rgba(96, 96, 96, 0.6)
+  color: #606060
+  text-transform: uppercase
+  font-size: 12px
+  padding: 7px 26px 7px 11px
+  line-height: 12px
+  transition: 0.2s
+  position: relative
+  width: 100%
+  display: block
+  margin-top: 29px
+  &:hover
+    text-decoration: none
+    border: 1px solid rgba(96, 96, 96, 1)
+  &:before
+    content: ''
+    @include sprite($arrow-back)
+    position: absolute
+    right: 11px
+    top: 50%
+    margin-top: -5.5px
+
+.catalog-item-order-tire
+  border: 1px solid rgba(96, 96, 96, 0.6)
+  padding: 7px 0px 7px 0px
+  line-height: 12px
+  transition: 0.2s
+  position: relative
+  color: $c60
+  text-transform: uppercase
+  font-size: 12px
+  text-decoration: none
+  display: block
+  text-align: center
+  margin-top: 15px
+  margin-bottom: 23px
+  &:hover
+    text-decoration: none
+    background: #6a9c1d
+    color: #fff
+    border: 1px solid rgba(106, 156, 29, 0.4)
+
+.catalog-detail-socials-links-block
+  padding-top: 5px
+  display: none
+
+.catalog-detail-socials-links
+  display: flex
+  justify-content: space-between
+
+.catalog-detail-socials__link
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.catalog-detail__share-social
+  display: block
+  width: 33px
+  height: 33px
+  fill: #606060
+
+.catalog-detail-socials__text
+  font-size: 16px
+  color: $c60
+  border-bottom: 1px dashed rgba(96, 96, 96, 0.4)
+  position: relative
+  margin-bottom: 40px
+  &:after
+    content: ''
+    @include sprite($mini-arrow)
+    position: absolute
+    right: -11px
+    top: 50%
+  &:hover
+    text-decoration: none
+    border-color: transparent
+    cursor: pointer
+
+.notifications-block
+  position: absolute
+  right: 160px
+  top: 268px
+  z-index: 2
+
+.notification-item
+  width: 247px
+  height: 50px
+  box-shadow: 0 3px 7px rgba(0, 1, 2, 0.3)
+  background-color: #ffffff
+  padding: 11px 35px 11px 15px
+  font-size: 14px
+  line-height: 16px
+  color: $c60
+  display: flex
+  align-items: center
+  margin-bottom: 5px
+  position: relative
+
+.notification-one-people
+  display: block
+  @include sprite($one-people)
+  margin-right: 15px
+  min-width: 22px
+
+.notification-two-people
+  display: block
+  @include sprite($two-people)
+  margin-right: 15px
+  min-width: 22px
+
+.container-notification
+  position: relative
+
+.close-notification
+  display: block
+  @include sprite($close-notification)
+  position: absolute
+  top: 5px
+  right: 5px
+  cursor: pointer
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.catalog-detail-tabs
+  margin: 0
+  padding: 0
+  list-style: none
+  border-bottom: 1px solid #cccccc
+  padding-bottom: 25px
+  overflow: hidden
+  display: flex
+  justify-content: space-between
+  &.personal-tabs
+    border: none
+  & > li
+    border-top: 4px solid transparent
+    &:hover
+      & > a
+        border: none
+        text-decoration: none
+        color: $c30
+    & > a
+      border: none !important
+      font-size: 22px
+      color: #8b8b8b
+      font-weight: 700
+      padding-top: 15px
+      display: inline-block
+    &.active
+      border-top: 4px solid #0f263d
+      & > a
+        border: none
+        color: $c30 !important
+        border-top: 4px solid #0f263d
+
+.catalog-detail-tabs-content
+  padding-top: 40px
+  padding-bottom: 55px
+  border-bottom: 1px solid #d7d7d7
+
+.catalog-detail-characteristics-color
+  display: flex
+  align-items: center
+  margin-bottom: 10px
+  &:last-child
+    margin: 0
+
+.catalog-detail-characteristics-color__image
+  border: 1px solid rgba(96, 96, 96, 0.4)
+  width: 66px
+  height: 66px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-right: 20px
+  background: rgba(255, 255, 255, 0.4)
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.catalog-detail-characteristics-color__name
+  color: $c60
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.catalog-detail-characteristics-list
+  padding: 14px 0
+  font-size: 18px
+  color: $c60
+  align-items: center
+  display: flex
+  &:nth-child(2n)
+    background: rgba(96, 96, 96, 0.11)
+  & > div:nth-child(1)
+    margin-left: 33px
+
+.catalog-detail-characteristics-list__link
+  color: $c60
+
+.tab-2d
+  position: relative
+
+.tab-2d-name
+  display: block
+  font-size: 20px
+  color: $c60
+  font-weight: bold
+  margin-bottom: 15px
+
+.tab-2d-btns
+  position: absolute
+  left: 0
+
+.tab-2d-btns-auto-edit
+  border: 1px solid rgba(96, 96, 96, 0.6)
+  padding: 7px 20px 5px 20px
+  line-height: 12px
+  margin-right: 30px
+  transition: 0.2s
+  position: relative
+  width: 100%
+  display: block
+  text-align: center
+  z-index: 1
+  &__span
+    border-bottom: 1px dashed
+    color: #606060
+    text-transform: uppercase
+    font-size: 12px
+  &:hover
+    text-decoration: none
+    background: #6a9c1d
+    border-color: #6a9c1d
+    .tab-2d-btns-auto-edit__span
+      border-color: transparent
+      color: #fff
+
+.tab-2d-btns-auto-show-tirs
+  border: 1px solid rgba(96, 96, 96, 0.6)
+  color: #606060
+  text-transform: uppercase
+  font-size: 12px
+  padding: 7px 15px 7px 7px
+  line-height: 12px
+  transition: 0.2s
+  position: relative
+  width: 100%
+  display: block
+  margin-top: 15px
+  z-index: 1
+  &:hover
+    text-decoration: none
+    border: 1px solid #606060
+  &:before
+    content: ''
+    @include sprite($arrow-back)
+    position: absolute
+    right: 11px
+    top: 50%
+    margin-top: -5.5px
+
+.tab-2d__image
+  display: block
+  margin: 0 auto
+  margin-top: 43px
+
+.tab-2d-apply
+  right: 0
+  position: absolute
+  top: 5px
+
+.tab-2d-apply__text
+  display: block
+  position: relative
+  text-transform: uppercase
+  font-size: 18px
+  line-height: 22px
+  color: $c60
+  font-weight: 400
+  width: 174px
+  float: right
+  &:before
+    @include sprite($apply-tire)
+    content: ''
+    position: absolute
+    left: -60px
+    top: 50%
+    margin-top: -20px
+
+.tab-2d-not-apply__text
+  display: block
+  position: relative
+  text-transform: uppercase
+  font-size: 18px
+  line-height: 22px
+  color: $c60
+  font-weight: 400
+  width: 215px
+  float: right
+  &:before
+    @include sprite($warning)
+    content: ''
+    position: absolute
+    left: -60px
+    top: 50%
+    margin-top: -20px
+
+.catalog-detail-interesting
+  margin-top: 100px
+
+.catalog-detail-interesting__title
+  font-weight: bold
+  font-size: 20px
+  color: #020c16
+  margin-bottom: 10px
+  display: block
+
+.catalog-detail-video
+  margin-top: 50px
+
+.catalog-detail-contacts
+  margin-top: 100px
+  margin-bottom: 25px
+
+.modal-issue
+  position: fixed
+  background: #fff
+  left: 0
+  width: 100%
+  top: 0
+  height: 100vh
+  z-index: 1100
+  visibility: hidden
+  opacity: 0
+
+.modal-issue-container
+  padding-right: 0
+
+.modal-issue-content
+  padding-top: 44px
+
+.modal-issue-content-scroll
+  max-height: 70vh
+
+.modal-issue-title
+  display: block
+  font-size: 26px
+  font-weight: bold
+  margin-bottom: 44px
+
+.modal-issue__title-count
+  color: $c60
+  font-family: $latoLight
+  display: inline-block
+  margin-left: 20px
+
+.modal-issue-header-puncts
+  display: flex
+  align-items: center
+  border-bottom: 1px solid #e5e5e5
+  padding-bottom: 10px
+  margin: 0
+
+.modal-issue-header
+  color: $c60
+  font-size: 14px
+  text-transform: uppercase
+  display: flex
+
+.modal-issue__number
+  min-width: 50px
+  display: block
+
+.modal-issue-item
+  padding: 20px 0
+  border-bottom: 1px solid #e5e5e5
+  display: flex
+  align-items: center
+  position: relative
+  margin: 0
+  &:nth-child(2n)
+    background: rgba(241, 241, 241, 0.9)
+.modal-issue-col-1
+  display: flex
+  align-items: center
+
+.modal-issue-col-1-text
+  flex-grow: 1
+
+.modal-issue__number-bold
+  min-width: 50px
+  display: block
+  font-size: 20px
+  color: #2a3d62
+  font-style: italic
+  font-weight: bold
+  font-family: Georgia, Arial, sans-serif
+
+.modal-issue__name
+  font-size: 16px
+  font-weight: 700
+  line-height: 18px
+  color: $c30
+  display: block
+  margin-bottom: 12px
+
+.modal-issue-as
+  font-size: 16px
+  font-style: italic
+  color: $c60
+  opacity: 0.8
+  border-bottom: 1px dashed
+  cursor: pointer
+  font-family: Georgia, Arial, sans-serif
+  &:hover
+    border-color: transparent
+
+.modal-issue__phone
+  display: block
+  font-size: 16px
+  line-height: 30px
+  color: $c30
+  font-weight: bold
+
+.modal-issue__clock
+  line-height: 18px
+  opacity: 0.8
+  color: $c60
+  font-size: 16px
+  display: block
+
+.modal-issue__card
+  font-size: 16px
+  color: $c30
+
+.modal-issue-item-popup
+  position: absolute
+  display: none
+  left: 0px
+  right: 8px
+  top: 95%
+  background: #fff
+  border: 2px solid #606060
+  padding: 27px
+  z-index: 2
+  &:before
+    content: ''
+    width: 20px
+    height: 20px
+    position: absolute
+    border: 2px solid #606060
+    background: #fff
+    top: -10px
+    transform: rotate(45deg)
+    left: 78px
+  &:after
+    content: ''
+    width: 30px
+    height: 20px
+    position: absolute
+    background: #fff
+    top: 0px
+    left: 72px
+
+.modal-issue-item-popup__title
+  font-size: 16px
+  font-weight: 700
+  display: block
+  color: $c30
+  margin-bottom: 15px
+
+.modal-issue-item-popup__text
+  font-size: 16px
+  font-weight: 400
+  line-height: 22px
+  color: $c60
+
+.modal-issue-item-popup__close
+  @include sprite($close-cart)
+  display: block
+  position: absolute
+  right: 13px
+  top: 13px
+  transition: 0.2s
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+
+.modal-issue-map-col
+  padding: 0
+
+.modal-issue-row
+  margin: 0
+
+.modal-issue__text-bottom
+  font-size: 16px
+  color: $c30
+  display: block
+  margin-top: 39px
+
+.header-mobile-icon-menu
+  @include sprite($mobile-menu)
+  cursor: pointer
+
+.header-car-mobile
+  padding: 11px 16px 11px 65px
+  & #svg-header-car
+    left: 10px
+  &.active
+    padding: 11px 16px
+    & .mobile-header-car
+      display: none
+    & .mobile-menu-search__input
+      display: block
+    & .mobile-menu-search
+      width: 100%
+
+.footer-phones.show-mobile
+  display: none
+
+.footer-phones.show-tablet
+  display: none
+
+.steps-cart
+  margin-top: 60px
+  margin-bottom: 40px
+  display: flex
+  justify-content: space-between
+  height: 57px
+  align-items: center
+  overflow: hidden
+
+.steps-cart-item
+  width: 33.333%
+  display: flex
+  background: #F1F1F1
+  height: 57px
+  justify-content: center
+  align-items: center
+  color: #8d8d8d
+  text-transform: uppercase
+  font-size: 14px
+  border: 1px solid #c2c2c2
+  position: relative
+  line-height: 14px
+  &.active
+    background: #fff
+    color: $c30
+  &.step1
+    &:before
+      content: ''
+      width: 57px
+      height: 57px
+      border: 1px solid #c2c2c2
+      position: absolute
+      right: -28px
+      z-index: 1
+      background: #f1f1f1
+      transform: rotate(45deg)
+      top: -1px
+    &:after
+      content: ''
+      width: 57px
+      height: 57px
+      position: absolute
+      right: -10px
+      z-index: 2
+      background: #f1f1f1
+      top: -1px
+      border-top: 1px solid #c2c2c2
+      border-bottom: 1px solid #c2c2c2
+  &.step2
+    &:before
+      content: ''
+      width: 57px
+      height: 57px
+      border: 1px solid #c2c2c2
+      position: absolute
+      right: -28px
+      z-index: 1
+      background: #f1f1f1
+      transform: rotate(45deg)
+      top: -1px
+    &:after
+      content: ''
+      width: 57px
+      height: 57px
+      position: absolute
+      right: -10px
+      z-index: 2
+      background: #f1f1f1
+      top: -1px
+      border-top: 1px solid #c2c2c2
+      border-bottom: 1px solid #c2c2c2
+  &.active
+    background: #fff
+    color: $c30
+    &:before
+      background: #fff
+    &:after
+      background: #fff
+
+.cart-title
+  display: block
+  font-size: 26px
+  color: #0c141c
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 40px
+  &.checkout
+    margin-bottom: 20px
+
+.cart-table-row
+  display: flex
+  align-items: center
+  width: 100%
+  flex-wrap: wrap
+
+.cart-table-col1
+  width: 11%
+  padding-right: 20px
+  &:first-child
+    padding-left: 20px
+
+.cart-table-row-titles
+  margin-bottom: 20px
+  padding-bottom: 10px
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+.cart-table-title
+  text-transform: uppercase
+  font-size: 14px
+  display: block
+  color: $c60
+
+.cart-table-col2
+  width: 25%
+  padding-right: 20px
+
+.cart-table-col3
+  width: 17%
+  padding-right: 20px
+
+.cart-table-col4
+  min-width: 17%
+  padding-right: 20px
+
+.cart-table-col5
+  min-width: 30%
+  padding-right: 20px
+
+.cart-table-container
+  border: 2px solid #cccccc
+
+.cart-table-auto
+  height: 58px
+  background-color: rgba(241, 241, 241, 0.6)
+  display: flex
+  align-items: center
+  padding-left: 20px
+
+.cart-table-auto__name
+  font-size: 16px
+  margin-right: 20px
+  color: $c30
+
+.cart-table-auto-btn-edit
+  border: 1px solid rgba(106, 156, 29, 0.4)
+  padding: 7px 20px 7px 20px
+  line-height: 12px
+  margin-right: 30px
+  transition: 0.2s
+  position: relative
+  &:hover
+    text-decoration: none
+    background: rgba(106, 156, 29, 1)
+    & .cart-table-auto-btn-edit__span
+      border-color: transparent
+      color: #fff
+
+.cart-table-auto-btn-edit__span
+  border-bottom: 1px dashed
+  color: #606060
+  text-transform: uppercase
+  font-size: 12px
+
+.cart-table-row-internal
+  padding: 20px 0
+
+.cart-table-article
+  font-size: 16px
+  display: block
+  color: $c30
+  font-weight: bold
+
+.cart-table-product
+  display: flex
+  align-items: center
+  max-width: 260px
+
+.cart-table-product__image
+  min-width: 80px
+  margin-right: 20px
+  text-align: center
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.cart-table-product__link
+  font-size: 18px
+  text-decoration: none
+  font-family: $latoSemibold
+  color: $c30
+  text-decoration: none
+  line-height: 20px
+  &:hover
+    text-decoration: underline
+
+.cart-table-product__color
+  display: block
+  font-size: 16px
+  color: $c60
+  margin-top: 10px
+
+.cart-table-compatibility
+  display: flex
+  width: 160px
+  align-items: center
+  margin-bottom: 10px
+
+.cart-table-compatibility__text
+  line-height: 10px
+  font-size: 12px
+  font-family: $latoBold
+
+.cart-table-compatibility_icon
+  display: block
+  @include sprite($compatible)
+  margin-right: 10px
+  min-width: 31px
+
+.cart-table-incompatibility_icon
+  display: block
+  @include sprite($incompatible)
+  margin-right: 10px
+  min-width: 28px
+
+.cart-table-compatibility__link
+  display: block
+  max-width: 180px
+  font-size: 14px
+  color: $c30
+  opacity: 0.8
+  margin-bottom: 5px
+  &:hover
+    text-decoration: none
+    & span
+      border-color: transparent
+  & span
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.4)
+
+.cart-table-instock__span
+  display: block
+  font-size: 16px
+  margin-bottom: 3px
+  color: $c30
+  font-weight: bold
+
+.cart-table-instock-text
+  width: 135px
+  display: block
+
+.cart-table-instock-text
+  font-size: 12px
+  line-height: 14px
+  color: #606060
+
+.cart-table-instock-text__bold
+  font-family: $latoBold
+  color: $c30
+
+.cart-table-price
+  font-size: 19px
+  font-weight: 300
+  color: $c30
+  display: flex
+  align-items: center
+
+.cart-table__price-multi
+  font-size: 12px
+  color: $c60
+  margin: 0 8px
+
+.cart-table__price-equally
+  font-size: 12px
+  color: $c60
+  margin-left: 19px
+  margin-right: 11px
+  line-height: 14px
+
+.cart-table__price-count
+  width: 24px !important
+  & .dropdown-toggle
+    margin: 0 !important
+    padding: 0 !important
+    border: none !important
+  & .filter-option
+    font-size: 20px
+    color: $c30 !important
+  & .bs-caret
+    opacity: 0.8 !important
+    color: $c60 !important
+  & li
+    outline: none !important
+    & a
+      outline: none !important
+      font-size: 18px
+
+.cart-table__price-count.btn-group .dropdown-toggle .caret
+  right: -5px !important
+
+.cart-table__price-total
+  font-size: 20px
+  font-weight: 600
+  color: $c30
+
+.cart-table-price-and-delete
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.cart-table-delete
+  display: block
+  @include sprite($delete-cart)
+  &:hover
+    opacity: 0.8
+
+.table-cart-separate
+  margin: 0 10px
+  &.no-margin
+    margin: 0
+
+.cart-table-col6
+  width: 100%
+  padding-left: 20px
+  margin-top: 20px
+
+.cart-table-checkbox
+  display: flex
+  align-items: center
+  cursor: pointer
+
+.cart-table-checkbox-span
+  font-size: 16px
+  color: $c60
+  line-height: 16px
+  opacity: 0.8
+
+.cart-table-checkbox-span__city
+  font-size: 16px
+  color: $c60
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.cart-table-bottom
+  background-color: #f1f1f1
+  height: 74px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 30px
+  margin-top: 20px
+
+.cart-table-coupon
+  margin-bottom: 0
+  display: flex
+  align-items: center
+
+.cart-table-coupon__input
+  width: 200px
+  height: 34px
+  border: 1px solid #c2c2c2
+  background-color: #ffffff
+  padding: 0 16px
+  font-size: 16px
+  color: $c60
+
+.cart-table-coupon__submit
+  margin-left: 3px
+  width: 124px
+  height: 34px
+  background-color: #0f263d
+  transition: 0.2s
+  font-size: 16px
+  color: #fff
+  text-align: center
+  border: none
+  &:hover
+    opacity: 0.9
+
+.cart-table-sum
+  display: flex
+  align-items: center
+
+.cart-table-sum__text
+  font-size: 16px
+  font-family: $latoSemibold
+  color: $c60
+  margin-right: 28px
+
+.cart-table-sum__price
+  font-size: 28px
+  font-weight: 700
+  color: $c30
+
+.cart-table-btn
+  width: 406px
+  height: 51px
+  border: 2px solid #6a9c1d
+  display: flex
+  align-items: center
+  margin: 0 auto
+  margin-bottom: 101px
+  margin-top: 40px
+  justify-content: center
+  color: #6a9c1d
+  font-size: 14px
+  text-transform: uppercase
+  font-weight: bold
+  transition: 0.2s
+  position: relative
+  &:hover
+    opacity: 0.8
+    text-decoration: none
+  &:before
+    content: ''
+    @include sprite($cart-button-arrow)
+    position: absolute
+    right: 42px
+    top: 50%
+    margin-top: -8px
+
+.cart-accessories-title
+  display: block
+  margin-bottom: 20px
+  font-size: 20px
+  font-weight: bold
+  color: #020c16
+
+.cart-accessories-item
+  &:hover
+    & .cart-accessories-item-content
+      border-bottom-color: transparent
+    & .cart-accessories-item__btn
+      display: block
+
+.cart-accessories-item-content
+  padding: 22px
+  border: 2px solid #e7e7e7
+  background: #fff
+
+.cart-accessories-item__image
+  text-align: center
+  transition: 0.2s
+  display: block
+  margin-bottom: 20px
+  & img
+    height: 160px
+  &:hover
+    opacity: 0.8
+
+.cart-accessories-item__link
+  display: block
+  font-size: 16px
+  font-weight: 400
+  line-height: 20px
+  color: $c60
+  text-decoration: none
+  margin-bottom: 15px
+  height: 40px
+  overflow: hidden
+  &:hover
+    text-decoration: underline
+
+.cart-accessories-item__price
+  font-size: 26px
+  display: block
+  color: $c30
+  line-height: 26px
+  height: 26px
+
+.cart-accessories-item__btn
+  display: block
+  text-align: center
+  background-color: #6a9c1d
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  padding: 15px 0
+  transition: 0.2s
+  display: none
+  position: absolute
+  left: 10px
+  right: 10px
+  bottom: -48px
+  &:hover
+    background: #7eb727
+    text-decoration: none
+
+.cart-checkout-btn-authorize
+  border: 1px solid rgba(106, 156, 29, 0.4)
+  padding: 7px 27px 7px 55px
+  line-height: 12px
+  margin-right: 30px
+  transition: 0.2s
+  position: relative
+  display: inline-block
+  &:before
+    content: ''
+    position: absolute
+    @include sprite($checkout-authorize)
+    left: 27px
+    top: 50%
+    margin-top: -9px
+  &:hover
+    text-decoration: none
+    border-color: rgba(96, 96, 96, 0.41)
+    & .cart-checkout-btn-authorize__span
+      border-color: transparent
+      color: $c60
+
+.cart-checkout-btn-authorize__span
+  border-bottom: 1px dashed
+  color: #606060
+  text-transform: uppercase
+  font-size: 12px
+
+.checkout-authotize-text
+  display: block
+  margin-top: 3px
+  font-size: 12px
+  color: #8b8b8b
+
+.cart-checkout-top
+  margin-bottom: 35px
+
+.checkout-content-tabs
+  border: none
+  list-style: none
+  overflow: hidden
+  margin: 0
+  padding: 0
+
+.checkout-tab-fiz-icon
+  @include sprite($fiz-tab-grey)
+  display: block
+  margin-right: 20px
+
+.checkout-tab-ur-icon
+  @include sprite($ur-tab-grey)
+  display: block
+  margin-right: 20px
+
+.checkout-tab
+  height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0
+  border-radius: 0
+  cursor: pointer
+  border: 2px solid transparent
+  border-bottom: 2px solid #e5e5e5
+  margin-bottom: 0 !important
+  & a
+    color: #8b8b8b !important
+  &.active
+    border: 2px solid #e5e5e5
+    border-bottom: none
+    & a
+      color: #020c16 !important
+    .checkout-tab-fiz-icon
+      @include sprite($fiz-tab-black)
+    .checkout-tab-ur-icon
+      @include sprite($ur-tab-black)
+  & a
+    border-radius: 0 !important
+    display: flex
+    height: 100%
+    width: 100%
+    border: none !important
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    font-size: 20px
+    text-decoration: none
+    color: #020c16
+    font-weight: 700
+    &:hover
+      text-decoration: none
+
+.checkout-content
+  padding-top: 50px
+  border: 2px solid #e5e5e5
+  border-top: 1px solid transparent
+  padding-bottom: 45px
+  margin-bottom: 20px
+  margin-right: 0
+  margin-left: 0
+
+.checkout-contacts-title
+  text-transform: uppercase
+  font-size: 14px
+  color: $c60
+  display: block
+  margin-bottom: 7px
+
+.checkout-contacts-input
+  width: 100%
+  height: 42px
+  padding: 0 4px
+  font-size: 18px
+  color: #303030
+  border: 1px solid #c2c2c2
+  &-hide
+    display: none
+    margin-top: 5px
+
+.row-checkout-input
+  margin-bottom: 7px
+
+.checkout-add-number
+  color: $c60
+  font-size: 14px
+  display: inline-block
+  border-bottom: 1px dashed
+  cursor: pointer
+  margin-bottom: 40px
+  &:hover
+    border-bottom: 1px dashed transparent
+
+.checkout-delivery-tabs
+  border: none
+  margin-top: 40px
+  overflow: hidden
+  list-style: none
+  margin: 0
+  padding: 0
+
+.checkout-delivery__span
+  font-size: 16px
+  color: $c30
+  font-weight: 700
+  line-height: 18px
+
+.checkout-delivery1-icon
+  @include sprite($delivery1)
+  display: block
+  margin-right: 12px
+  min-width: 23px
+
+.checkout-delivery2-icon
+  @include sprite($delivery2)
+  display: block
+  margin-right: 12px
+  min-width: 22.5px
+
+.checkout-delivery3-icon
+  @include sprite($delivery3)
+  display: block
+  margin-right: 12px
+  min-width: 22.5px
+
+.checkout-delivery-tab
+  width: 33.33%
+  float: left
+  padding-right: 20px !important
+  border-bottom: 1px solid rgba(194, 194, 194, 0.4)
+  margin-bottom: 0 !important
+  .checkout-delivery-tab-link
+    border-top: 4px solid transparent !important
+  &:hover
+    .checkout-delivery-tab-link
+      border-top: 4px solid rgba(15, 38, 61, 0.17) !important
+  &.active
+    .checkout-delivery-tab-link
+      border-top: 4px solid #0f263d !important
+    .checkout-delivery1-icon
+      @include sprite($delivery1-active)
+    .checkout-delivery2-icon
+      @include sprite($delivery2-active)
+    .checkout-delivery3-icon
+      @include sprite($delivery3-active)
+
+.checkout-delivery-tab-link
+  display: flex
+  cursor: pointer !important
+  width: 100%
+  border: none !important
+  border-radius: 0 !important
+  align-items: center
+  padding-left: 12px
+  height: 78px
+  &:hover
+    text-decoration: none
+
+.checkout-delivery-content
+  padding-top: 40px
+
+.checkout-delivery-title__span
+  text-transform: uppercase
+  color: $c60
+  display: inline-block
+  margin-right: 20px
+  font-size: 14px
+  line-height: 14px
+
+.checkout-delivery-city-container
+  .dropdown-toggle
+    border: none
+    padding: 0
+    outline: none
+    &:hover
+      background: #fff
+    &:focus
+      outline: none !important
+  & .btn-group.open .dropdown-toggle
+    border-bottom: 1px solid transparent !important
+
+.checkout-delivery-city-container .dropdown-menu
+  border-radius: 0
+  overflow: hidden
+  border: none
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.57)
+
+.checkout-delivery-city-container .dropdown-menu .active a
+  background-color: #6a9c1d !important
+
+.checkout-delivery-city-container a
+  outline: none
+  &:focus
+    outline: none
+
+.checkout-delivery-city-container .form-control
+  border-radius: 0 !important
+  outline: none !important
+  border: none
+  border-bottom: 1px solid #ccc
+  box-shadow: none
+  padding: 0
+  margin-bottom: 10px
+  height: 24px
+  font-style: italic
+  & a
+    padding: 3px 10px !important
+  &:focus
+    outline: none
+    border-bottom: 1px solid #ccc
+    box-shadow: none
+
+.checkout-delivery-city-container .dropdown-toggle
+  border-radius: 0
+  color: #606060 !important
+  font-style: italic
+  font-size: 16px
+  border-bottom: 1px dashed
+  position: relative
+  width: auto !important
+  font-family: Georgia, Arial, sans-serif
+  line-height: 16px
+
+.checkout-delivery-city
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+.checkout-delivery-title__input
+  display: block
+  width: 100%
+  height: 42px
+  border: 1px solid #c2c2c2
+  padding: 0 4px
+  margin-top: 5px
+  border-radius: 0px
+  box-shadow: none
+  outline: none !important
+  &:focus
+    outline: none !important
+    border: 1px solid #c2c2c2 !important
+    box-shadow: none !important
+  &-hide
+    display: none
+
+.checkout-delivery-address
+  margin-bottom: 20px
+
+.input-group-addon
+  @include sprite($date-icon)
+  position: absolute
+  cursor: pointer
+  z-index: 2
+  background-color: transparent
+  border: none
+  position: absolute
+  right: 10px
+  top: 50%
+  margin-top: -12px
+
+.input-group.date
+  width: 193px
+
+.checkout-date-and-time
+  display: flex
+  align-items: center
+
+.checkout-date
+  margin-right: 15px
+
+.checkout-date-select.bootstrap-select.btn-group
+  width: 93px !important
+  margin-top: 5px
+  height: 42px
+  &.checkout-date-select-entity
+    width: 100% !important
+  & .dropdown-toggle
+    height: 42px
+    border-radius: 0
+    border: 1px solid #c2c2c2
+    font-size: 18px
+    color: $c30
+    & .caret
+      right: 5px !important
+  &.open
+    & .dropdown-toggle
+      border: 1px solid #c2c2c2
+  & .dropdown-menu
+    font-size: 16px
+    border-radius: 0
+    & li
+      outline: none !important
+      & a
+        outline: none !important
+
+.checkout-time
+  position: relative
+  &:before
+    content: 'по местному времени'
+    font-size: 14px
+    color: $c60
+    opacity: 0.8
+    font-style: italic
+    top: 50px
+    left: 22px
+    position: absolute
+    font-family: Georgia, Arial, sans-serif
+
+.checkout-time__span
+  margin: 0 5px
+  font-size: 18px
+  color: $c30
+  margin-right: 2px
+  margin-top: 5px
+  display: inline-block
+
+.comment-delivery
+  display: block
+  margin-top: 40px
+  margin-bottom: 40px
+
+.comment-delivery__text
+  font-size: 14px
+  color: $c60
+  border-bottom: 1px solid
+  cursor: pointer
+  &:hover
+    border-color: transparent
+
+.delivery-company
+  padding-bottom: 20px
+  border-bottom: 1px solid rgba(194, 194, 194, 0.4)
+  margin-bottom: 20px
+
+.delivery-company-row
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+.delivery-company-row-title
+  text-transform: uppercase
+  color: $c60
+  font-size: 14px
+  padding-bottom: 5px
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+.delivery-company-col-label
+  display: block
+  width: 100%
+
+.delivery-company-col
+  width: 33.3%
+  display: flex
+  align-items: center
+  &-address
+    color: #2c2c2c
+    text-decoration: underline
+    font-size: 16px
+    margin-left: 16px
+    &:hover
+      text-decoration: none
+  &.col1
+    flex-grow: 1
+    margin-right: 30px
+  &.col2
+    width: 90px
+    margin-right: 60px
+    & .delivery-company-name
+      margin-left: 0
+  &.col3
+    width: 115px
+    margin-right: 40px
+  &.col2
+    width: 100px
+
+.delivery-company-name
+  margin-left: 30px
+  text-align: center
+
+.delivery-company-name__span
+  text-align: center
+  display: block
+  text-transform: uppercase
+  font-size: 12px
+  color: #0c141c
+  margin-top: 3px
+  font-family: $latoBold
+
+.delivery-company-time
+  font-size: 16px
+  color: $c60
+
+.delivery-company-price
+  display: block
+
+.delivery-company-price__rouble
+  line-height: 18px
+  color: $c30
+  font-weight: bold
+  display: block
+
+.delivery-company-price__text
+  display: block
+  font-size: 16px
+  color: $c60
+  font-weight: 400
+
+.delivery-company-col-label
+  cursor: pointer
+
+.delivery-bottom__span
+  display: inline-block
+  margin-right: 40px
+  font-size: 14px
+  color: $c60
+  text-decoration: underline
+  cursor: pointer
+  &:hover
+    text-decoration: none
+
+.delivery-payment-name-container
+  position: relative
+  &:before
+    content: ''
+    height: 1px
+    background: rgba(194, 194, 194, 0.4)
+    position: absolute
+    left: 10px
+    right: 10px
+    bottom: 0px
+    display: block
+
+.delivery-payment-name
+  border-top: 4px solid #0f263d !important
+  display: flex
+  width: 100%
+  align-items: center
+  padding-left: 15px
+  font-size: 16px
+  color: #303030
+  font-weight: 700
+  line-height: 18px
+  height: 78px
+
+.payment-title-icon
+  display: block
+  @include sprite($payment-title)
+  margin-right: 14px
+  min-width: 33px
+
+.type-payments-label
+  display: flex
+  align-items: center
+  cursor: pointer
+  margin-top: 30px
+  &.active
+    align-items: flex-start
+    & .type-payments-text__text
+      display: block
+    & .jq-radio
+      margin-top: 15px
+
+.type-paymants-icon
+  margin-left: 17px
+  margin-right: 11px
+  min-width: 54px
+  text-align: center
+
+.type-payments-icon1
+  display: block
+  @include sprite($payment-checkout1)
+  margin: 0 auto
+
+.type-payments-icon2
+  display: block
+  @include sprite($payment-checkout2)
+  margin: 0 auto
+
+.type-payments-icon3
+  display: block
+  @include sprite($payment-checkout3)
+  margin: 0 auto
+
+.type-payments-icon4
+  display: block
+  @include sprite($payment-checkout4)
+  margin: 0 auto
+
+.type-payments-icon5
+  display: block
+  @include sprite($payment-checkout5)
+  margin: 0 auto
+
+.type-payments-text__name
+  font-size: 16px
+  color: #2c2c2c
+  font-weight: 700
+  display: block
+  line-height: 16px
+  margin-bottom: 5px
+
+.type-payments-text__text
+  font-weight: 400
+  line-height: 16px
+  font-size: 14px
+  color: $c60
+  display: none
+
+.checkout-info-bottom
+  background-color: #f1f1f1;
+  padding: 25px 30px
+  margin-bottom: 40px
+  margin-left: 0
+  margin-right: 0
+
+.checkout-info-bottom-text
+  display: inline-block
+  font-size: 16px
+  color: $c30
+
+.checkout-info-bottom__link
+  display: block
+  text-align: right
+  font-size: 12px
+  color: $c60
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.checkout-link__next
+  width: 234px
+  height: 51px
+  background-color: #6a9c1d
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  display: flex
+  margin: 0 auto
+  justify-content: center
+  align-items: center
+  transition: 0.2s
+  margin-bottom: 15px
+  &:hover
+    background: #7eb727
+    text-decoration: none
+
+.checkout-return-container
+  text-align: center
+  font-size: 16px
+  color: $c60
+
+.isue-point-title
+  display: block
+  font-weight: bold
+  margin-bottom: 13px
+  font-size: 16px
+
+.checkout-mobile-tire-icon
+  display: block
+  @include sprite($mobile-tire)
+  margin: 0 12px 0 3px
+  min-width: 50px
+
+.checkout-mobile-tire__title
+  display: block
+  color: $c30
+  font-size: 16px
+
+.checkout-mobile-tire__title
+  display: block
+  color: $c60
+  font-size: 16px
+
+.checkout-mobile-tire__link
+  display: inline-block
+  color: $c60
+  font-size: 14px
+  border-bottom: 1px dashed
+  &:hover
+    text-decoration: none
+    border-bottom: 1px dashed transparent
+
+.checkout-mobile-tire-label
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  cursor: pointer
+
+.div-cart-top
+  display: flex
+  justify-content: space-between
+  position: relative
+
+.cart-top-right
+  position: relative
+  display: flex
+  align-items: center
+  & .catalog-detail-socials-links-block
+    position: absolute
+    left: 0
+    width: 250px
+    top: 60px
+    background: #fff
+  & .catalog-detail-socials__text
+    margin-bottom: 0
+  & .catalog-item-like
+    margin-left: 37px
+
+.cart-print-icon
+  display: block
+  @include sprite($print)
+  margin-right: 12px
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.cart-print
+  display: flex
+  align-items: center
+
+.cart-print-link
+  font-style: italic
+  color: $c60
+  text-decoration: underline
+  font-size: 14px
+  font-family: Georgia, Arial, sans-serif
+  &:hover
+    text-decoration: none
+
+.comment-delivery__textarea
+  display: block
+  margin-top: 10px
+  width: 100%
+  resize: none
+  font-size: 16px
+  padding: 10px
+  height: 100px
+  display: none
+
+.checkout-time-bottom
+  margin-top: 10px
+  display: none
+
+.cart-table-product__link-checkout
+  cursor: default
+  &:hover
+    text-decoration: none
+
+.cart-table-product__image-checkout
+  &:hover
+    opacity: 1
+
+.cart-table-checkout
+  display: none
+  & .cart-table-col1
+    width: 15%
+  & .cart-table-col2
+    width: 30%
+  & .cart-table-col4
+    width: 25%
+  & .cart-table-col5
+    width: 30%
+
+.left-header-tablet
+  display: none
+  padding: 15px 0
+  position: relative
+
+.left-header-tablet-menu
+  display: flex
+  align-items: center
+  margin-right: 40px
+  width: 83px
+  &.active
+    .left-header-tablet-menu-icon
+      @include sprite($active-tablet-menu)
+      display: block
+      margin-right: 10px
+    .left-header-tablet-menu-text
+      opacity: 0
+
+.left-header-tablet-menu-icon
+  @include sprite($menu-icon-tablet)
+  display: block
+  margin-right: 10px
+
+.left-header-tablet-menu-text
+  color: $c60
+  font-size: 14px
+
+.left-header-tablet-search
+  display: flex
+  align-items: center
+  margin: 0
+
+.left-header-tablet-search__submit
+  @include sprite($search-icon-tablet)
+  border: none
+  background-color: transparent
+  margin-right: 10px
+
+.left-header-tablet-search__input
+  border: none
+  color: $c60
+  font-size: 14px
+
+.modal-credit-dialog
+  width: 700px
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.45)
+  background-color: #ffffff
+  padding: 60px
+  position: relative
+  line-height: 30px
+
+.modal-idontnow-dialog
+  width: 850px
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.45)
+  background-color: #ffffff
+  padding: 70px 100px
+  position: relative
+  line-height: 30px
+  & h3
+    margin-bottom: 15px
+
+.tabs-modal-idontnow
+  display: flex
+  justify-content: space-between
+  padding-bottom: 10px
+  margin-bottom: 35px
+  &::before
+    display: none
+
+li.tabs-modal-idontnow__li
+  width: 30%
+  border: none
+  border-top: 4px solid #fff
+  &.active
+    border-top: 4px solid #0f263d
+
+.tabs-modal-idontnow__link
+  padding: 0 !important
+  border: none !important
+  line-height: 1 !important
+  border-radius: 0 !important
+  color: #8b8b8b !important
+  font-size: 17px !important
+  font-weight: bold
+  padding-top: 10px !important
+
+.modal-logo-credit
+  margin-bottom: 37px
+
+.modal-credit-title
+  display: block
+  font-size: 26px
+  margin-bottom: 30px
+  font-weight: bold
+
+.modal-credit-block
+  margin-bottom: 40px
+  &:last-child
+    margin-bottom: 0
+
+.modal-credit-text
+  color: $c60
+  font-size: 16px
+  line-height: 20px
+
+.modal-idontnow__btn
+  width: 100%
+  margin-top: 30px
+  text-align: center
+
+.modal-credit-block-list-title
+  color: $c30
+  font-weight: bold
+  font-size: 16px
+  margin-bottom: 13px
+
+.modal-credit-block-list-ul
+  margin: 0px
+  padding: 0
+  list-style: none
+  padding-left: 26px
+
+.modal-credit-block-list-li
+  position: relative
+  color: $c60
+  font-size: 16px
+  display: block
+  margin-bottom: 10px
+  line-height: 16px
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    background: #6a9c1d
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    left: -26px
+    top: 5px
+
+.modal-credit-block-star
+  margin-top: 25px
+
+.modal-credit-block-star-bold
+  display: block
+  margin-bottom: 10px
+  color: #000
+  font-size: 16px
+
+.modal-best-price
+  width: 700px
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.45)
+  background-color: #ffffff
+  padding: 60px
+  position: relative
+  line-height: 30px
+
+.modal-best-price-logo
+  font-size: 42px
+  color: #1e2a3f
+  width: 300px
+  margin: 0 auto
+  text-align: right
+  margin-bottom: 40px
+
+.modal-best-price-logo-green
+  color: #7a9b30
+
+.modal-best-price-logo-text
+  display: block
+  text-align: right
+  line-height: 18px
+  font-size: 18px
+  color: #1e2a3f
+  font-style: italic
+  padding-right: 5px
+  margin-top: 5px
+
+.modal-best-price-logo-text-italic-center
+  display: block
+  text-align: center
+  line-height: 18px
+  color: $c30
+  font-style: italic
+  font-size: 16px
+  margin-bottom: 40px
+  &_link
+    text-decoration: underline
+    color: #4e648a
+    &:hover
+      text-decoration: none
+
+.modal-best-price-title
+  display: block
+  text-transform: uppercase
+  color: #578421
+  margin-bottom: 25px
+  font-size: 16px
+  line-height: 20px
+  font-weight: bold
+  text-align: center
+
+.modal-best-price-steps
+  border: 1px solid #ccc
+  padding: 30px
+  margin-bottom: 30px
+
+.best-price-steps-row
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+.modal-best-price-steps__number
+  color: #578421
+  font-style: italic
+  font-size: 40px
+  font-family: Georgia, Arial, sans-serif
+
+.modal-best-price-steps__text
+  font-size: 18px
+  line-height: 22px
+  color: $c30
+
+.modal-best-price-steps__icon
+  text-align: center
+
+.modal-best-price-steps__icon1
+  display: block
+  height: 90px
+  width: 90px
+  margin: 0 auto
+  background: url(../img/bestprice-icons.png)
+  background-position: 0 0
+
+.modal-best-price-steps__icon2
+  display: block
+  height: 80px
+  width: 90px
+  margin: 0 auto
+  background: url(../img/bestprice-icons.png)
+  background-position: 0 -92px
+
+.modal-best-price-steps__icon3
+  display: block
+  height: 90px
+  width: 90px
+  margin: 0 auto
+  background: url(../img/bestprice-icons.png)
+  background-position: 0 -173px
+
+.modal-best-price-steps__icon4
+  display: block
+  height: 90px
+  width: 123px
+  margin: 0 auto
+  background: url(../img/bestprice-icons.png)
+  background-position: 0 -265px
+
+.modal-best-price-steps__text-green
+  font-weight: bold
+  color: #578421
+
+.modal-best-price-steps-big-text
+  padding-top: 20px
+  border-top: 1px solid #ccc
+  line-height: 18px
+  font-style: italic
+  font-family: Georgia, Arial, sans-serif
+  color: $c30
+  font-size: 16px
+
+.modal-best-price-btn
+  display: block
+  text-align: center
+  background-color: #6a9c1d
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  padding: 8px 0
+  width: 205px
+  margin: 0 auto
+  border: none
+  &:hover
+    background: #7eb727
+    text-decoration: none
+
+.modal-best-price-btn__submit
+  display: block
+  text-align: center
+  background-color: #6a9c1d
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  padding: 8px 0
+  width: 205px
+  margin: 0 auto
+  border: none
+  &:hover
+    background: #7eb727
+    text-decoration: none
+
+.entity-row
+  margin-bottom: 28px
+  display: flex
+  align-items: flex-end
+
+.entity-row-text
+  color: #8b8b8b
+  font-size: 14px
+  font-family: Georgia, Arial, sans-serif
+  line-height: 14px
+  font-style: italic
+
+.checkout-delivery-title__span-link
+  color: $c60
+  font-size: 14px
+  text-transform: none
+  margin-left: 10px
+  padding-bottom: 1px
+  border-bottom: 1px solid
+  cursor: pointer
+  &:hover
+    border-color: transparent
+
+.checkout-delivery-title__span-entity
+  display: flex
+  align-items: center
+
+.entity-row-number-col
+  position: relative
+
+.entity-row-number-col-add
+  position: absolute
+  color: $c60
+  display: inline-block
+  border-bottom: 1px dashed
+  cursor: pointer
+  font-size: 14px
+  right: -140px
+  bottom: 15px
+  &:hover
+    border-bottom: 1px dashed transparent
+
+.entity-row-email
+  display: block
+  margin-bottom: 78px
+
+.entity-row-email__input
+  margin-bottom: 5px
+
+.entity-rows
+  margin-bottom: 65px
+
+.modal-best-price-forms
+  border: 1px solid #ccc
+  padding: 30px 30px 0 30px
+
+.modal-best-price-forms__title
+  text-transform: uppercase
+  margin-top: 40px
+  margin-bottom: 25px
+  font-size: 16px
+  font-weight: bold
+  text-align: center
+  display: block
+
+.modal-best-price-forms-label
+  display: flex
+  align-items: center
+  cursor: pointer
+
+.modal-best-price-forms-span
+  font-weight: normal
+  font-size: 16px
+  line-height: 20px
+
+.modal-best-price-forms-labels
+  margin-bottom: 30px
+
+.modal-best-price-form
+  display: none
+  &.form1
+    display: block
+
+.catalog-noauto-title
+  display: block
+  font-size: 26px
+  color: #0c141c
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 40px
+  margin-top: 45px
+
+.catalog-noauto-table-row
+  font-size: 18px
+  color: $c60
+  overflow: hidden
+  border-top: 1px solid #efefef
+  border-bottom: 1px solid #efefef
+  &:nth-child(2n)
+    background: #efefef
+  & > div
+    border-right: 1px solid #fff
+    padding-top: 12px
+    padding-bottom: 12px
+    &:first-child
+      padding-left: 35px
+    &:last-child
+      border: none
+
+.catalog-noauto-table
+  margin-bottom: 100px
+  display: flex
+  flex-wrap: wrap
+  & > div
+    border-bottom: 1px solid #ccc
+    height: 50px
+    align-items: center
+    display: flex
+
+.catalog-no-auto__image
+  display: block
+  margin: 0 auto
+  margin-top: 10px
+
+.catalog-noauto-select
+  display: block
+  padding: 0
+  height: auto
+  & .tire-selection-block-hover
+    max-width: 400px
+
+.catalog-noauto-select-auto-title
+  display: block
+  padding-bottom: 25px
+  border-bottom: 1px solid #cccccc
+  margin-bottom: 30px
+  font-weight: bold
+  font-size: 20px
+
+.catalog-noauto-table-row__link
+  color: $c60
+
+.header-submenu
+  position: absolute
+  top: 60px
+  left: 0
+  right: 0
+  background: #fff
+  padding: 50px 10px 60px 10px
+  z-index: 20
+  visibility: hidden
+  opacity: 0
+  //transition: all 0.5s ease .4s;
+  &:hover
+    visibility: visible
+    opacity: 1
+
+.header-submenu-container
+  content: ''
+  top: 0
+  display: block
+  height: 100%
+  position: absolute
+  box-shadow: 0 5px 10px rgba(0, 1, 2, 0.6)
+  background: #fff
+
+.header-submenu-title
+  display: block
+  text-transform: uppercase
+  font-size: 14px
+  color: #8b8b8b
+  margin-bottom: 25px
+
+.header-menu-submenu__link
+  display: block
+  color: $c60
+  text-decoration: none
+  margin-bottom: 5px
+  &.active
+    color: $c30
+    font-weight: bold
+  &.rim
+    display: block
+    margin-right: 35px
+  &:hover
+    text-decoration: underline
+
+.header-menu-submenu__link-third
+  margin-left: 30px
+  display: block
+  color: $c60
+  text-decoration: none
+  &.active
+    color: $c30
+    font-weight: bold
+  &:hover
+    text-decoration: underline
+
+.header-menu-submenu-block
+  &.rim
+    column-count: 3
+
+.tablet-menu
+  padding: 30px 10px
+  box-shadow: -1px 3px 8px rgba(0, 1, 2, 0.3)
+  position: absolute
+  background: white
+  padding: 30px 10px
+  left: -1px
+  right: -1px
+  top: 59px
+  z-index: 20
+  display: none
+  &.active
+    display: block
+
+.tirs-menu-icon
+  @include sprite($tirs-menu)
+  display: block
+  margin-right: 8px
+
+.rim-menu-icon
+  @include sprite($rim-menu)
+  display: block
+  margin-right: 8px
+
+.tablet-menu-big-link
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+.tablet-menu-big-link__span
+  display: block
+  font-weight: bold
+  font-size: 20px
+  color: $c30
+
+.table-menu-title
+  margin-bottom: 15px
+
+.tablet-menu-row
+  margin-bottom: 20px
+
+.tablet-menu-one-links
+  margin: 25px 0
+
+.mobile-menu
+  padding: 15px
+  position: absolute
+  top: -2px
+  background: #fff
+  z-index: 20
+  box-shadow: -1px 3px 8px rgba(0, 1, 2, 0.3)
+  display: none
+  left: 0
+  right: 0
+  & .table-menu-title
+    margin-top: 30px
+    margin-bottom: 8px
+  & .tablet-menu-big-link
+    margin-bottom: 0
+  & .tablet-menu-row
+    border-bottom: 1px solid #cccccc
+    margin-bottom: 30px
+    padding-bottom: 30px
+    &:last-child
+      border: none
+      margin: 0
+  & .tablet-menu-one-links
+    border-bottom: 1px solid #cccccc
+    margin-bottom: 0
+    margin-left: -10px
+    margin-right: -10px
+    padding-left: 10px
+    padding-right: 10px
+    padding-bottom: 15px
+    & .row
+      margin: 0
+    & .tablet-menu-row-big
+      padding: 0
+    & .tablet-menu-big-link
+      margin-bottom: 20px
+
+.mobile-menu-top-close
+  @include sprite($active-tablet-menu)
+  display: block
+
+.mobile-menu-top
+  display: flex
+  justify-content: space-between
+  margin-bottom: 19px
+  & .header-account__link
+    color: $c60
+
+.mobile-menu-search__input
+  width: 100%
+  height: 43px
+  padding: 0 20px
+  color: #606060
+  background: #efefef
+  border: none
+  font-size: 16px
+  display: none
+
+.mobile-menu-search
+  position: relative
+  margin-bottom: 0
+  min-width: 60px
+
+.mobile-menu-search__submit
+  @include sprite($search-icon-tablet)
+  background-color: transparent
+  border: none
+  position: absolute
+  right: 15px
+  top: 7px
+  cursor: pointer
+
+.title-personal
+  display: block
+  font-weight: bold
+  margin-top: 77px
+  margin-bottom: 60px !important
+  text-transform: uppercase
+  color: #0c141c
+  font-size: 20px
+
+.tab-personal
+  border-top: 1px solid #cccccc
+  padding-top: 20px
+
+.list-order-item
+  border: 2px solid #e5e5e5
+
+.list-order-item-header
+  background: #e5e5e5
+  padding: 12px 30px
+  display: flex
+  align-items: center
+
+.list-order-item-header__button
+  border: 1px solid rgba(106, 156, 29, 0.4)
+  padding: 7px 20px 7px 20px
+  line-height: 12px
+  margin-right: 30px
+  transition: 0.2s
+  position: relative
+  display: inline-block
+  & .list-order-item-header__button-span
+    border-bottom: 1px dashed #bfd3a0
+    color: #6a9c1d
+    text-transform: uppercase
+    font-size: 12px
+  &:hover
+    text-decoration: none
+    background: rgba(106, 156, 29, 1)
+    & .list-order-item-header__button-span
+      border-color: transparent
+      color: #fff
+
+.list-order-item-header__bold
+  color: $c30
+  font-weight: bold
+  font-size: 13px
+  margin-right: 50px
+
+.list-order-item-content
+  padding-top: 40px
+  padding-left: 30px
+
+.list-order-item-content-title
+  display: inline-block
+  font-size: 13px
+  margin-bottom: 20px
+  font-weight: bold
+
+.list-order-item-content-row
+  display: flex
+  align-items: center
+  margin-bottom: 10px
+
+.list-order-item-content-grey-title
+  color: $c60
+  font-size: 11px
+  text-transform: uppercase
+  width: 50%
+  margin-right: 20px
+
+.list-order-item-content-delivery
+  display: flex
+  align-items: center
+  font-size: 13px
+  color: $c30
+  font-weight: bold
+
+.list-order-item-content-delivery-icon1
+  @include sprite($personal-delivery-icon1)
+  display: block
+  margin-right: 12px
+
+.list-order-item-content-delivery-icon2
+  @include sprite($personal-delivery-icon2)
+  display: block
+  margin-right: 12px
+
+.list-order-item-content-delivery-icon3
+  @include sprite($personal-delivery-icon3)
+  display: block
+  margin-right: 12px
+
+.list-order-item-content-sum
+  align-items: center
+  display: flex
+
+.list-order-item-content-sum-price
+  font-size: 15px
+  font-weight: bold
+  color: $c30
+  margin-right: 15px
+
+.list-order-item-content-sum-status
+  font-size: 13px
+  color: #8b8b8b
+
+.list-order-item-content-pay
+  display: flex
+  align-items: center
+  font-size: 13px
+  color: $c30
+  font-weight: bold
+
+.list-order-item-content-pay-icon
+  @include sprite($personal-visa-icon)
+  display: block
+  margin-right: 12px
+
+.list-order-item-content-type-delivery
+  font-size: 13px
+  color: $c30
+  font-weight: bold
+
+.list-order-item-content-date-delivery
+  font-size: 12px
+  color: $c30
+
+.list-order-item-number-delivery
+  display: flex
+  width: 100%
+  align-items: center
+
+.list-order-item-number-delivery-left
+  color: $c60
+  font-size: 11px
+  text-transform: uppercase
+  margin-right: 20px
+
+.list-order-item-number-delivery-right
+  font-size: 12px
+  font-weight: bold
+
+.list-order-item-number-delivery__link
+  border: 1px solid rgba(106, 156, 29, 0.4)
+  padding: 7px 10px 7px 10px
+  line-height: 12px
+  transition: 0.2s
+  position: relative
+  color: $c60
+  text-transform: uppercase
+  font-size: 12px
+  text-decoration: none
+  display: block
+  margin-top: 5px
+  text-align: center
+  &:hover
+    text-decoration: none
+    background: #6a9c1d
+    color: #fff
+
+.list-order-item-number-delivery-item
+  margin-bottom: 20px
+
+.list-order-item__return
+  border: 1px solid rgba(106, 156, 29, 0.4)
+  padding: 7px 7px 7px 7px
+  line-height: 12px
+  margin-right: 30px
+  transition: 0.2s
+  position: relative
+  display: inline-block
+  width: 100%
+  text-align: center
+  & .list-order-item__return-span
+    border-bottom: 1px dashed #bfd3a0
+    color: #6a9c1d
+    text-transform: uppercase
+    font-size: 12px
+  &:hover
+    text-decoration: none
+    background: rgba(106, 156, 29, 1)
+    & .list-order-item__return-span
+      border-color: transparent
+      color: #fff
+
+.list-order-item
+  margin-bottom: 20px
+
+.personal-info-add-number
+  color: $c60
+  display: inline-block
+  border-bottom: 1px dashed
+  cursor: pointer
+  font-size: 14px
+  margin-top: 5px
+  &:hover
+    border-bottom: 1px dashed transparent
+
+.personal-info-row
+  margin-bottom: 28px
+
+.personal-info-notice
+  margin-top: 30px
+
+.personal-info-notice-content
+  column-count: 3
+
+.personal-info-notice-label
+  display: flex
+  align-items: center
+  margin-bottom: 18px
+  cursor: pointer
+
+.personal-info-notice-label__span
+  margin-left: 3px
+  color: $c60
+  font-size: 13px
+  font-weight: normal
+
+.personal-info__button
+  display: block
+  text-align: center
+  background-color: #6a9c1d
+  font-size: 14px
+  color: #fff
+  text-transform: uppercase
+  padding: 15px 0
+  transition: 0.2s
+  margin-bottom: 6px
+  margin-top: 50px
+  &:hover
+    background: #7eb727
+    text-decoration: none
+
+.personal-exit
+  width: 240px
+  margin: 0
+  margin-right: 10px
+
+.row-personal-top
+  display: flex
+  align-items: center
+
+.personal-page-mobile
+  display: none
+
+.personal-page-mobile-item
+  border: 2px solid #e5e5e5
+  padding: 5px
+
+.personal-page-mobile-item-title
+  display: block
+  height: 53px
+  display: flex
+  align-items: center
+  padding: 0 30px
+  font-size: 20px
+  font-weight: bold
+  border-top: 1px solid #e5e5e5
+  position: relative
+  cursor: pointer
+  &:before
+    content: ''
+    display: block
+    @include sprite($arrow-mobile-personal)
+    position: absolute
+    right: 30px
+    position: absolute
+    top: 50%
+    margin-top: -4px
+  &:first-child
+    border: none
+  &.active
+    &:before
+      transform: rotate(180deg)
+
+.catalog-detail-small-image-var2
+  display: flex
+  justify-content: space-between
+  margin-top: 25px
+  & .catalog-detail-more-colors__link
+    margin-top: 0
+
+.catalog-selection-open-filter
+  display: none
+  margin-top: 25px
+
+.mobile-catalog-item
+  padding-top: 15px
+  border-top: 1px solid #ccc
+  margin-bottom: 27px
+
+.mobile-catalog-item-content
+  display: flex
+  padding: 0 10px
+
+.mobile-catalog-item-image
+  min-width: 60px
+  text-align: center
+  margin-right: 10px
+  & > img
+    max-width: 60px
+    max-height: 60px
+
+.mobile-catalog-item-info__mini
+  display: block
+  font-size: 12px
+  color: $c60
+
+.mobile-catalog-item-info-brand__link
+  display: block
+  color: $c60
+  text-decoration: underline
+  font-size: 14px
+  word-wrap: break-word
+
+.mobile-catalog-item-info__delivery
+  display: block
+  font-size: 12px
+  color: $c60
+  font-weight: bold
+
+.mobile-catalog-item-info__price
+  display: inline-block
+  margin-top: 10px
+  font-size: 17px
+
+.mobile-catalog-item-buttons
+  margin-left: 10px
+
+.mobile-catalog-item-buttons__add-to-cart
+  width: 80px
+  text-align: center
+  background: #6a9c1d
+  color: #fff
+  font-size: 18px
+  padding: 3px 0
+  border: 2px solid #6a9c1d
+  display: block
+  &:hover
+    text-decoration: none
+
+.mobile-catalog-item-buttons__more
+  width: 50%
+  text-align: center
+  background: #ffffff
+  color: #6a9c1d
+  font-size: 18px
+  padding: 3px 0
+  border: 2px solid #6a9c1d
+  display: block
+  &:hover
+    text-decoration: none
+
+.catalog-top-scroll-mobile
+  display: none
+
+.personal-page-order-top__title
+  color: $c30
+  font-size: 21px
+  font-family: $latoBold
+
+.personal-page-order-top
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-bottom: 29px
+  border-bottom: 1px solid #cccccc
+  margin-bottom: 20px
+
+.personal-page-order-top__btn
+  margin-left: 12px
+
+.info-order-title
+  background: #f7f7f7
+  padding: 10px 18px
+  margin: 0
+  display: flex
+  align-items: center
+
+.info-order-title-flex
+  display: flex
+  align-items: center
+  & > div
+    display: flex
+    align-items: center
+
+.info-order-mobile
+  display: none
+  border: none
+
+.info-order-mobile-item
+  padding-top: 10px
+  padding-bottom: 35px
+  border-bottom: 1px solid #ccc
+  margin-bottom: 25px
+
+.cart-table-sum__price
+  font-size: 22px
+
+.title-info-order-black
+  display: block
+  font-size: 15px
+  font-weight: bold
+  margin-bottom: 20px
+
+.info-order-mobile-article
+  display: flex
+  align-items: center
+  margin-bottom: 10px
+
+.order-info-table-product__image
+  margin-right: 30px
+
+.info-order-mobile-article__title
+  width: 60px
+  color: #606060
+  font-size: 14px
+  text-transform: uppercase
+  margin-right: 20px
+
+.info-order-mobile-price__title
+  color: #606060
+  font-size: 14px
+  text-transform: uppercase
+  display: block
+  margin-top: 15px
+
+.info-order-mobile-article__text
+  color: $c30
+  font-weight: bold
+  font-size: 16px
+
+.info-order-title-status
+  color: $c60
+  text-transform: uppercase
+  font-size: 12px
+  margin-right: 15px
+
+.info-order-title-sum__title
+  color: $c60
+  text-transform: uppercase
+  font-size: 12px
+  margin-right: 15px
+
+.info-order-title-status__remove
+  display: block
+  @include sprite($status-order-remove)
+  margin-right: 10px
+
+.info-order-title-status__text
+  font-size: 13px
+  color: $c30
+  margin-right: 15px
+
+.info-order-title-status__date
+  font-size: 13px
+  color: #8b8b8b
+
+.info-order-title__sum
+  color: $c30
+  font-size: 16px
+  font-weight: bold
+
+.info-order-title-sum
+  display: flex
+  align-items: center
+
+.info-order-block
+  border: 2px solid #cccccc
+  margin-bottom: 60px
+
+.info-order-block-content
+  padding: 30px 18px
+
+.info-order-block-content__title
+  display: block
+  color: #000
+
+.info-order-block-content__title
+  display: block
+  font-weight: bold
+  font-size: 12px
+  margin-bottom: 15px
+
+.info-order-block-content-item
+  margin-bottom: 45px
+  &:last-child
+    margin-bottom: 0
+
+.info-order-block-content-item-flex
+  display: flex
+  align-items: center
+  margin-bottom: 5px
+
+.info-order-block-content__name
+  width: 40%
+  color: #606060
+  font-size: 11px
+  text-transform: uppercase
+  margin-right: 20px
+
+.info-order-block-content__text
+  font-size: 13px
+  color: $c30
+
+.info-order-block-content__link
+  font-size: 13px
+  color: #8b8b8b
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.info-order-table-col1
+  width: 11%
+  padding-right: 20px
+  &:first-child
+    padding-left: 20px
+
+.info-order-table-col2
+  width: 39%
+  padding-right: 20px
+
+.info-order-table-col3
+  width: 26%
+  padding-right: 20px
+
+.info-order-table-col4
+  min-width: 24%
+  padding-right: 20px
+
+.info-order-table-product
+  max-width: 380px
+  display: flex
+  align-items: center
+
+.info-order-table-col3-text
+  display: flex
+  align-items: center
+  font-size: 13px
+  margin-bottom: 10px
+
+.info-order-table-col3__name
+  width: 122px
+  color: $c60
+
+.info-order-table-col3__text
+  color: $c30
+  font-weight: bold
+
+.info-order-table-sum
+  text-align: right
+  display: flex
+  align-items: center
+  width: 100%
+  justify-content: flex-end
+
+.info-table-bottom
+  display: block
+  height: auto
+  padding: 15px 60px
+
+.info-order-table-row-titles
+  display: flex !important
+
+.info-order-table-col3
+  display: none
+
+.info-order-table-col1
+  width: 15%
+  padding-right: 15px
+  &:first-child
+    padding-left: 15px
+
+.info-order-table-col2
+  width: 48%
+  padding-right: 15px
+
+.info-order-table-col4
+  min-width: 37%
+  padding-right: 20px
+
+.order-info-table-product__image
+  min-width: 50px !important
+  max-width: 50px !important
+
+.personal-page-order-top-btns
+  display: flex
+
+.panel-head-mobile
+  display: flex
+  justify-content: center
+  height: 44px
+  align-items: center
+  background: #658a2b
+  position: relative
+
+.panel-head-mobile-link
+  display: flex
+  align-items: center
+  color: #fff
+  font-size: 14px
+
+.panel-head-mobile-link__text
+  margin-left: 10px
+
+.close-panel
+  @include sprite($close-panel)
+  display: block
+  position: absolute
+  top: 50%
+  right: 14px
+  margin-top: -7px
+  cursor: pointer
+
+.news-item-page
+  margin-bottom: 100px
+  border-top: 2px solid #6a9c1d
+  overflow: hidden
+
+.news-item-page-header
+  display: flex
+  margin-bottom: 20px
+  align-items: center
+
+.news-item-page-date
+  background: #84c225
+  color: white
+  text-align: center
+  width: 85px
+  min-width: 85px
+  height: 85px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: center
+  flex-direction: column
+  font-size: 20px
+  margin-right: 20px
+
+.news-item-page-header-date__span
+  display: block
+
+.news-item-page-header__link
+  font-size: 20px
+  color: #000
+  display: block
+  font-family: $latoBold
+  line-height: 25px
+  &:hover
+    text-decoration: underline
+
+.news-item-page-header-row
+  width: 100%
+  display: flex
+  align-items: center
+
+.news-item-page-content-image
+  transition: 0.2s
+  display: block
+  margin-bottom: 30px
+  & img
+    width: 100%
+  &:hover
+    opacity: 0.8
+
+.news-item-page__text
+  color: #606060
+  font-size: 16px
+  margin-bottom: 20px
+
+.news-item-page__button
+  border: 2px solid #6a9c1d
+  height: 48px
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #6a9c1d
+  font-size: 14px
+  text-transform: uppercase
+  font-weight: bold
+  transition: 0.2s
+  &:hover
+    background: #6a9c1d
+    color: #fff
+
+.news-page-bottom
+  border-top: 1px solid #8b8b8b
+  & .catalog-top-scroll
+    margin-top: 50px
+  & .catalog-show-more
+    width: 100%
+    display: block
+    padding: 7px 0
+    text-align: center
+    margin-top: 30px
+  & .catalog-bottom-container-pagination
+    border: none
+
+.news-page-bottom-pagination-and-btn
+  display: flex
+  align-items: center
+
+.news-detail-date
+  display: block
+  color: $c60
+  font-size: 20px
+  font-style: italic
+  margin-bottom: 60px
+  font-family: Georgia, Arial, sans-serif
+
+.title-news-detail
+  margin-bottom: 0 !important
+
+.news-detail-big-image
+  margin-bottom: 17px
+  & img
+    width: 100%
+
+.news-detail-two-image
+  margin-top: 20px
+  margin-bottom: 50px
+  & img
+    width: 100%
+
+.news-videoreviews
+  margin-bottom: 60px
+
+.video-social
+  height: 35px
+  display: block
+  width: 35px
+  margin-right: 14px
+  & g
+    fill: #606060
+
+.news-detail-link__back
+  display: block
+  width: 100%
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 2px solid #606060
+  color: #606060
+  font-weight: bold
+  font-size: 14px
+  transition: 0.2s
+  text-transform: uppercase
+  margin-top: 60px
+  &:hover
+    text-decoration: none
+    border: 2px solid #6a9c1d
+    background: #6a9c1d
+    color: #fff
+
+.models-city
+  font-weight: normal
+
+.model-baner
+  margin-bottom: 25px
+  & img
+    width: 100%
+
+.models-text-block-bottom
+  margin-top: 95px
+
+.title-model-and-city
+  display: block
+  font-weight: bold
+  font-size: 20px
+  margin-bottom: 15px
+
+.title-model-and-city__link
+  font-weight: normal
+  font-size: 20px
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.title-model-and-city-arrow
+  display: block
+  font-weight: bold
+  font-size: 20px
+  margin-bottom: 15px
+  position: relative
+  padding: 0 20px
+  display: none
+  &:before
+    content: ''
+    position: absolute
+    @include sprite($arrow-models)
+    display: block
+    right: 10px
+    top: 11px
+  &.active
+    &:before
+      transform: rotate(180deg)
+
+.models-brands__link
+  text-transform: uppercase
+  color: $c60
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.modal-login-socials
+  text-align: center
+  margin-bottom: 60px
+
+.modal-login-socials-item
+  display: inline-block
+  margin-right: 14px
+  &:last-child
+    margin-right: 0
+
+.modal-login-social
+  width: 32px
+  height: 32px
+  transition: 0.2s
+  & g
+    fill: #606060
+  &:last-child
+    margin-right: 0
+  &:hover
+    opacity: 0.8
+
+.modal-login-content
+  background: white
+  max-width: 620px
+  margin: 0 auto
+  margin-top: 50px
+  margin-bottom: 50px
+  padding: 55px 105px
+  position: relative
+
+.modal-login-item
+  margin-bottom: 40px
+
+.modal-login__title
+  display: block
+  text-align: center
+  font-weight: bold
+  font-size: 26px
+  margin-bottom: 60px
+
+.label-forinput-default
+  color: $c60
+  display: block
+  font-size: 14px
+  text-transform: uppercase
+  margin-bottom: 5px
+  font-weight: normal
+
+.input-text-default
+  width: 100%
+  border: 1px solid #c2c2c2
+  padding: 0 15px
+  height: 42px
+  font-size: 18px
+
+.modal-login-link__password
+  display: block
+  text-decoration: underline
+  font-size: 14px
+  margin-top: 3px
+  color: $c60
+  &:hover
+    text-decoration: none
+
+.modal-login__btn.btn__type4
+  display: block
+  margin: 0 auto
+  margin-bottom: 30px
+  padding: 18px 73px
+  margin-top: 60px
+
+.modal-login-link__registration
+  text-align: center
+  display: block
+  text-decoration: underline
+  text-transform: uppercase
+  font-size: 14px
+  color: #6a9c1d
+  &:hover
+    text-decoration: none
+
+.modal-registration__btn.btn__type4
+  display: block
+  margin: 0 auto
+  margin-bottom: 30px
+  padding: 18px 36px
+  margin-top: 60px
+
+.modal-password-text
+  color: $c60
+  font-size: 14px
+  line-height: 14px
+  display: block
+  margin-bottom: 35px
+
+.brands-title
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  & .h2
+    text-transform: none
+    margin-right: 30px
+    margin-bottom: 0
+    margin-top: 0
+
+.brands-block__image
+  background: #f1f1f1
+  display: flex
+  height: 60px
+  justify-content: center
+  align-items: center
+
+.brand-block-item
+  margin-bottom: 20px
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+    & .brands-block__link
+      text-decoration: none
+
+.brands-block__link
+  display: block
+  font-size: 14px
+  color: $c60
+  text-decoration: underline
+  height: 38px
+  overflow: hidden
+  &:hover
+    text-decoration: none
+    border-top: 5px
+
+.brands-block
+  margin-bottom: 55px
+
+.brands-text
+  & .h2
+    margin: 0
+    margin-bottom: 20px
+    text-transform: none
+
+.brand-text-and-image
+  display: flex
+  align-items: center
+  margin-bottom: 115px
+
+.brands-tire-selection
+  & .tire-selection-block-names-element
+    margin-right: 60px
+    display: flex
+    background: none
+    color: $c60
+    border-top: 4px solid transparent
+    align-items: center
+    padding: 0
+    padding-top: 13px
+    &.active
+      border-top: 4px solid #6a9c1d
+    &:last-child
+      margin: 0
+  & .tire-selection-block-section
+    padding: 0
+  & .tire-selection-content-lines
+    margin: 0 auto
+  & .tire-selection-block-names
+    padding-bottom: 30px
+    border-bottom: 1px solid #ccc
+    margin-bottom: 40px
+  & .tire-selection-block-why
+    max-width: 550px
+  & .tire-selection-block-names-element1__icon
+    @include sprite($tire-selection-mini-icon1-grey)
+    margin-right: 17px
+  & .tire-selection-block-names-element2__icon
+    @include sprite($tire-selection-mini-icon2-grey)
+    margin-right: 17px
+  & .tire-selection-block-names-element3__icon
+    @include sprite($tire-selection-mini-icon3-grey)
+    margin-right: 17px
+  & .tire-selection-block-names-element-icon-container
+    margin: 0
+  & .tire-selection-bottom
+    max-width: 720px
+    margin: 0 auto
+  & .tire-selection-block-images__image
+    max-height: 100%
+  & .tire-selection-block-section
+    height: auto
+    padding-bottom: 35px
+
+.left-menu-text-item__title
+  display: block
+  text-transform: uppercase
+  font-size: 16px
+  text-decoration: none
+  margin-bottom: 20px
+  &:hover
+    text-decoration: underline
+
+.left-menu-text-item__menu
+  display: block
+  font-size: 15px
+  text-decoration: none
+  margin-bottom: 5px
+  &:hover
+    text-decoration: underline
+
+.page-in-text
+  margin-top: 80px
+  & .h1
+    margin-top: 0
+  & .h2
+    text-transform: none
+  & ul
+    list-style-type: disc
+    margin-left: 20px
+    & li
+      margin-bottom: 5px
+
+.left-menu-text-item
+  margin-bottom: 35px
+@import "media.sass"
+
+// ui-kit
+ul
+  list-style: none
+  font-size: 16px
+  margin: 0
+  padding: 0
+
+p
+  margin-bottom: 25px
+
+.h1
+  display: block
+  font-size: 26px
+  color: #0c141c
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 40px
+  padding: 0
+
+.h2
+  display: block
+  font-size: 20px
+  color: #0c141c
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 20px
+  padding: 0
+
+.radiobutton
+  cursor: pointer
+  color: #606060
+  font-weight: normal
+  display: flex
+  align-items: center
+  font-size: 16px
+
+.checkbox
+  cursor: pointer
+  color: #606060
+  font-weight: normal
+  display: flex
+  align-items: center
+  font-size: 16px
+
+.content-ui
+  & > div
+    margin-bottom: 5px
+    &.range-select
+      margin-bottom: 20px
+
+.select-default.bootstrap-select.btn-group
+  & > button
+    width: 100%
+    height: 33px
+    border: 1px solid #c2c2c2 !important
+    background-color: #ffffff
+    border-radius: 0
+    padding: 4px 12px
+  & .caret
+    right: 5px !important
+  & a
+    display: block
+    padding: 9px 20px
+    clear: both
+    font-weight: normal
+    line-height: 1.42857
+    color: #333333
+    white-space: nowrap
+    outline: none !important
+  & .dropdown-menu
+    border-radius: 0
+
+.btn__type1
+  border: 1px solid rgba(96, 96, 96, 0.6)
+  padding: 7px 20px 7px 20px
+  line-height: 12px
+  margin-right: 30px
+  transition: 0.2s
+  position: relative
+  display: inline-block
+  &:hover
+    text-decoration: none
+    background: #6a9c1d
+    border: 1px solid #6a9c1d
+    .btn__type1-span
+      border-color: transparent
+      color: #fff
+.btn__type1-span
+  border-bottom: 1px dashed
+  color: #606060
+  text-transform: uppercase
+  font-size: 12px
+
+.btn__type2
+  border: 1px solid rgba(96, 96, 96, 0.6)
+  color: #606060
+  text-transform: uppercase
+  font-size: 12px
+  padding: 7px 28px 7px 12px
+  line-height: 12px
+  transition: 0.2s
+  position: relative
+  display: inline-block
+  &:before
+    content: ''
+    @include sprite($arrow-back)
+    position: absolute
+    right: 11px
+    top: 50%
+    margin-top: -5.5px
+  &:hover
+    border: 1px solid rgba(96, 96, 96, 0.46)
+    text-decoration: none
+
+.btn__type3
+  border: 1px solid rgba(96, 96, 96, 0.6)
+  padding: 7px 20px 7px 20px
+  line-height: 12px
+  transition: 0.2s
+  position: relative
+  display: inline-block
+  color: #606060
+  font-size: 12px
+  text-transform: uppercase
+  &:hover
+    text-decoration: none
+    background: #6a9c1d
+    color: #fff
+    border: 1px solid #6a9c1d
+
+.btn__type4
+  background-color: #6a9c1d
+  font-size: 14px
+  text-transform: uppercase
+  text-decoration: none
+  color: #fff
+  display: inline-block
+  padding: 18px 54px
+  line-height: 14px
+  border: none
+  &:hover
+    text-decoration: none
+    background: #7cb12b
+    color: #fff
+
+.table-row
+  padding: 14px 0
+  font-size: 18px
+  color: #606060
+  align-items: center
+  display: flex
+  &:nth-child(2n)
+    background: rgba(96, 96, 96, 0.11)
+
+p
+  font-size: 16px
+
+a
+  color: #303030
+  font-size: 16px
+  outline: none !important
+  &:hover
+    text-decoration: none
+
+.modal-dialog-default
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.45)
+  background-color: #ffffff
+  padding: 60px
+  position: relative
+  line-height: 30px
+  max-width: 700px
+  margin: 20px auto
+
+.slider-dedault
+  max-width: 1000px
+  margin: 0 auto
+
+.range-select-container
+  max-width: 300px
+
+.tooltip-link
+  background-image: url(../img/sprite.png)
+  background-position: -252px -449px
+  width: 14px
+  height: 16px
+  display: inline-block
+  margin-left: 4px
+
+.default-tabs
+  margin: 0
+  padding: 0
+  list-style: none
+  border-bottom: 1px solid #cccccc
+  padding-bottom: 25px
+  overflow: hidden
+  margin-bottom: 20px
+  & > li
+    margin-right: 80px
+    border-top: 4px solid transparent
+    &.active
+      border-top: 4px solid #0f263d
+      & > a
+        color: #303030 !important
+        border-top: 4px solid #0f263d
+    & > a
+      border: none !important
+      font-size: 22px
+      color: #8b8b8b
+      font-weight: 700
+      padding-top: 15px
+      display: inline-block
+
+.access-container__link
+  display: block
+  margin-bottom: 10px
+  font-size: 18px
+  &:hover
+    text-decoration: underline
+  &.green
+    color: #98c13b
+  &.black
+    color: #9a9a9a
+
+.access-container
+  background: url(../img/bg-summer-road.jpg)
+  background-size: cover
+  padding: 20px
+  margin: 10px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: rgba(15, 38, 61, 0.8)
+
+.modal-cart__title
+  margin-bottom: 20px
+
+.modal-cart__mini-text
+  display: block
+  font-size: 15px
+  color: #666
+
+.popup-cart-accessories
+  display: flex
+  justify-content: space-between
+  & > .cart-accessories-item
+    width: 32%
+  & .cart-popup-accessories-item__btn
+    position: relative
+    left: auto
+    display: block
+    right: auto
+    bottom: auto
+    padding: 8px 0
+    margin-top: -2px
+
+.modal-cart-buttons
+  & .cart-popup-accessories-item__btn
+    position: relative
+    left: auto
+    display: block
+    right: auto
+    bottom: auto
+    padding: 8px 0
+    width: 195px
+
+.modal-cart__title-access
+  display: block
+  font-weight: bold
+  margin-bottom: 15px
+
+.modal-cart-item
+  display: flex
+  padding-bottom: 35px
+  border-bottom: 1px solid #d7d7d7
+  margin-bottom: 25px
+
+.modal-cart-item-image
+  height: 140px
+  display: flex
+  align-items: center
+  justify-content: center
+  min-width: 180px
+  margin-right: 30px
+
+.modal-cart-item-image__image
+  max-height: 80%
+
+.modal-cart-item-right
+  flex-grow: 1
+  padding-right: 30px
+
+.modal-cart-item-name
+  display: block
+  margin-bottom: 10px
+  font-size: 16px
+
+.modal-cart-item-right-prop-line
+  display: flex
+  align-items: center
+  line-height: 1
+  margin-bottom: 8px
+
+.modal-cart-item-right-prop-line__title
+  max-width: 115px
+  min-width: 115px
+  color: #666
+  font-size: 14px
+
+.modal-cart-item-right-prop-line__description
+  font-size: 15px
+
+.rouble__element
+  font-family: 'Roboto', sans-serif
+
+.modal-cart-buttons
+  margin-bottom: 50px
+  display: flex
+  align-items: center
+  width: 100%
+  justify-content: space-between
+
+.modal-cart-buttons__link
+  color: #666
+  font-size: 16px
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.info-order-item
+  border: 2px solid #d7d7d7
+  padding: 30px
+  display: flex
+  width: 100%
+  margin-bottom: 40px
+
+.info-order1-item1
+  width: 25%
+  text-align: center
+
+.info-order1-item2
+  width: 50%
+  text-align: center
+
+.info-order1-item3
+  width: 25%
+  text-align: center
+
+.info-order1-item2-p
+  margin: 10px 0
+
+.info-order2-item1
+  width: 40%
+  text-align: center
+
+.info-order2-item2
+  width: 55%
+  & > h2
+    margin: 0
+    padding-left: 0
+
+.info-order2
+  align-items: center
+  & p:last-child
+    margin-bottom: 0
+
+.info-order3
+  align-items: center
+  padding: 60px 30px
+  & p:last-child
+    margin-bottom: 0
+
+.info-order2-h2
+  margin-bottom: 30px !important
+
+.footer-copy
+  margin-top: 20px
+  font-size: 14px
+  color: #8b8b8b
+
+.footer-copy__link
+  font-size: 14px
+  color: #8b8b8b
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.dropdown-menu a:hover
+  background: #85bb32 !important
+  color: #fff !important
+
+.catalog-detail-guarantee__big
+  display: block
+  text-align: left
+  color: #0f263d
+  font-family: 'Lato-Bold', Arial, sans-serif
+  font-size: 17px
+
+.catalog-detail-guarantee__small
+  display: block
+  text-align: left
+  font-weight: bold
+  color: #606060
+  margin-top: -8px
+  font-size: 12px
+  font-family: 'Lato-Heavy', Arial, sans-serif
+
+#modalBestPriceForms
+  & .close-popup
+    top: 15px
+    right: 15px
+
+.catalog-likes-item-hide-block
+  width: 114px
+  margin: 0 auto
+  text-align: left
+  background: #fff
+  z-index: 10
+  border: 2px solid #606060
+  border-top: 0
+  display: none
+  margin-top: -2px
+  padding: 5px
+  position: relative
+
+.catalog-likes-item-hide-block__link
+  display: block
+  font-size: 13px
+  text-decoration: underline
+  max-height: 63px
+  overflow: hidden
+
+.catalog-likes-item-hide-block__price
+  display: block
+  font-size: 15px
+  font-weight: bold
+
+.catalog-likes-item-hide-block__btn-cart
+  display: flex
+  margin-bottom: 5px
+  background: #6a9c1d
+  color: #fff
+  text-transform: uppercase
+  text-align: center
+  font-size: 13px
+  height: 30px
+  align-items: center
+  width: 100%
+  justify-content: center
+  transition: 0.2s
+  &:hover
+    opacity: 0.8
+
+.catalog-likes-item-hide-block__btn-read
+  display: flex
+  margin-bottom: 5px
+  border: 2px solid #6a9c1d
+  color: #6a9c1d
+  text-transform: uppercase
+  text-align: center
+  font-size: 13px
+  height: 30px
+  align-items: center
+  width: 100%
+  justify-content: center
+  transition: 0.2s
+  &:hover
+    background: #6a9c1d
+    color: #fff
+
+.image-slider-likes
+  height: 135px
+  border: none
+  &:hover
+    & .slick-list
+      height: 275px
+  & .catalog-detail-small-image__link
+    &:hover
+      border: 2px solid #606060
+      border-bottom: 2px solid #fff
+      & + .catalog-likes-item-hide-block
+        display: block
+
+.catalog-likes-block__title
+  display: block
+  margin-top: 20px
+  font-size: 15px
+  color: #606060
+  & > b
+    font-family: 'Lato-Light', Arial, sans-serif
+    font-weight: normal
+
+.none-block
+  display: none
+
+.catalog-detail-delivery-and-payment-mobile-div
+  display: none
+
+.catalog-detail-mobile-div
+  position: relative
+  margin: 0 10px
+  padding-bottom: 10px
+  display: none
+
+.catalog-detail-tabs-content-mobile
+  & .personal-page-mobile-item-title
+    padding: 0 10px
+    &:before
+      right: 10px
+
+.checkout-title-for-tab
+  padding: 0 10px
+  font-size: 20px
+  position: relative
+  font-weight: bold
+  margin-bottom: 10px
+  margin-top: 10px
+  cursor: pointer
+  &:before
+    content: ''
+    @include sprite($arrow-mobile-personal)
+    position: absolute
+    right: 30px
+    top: 50%
+    margin-top: -3px
+    transform: rotate(180deg)
+  &.active
+    &:before
+      transform: rotate(0deg)
+  & + div
+    display: none
+
+.checkout-delivery-company-item-mobile
+  padding: 5px
+  border: 1px solid #d7d7d7
+  margin-bottom: 10px
+  width: 100%
+  & > div
+    margin-bottom: 5px
+    font-size: 16px
+    color: #606060
+    font-weight: normal
+
+.checkout-delivery-company-item-mobile__title
+  display: flex
+  align-items: center
+  opacity: 1
+
+.mobile-result-filter
+  display: none
+  margin-bottom: 10px
+  font-size: 15px
+  color: #606060
+  padding: 0 30px
+
+.search-result-content
+  & .personal-page-mobile-item-title
+    padding: 0 10px
+    &::before
+      right: 10px
+  & .catalog-detail-mobile-div
+    margin: 0
+
+.search-result-catalog-sort
+  padding-left: 10px
+  margin-bottom: 10px
+
+.header-mobile-phone__link
+  background: #0f263d
+  display: block
+  text-align: center
+  color: #fff
+  font-size: 22px
+  padding-bottom: 15px
+  margin-top: -10px
+
+.header-mobile-phone__link-span
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.4)
+
+.mobile-catalog-item-info
+  flex-grow: 1
+  min-width: 100px
+
+.catalog-item-nokian
+  position: absolute
+  width: 100px
+  top: 140px
+  left: 30px
+
+.modal-city-mobile-title
+  color: #303030
+  font-size: 26px
+  text-transform: none
+
+#modalCityMobile
+  & .modal-credit-dialog
+    padding-left: 25px
+    padding-right: 25px
+    padding-top: 60px
+    margin-bottom: 50px
+  & .close-popup
+    right: 12px
+    top: 12px
+
+.modal-city-mobile__link
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 36px
+  border: 1px solid #606060
+  margin-bottom: 30px
+  text-transform: uppercase
+  color: #606060
+  font-size: 14px
+  font-weight: 500
+
+.btn__i-dont-now
+  margin-bottom: 10px
+
+.select-name-slyle.bootstrap-select.btn-group
+  & .filter-option
+    padding-bottom: 13px
+  & .dropdown-toggle
+    border: none !important
+    font-size: 18px
+    color: #0c141c !important
+    position: relative
+    cursor: pointer
+    padding: 0
+    & .bs-caret
+      display: none
+    &::before
+      content: ''
+      @include sprite($filter-arrow)
+      right: 0
+      top: 50%
+      margin-top: -5px
+      position: absolute
+    &:hover
+      border: none
+  &.open
+    & .dropdown-toggle
+      &::before
+        transform: rotate(180deg)
+
+.link-store-popup
+  display: block
+  font-style: italic
+  color: #303030
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+.modal-stores-table__titles
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  text-transform: uppercase
+  font-size: 14px
+  padding-bottom: 10px
+  font-weight: bold
+  border-bottom: 1px solid #cdcdcd
+  & > span
+    width: 33.3333%
+
+.modal-stores-item-mobile__row
+  font-size: 14px
+
+.modal-stores-item-mobile__name
+  font-weight: bold
+  margin-right: 10px
+
+.modal-stores-item-mobile
+  border: 1px solid #dedede
+  padding: 5px
+  margin-bottom: 5px
+  font-size: 14px
+  line-height: 1.5
+
+.modal-stores-table__row
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  font-size: 14px
+  border-bottom: 1px solid #dedede
+  padding: 5px 0
+  & > span
+    width: 33.3333%
+
+.catalog-detail-features
+  margin-top: 25px
+  &__title
+    display: block
+    font-weight: bold
+    font-size: 20px
+    margin-bottom: 30px
+  &__item
+    display: flex
+    align-items: flex-start
+    margin-bottom: 30px
+    &-icon
+      height: auto
+      margin-right: 15px
+      min-width: 50px
+      margin-top: 3px
+      & .st0
+        fill: #7d7d7d
+    &-text
+      font-size: 14px
+      line-height: 1.2
+    &-title
+      display: block
+      font-weight: bold
+      color: #000
+      margin-bottom: 5px
+    &-description
+      display: block
+      color: #8b8b8b
+
+.catalog-detail-interesting__title
+  display: block
+  margin-top: 20px
+
+.left-header-tablet-phone
+  display: none
+
+@media screen and (max-width: 767px)
+  .table-row
+    padding: 0
+    font-size: 16px

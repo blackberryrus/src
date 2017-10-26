@@ -1,0 +1,81 @@
+div.row
+    div.col-lg-12.col-sm-12
+        ul.catalog-detail-tabs.nav-tabs
+            li.active
+                a(href="#all" data-toggle="tab") Все характеристики
+            li
+                a(href="#description" data-toggle="tab") Подробное описание
+            li
+                a(href="#reviews" data-toggle="tab") Отзывы
+            li
+                a(href="#analogs" data-toggle="tab") Аналоги
+div.row.catalog-detail-tabs-content
+    div.col-lg-12.tab-content.col-sm-12
+        div(id="all" class="tab-pane active row")
+            div.col-lg-12.col-sm-12
+                div.row.catalog-detail-characteristics-list
+                    div.col-lg-5.col-sm-7 Тип:
+                    div.col-lg-7.col-sm-5
+                        a.catalog-detail-characteristics-list__link(href="#") Литые
+                div.row.catalog-detail-characteristics-list
+                    div.col-lg-5.col-sm-7 Материал:
+                    div.col-lg-7.col-sm-5 Алюминиевый сплав
+                div.row.catalog-detail-characteristics-list
+                    div.col-lg-5.col-sm-7 Цвет:
+                    div.col-lg-7.col-sm-5
+                        div.catalog-detail-characteristics-color
+                            a.catalog-detail-characteristics-color__image(href="#")
+                                img(src="local/templates/kolesatyt/img/tire-mini.png")
+                            span.catalog-detail-characteristics-color__name(href="#") Серебристый
+                div.row.catalog-detail-characteristics-list
+                    div.col-lg-5.col-sm-7 Варианты цветов:
+                    div.col-lg-7.col-sm-5
+                        div.catalog-detail-characteristics-color
+                            a.catalog-detail-characteristics-color__image(href="#")
+                                img(src="local/templates/kolesatyt/img/tire-mini.png")
+                            a.catalog-detail-characteristics-color__name(href="#") Черный матовый
+                div.row.catalog-detail-characteristics-list
+                    div.col-lg-5.col-sm-7 Тип:
+                    div.col-lg-7.col-sm-5
+                        a.catalog-detail-characteristics-list__link(href="#") Литые
+                div.row.catalog-detail-characteristics-list
+                    div.col-lg-5.col-sm-7 Материал:
+                    div.col-lg-7.col-sm-5 Алюминиевый сплав
+        div(id="description" class="tab-pane")
+            div.row
+                div.col-lg-12.col-sm-12
+                    span.catalog-detail-description-tirs-name Шина Nokian Hakkapeliitta 8 suv
+            div.row.catalog-detail-description-tirs-title
+                div.col-lg-2.col-sm-4 Элементы протектора
+                div.col-lg-4.col-sm-7 Свойства шины
+                div.col-lg-4.hide-tablet преимущества шины
+                div.col-lg-2.col-sm-1
+            div.row.catalog-detail-description-tirs-item
+                div.col-lg-2.catalog-detail-description-tirs-item-col.col-sm-4
+                    div.catalog-detail-description-tirs-item-image
+                        img.catalog-detail-description-tirs-item-image__img(src="local/templates/kolesatyt/img/protector.png")
+                div.col-lg-4.catalog-detail-description-tirs-item-col.col-sm-7
+                    |Современный рисунок протектора, канавки с полированной поверхностью.
+                div.col-lg-4.catalog-detail-description-tirs-item-col.hide-tablet
+                    |Легко очищается, прекрасно ведет себя в глубоком снегу и слякоти.
+                div.col-lg-2.catalog-detail-description-tirs-item-col.col-sm-1
+            div.row.catalog-detail-description-tirs-item
+                div.col-lg-2.catalog-detail-description-tirs-item-col.col-sm-4
+                    div.catalog-detail-description-tirs-item-image
+                        img.catalog-detail-description-tirs-item-image__img(src="local/templates/kolesatyt/img/protector.png")
+                div.col-lg-4.catalog-detail-description-tirs-item-col.col-sm-7
+                    | Современный рисунок протектора, канавки с полированной поверхностью.
+                div.col-lg-4.catalog-detail-description-tirs-item-col.hide-tablet
+                    | Легко очищается, прекрасно ведет себя в глубоком снегу и слякоти.
+                div.col-lg-2.catalog-detail-description-tirs-item-col.col-sm-1
+            div.row.catalog-detail-description-tirs-item
+                div.col-lg-2.catalog-detail-description-tirs-item-col.col-sm-4
+                    div.catalog-detail-description-tirs-item-image
+                        img.catalog-detail-description-tirs-item-image__img(src="local/templates/kolesatyt/img/protector.png")
+                div.col-lg-4.catalog-detail-description-tirs-item-col.col-sm-7
+                    | Современный рисунок протектора, канавки с полированной поверхностью.
+                div.col-lg-4.catalog-detail-description-tirs-item-col.hide-tablet
+                    | Легко очищается, прекрасно ведет себя в глубоком снегу и слякоти.
+                div.col-lg-2.catalog-detail-description-tirs-item-col.col-sm-1
+        div(id="reviews" class="tab-pane") Отзывы
+        div(id="analogs" class="tab-pane") Аналоги

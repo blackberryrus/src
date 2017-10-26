@@ -1,0 +1,348 @@
+section.tire-selection
+	div.container
+		div.row.tire-selection-container
+			div.col-lg-6.col-md-6.col-xs-12.col-sm-12.tire-selection-block
+				ul.tire-selection-block-names
+					li.active.tire-selection-block-names-element
+						div.tire-selection-block-names-element-icon-container
+							i.tire-selection-block-names-element-icon
+								img(src="local/templates/kolesatyt/img/sedan-car-front.png")
+						span.tire-selection-block-names-element__text.hide-mobile
+							|Подбрать шины
+							br
+							|и диски для авто
+						span.tire-selection-block-names-element__text.show-mobile
+							|шины/диски
+							br
+							| для авто
+					li.tire-selection-block-names-element.tire-selection-block-names-element2
+						div.tire-selection-block-names-element-icon-container
+							i.tire-selection-block-names-element-icon
+								img(src="local/templates/kolesatyt/img/car-wheel.png")
+						span.tire-selection-block-names-element__text.hide-mobile
+							|Подобрать диски
+							br
+							|по параметрам
+						span.tire-selection-block-names-element__text.show-mobile
+							|диски по
+							br
+							| параметрам
+					li.tire-selection-block-names-element
+						div.tire-selection-block-names-element-icon-container
+							i.tire-selection-block-names-element-icon
+								img(src="local/templates/kolesatyt/img/Tyre.png")
+						span.tire-selection-block-names-element__text.hide-mobile
+							|Подобрать шины
+							br
+							|по параметрам
+						span.tire-selection-block-names-element__text.show-mobile
+							|шины по
+							br
+							| параметрам
+				div.tire-selection-block-section.active
+					a.tire-selection-block-why(href="#")
+						| Почему действительно важно
+						b.tire-selection-block-why__bold  указать автомобиль
+						| ?
+						div.tire-selection-block-hover При выборе вашего автомобиля, мы автоматически подбираем подходящие к нему диски и шины. А также, наглядно продемонстрируем  как смотрятся диски на вашем авто.
+							div.header-triangle
+					div.tire-selection-block-section-selects
+						select(class="select-mark tire-selection-select" data-live-search="true" title="Марка")
+							option(value="Aston Martin") Aston Martin
+							option(value="BMW") BMW
+
+						select(class="select-model tire-selection-select" disabled title="Модель" data-live-search="true")
+
+						select(class="select-year tire-selection-select" disabled title="Год" data-live-search="true")
+
+						select(class="select-engine tire-selection-select" disabled title="Двигатель" data-live-search="true")
+
+						select(class="select-bodytype tire-selection-select" disabled title="Кузов" data-live-search="true")
+
+					div.tire-selection-block-images
+						a.btn__type1.btn__i-dont-now(href="#modalIdontnow" data-toggle="modal")
+								span.btn__type1-span Я не знаю все параметры
+						div
+							img(src="local/templates/kolesatyt/img/car-white.jpg").tire-selection-block-images__image#tire-selection-block-images__image
+						div.tire-selection-color
+							span.tire-selection-color-text Цвет:
+							div.tire-selection-color-items
+								div.tire-selection-color__item.color-white(data-color-url="local/templates/kolesatyt/img/car-white.jpg")
+								div.tire-selection-color__item.color-grey(data-color-url="local/templates/kolesatyt/img/car-grey.jpg")
+								div.tire-selection-color__item.color-bez(data-color-url="local/templates/kolesatyt/img/car-bez.jpg")
+								div.tire-selection-color__item.color-green(data-color-url="local/templates/kolesatyt/img/car-green.jpg")
+								div.tire-selection-color__item.color-red(data-color-url="local/templates/kolesatyt/img/car-red.jpg")
+								div.tire-selection-color__item.color-blue(data-color-url="local/templates/kolesatyt/img/car-blue.jpg")
+								div.tire-selection-color__item.color-black(data-color-url="local/templates/kolesatyt/img/car-black.jpg")
+					div.tire-selection-bottom
+						a.tire-selection-bottom-btn.item1(href="#")
+							i.tire-selection-bottom-btn-icon
+								img(src="local/templates/kolesatyt/img/Tyre.png")
+							span подобрать шины
+						a.tire-selection-bottom-btn.item2(href="#")
+							i.tire-selection-bottom-btn-icon
+								img(src="local/templates/kolesatyt/img/car-wheel.png")
+							span подобрать диски
+					span.tire-footnote В каталоге вы сможете отфильтровать товары по заводским параметрам или для тюнинга
+				div.tire-selection-block-section
+					div.tire-selection-content-lines
+						div.tire-selection-line
+							select(class="tire-selection-line-big" title="Производитель")
+								option(value="Производитель 1") Производитель 1
+								option(value="Производитель 2") Производитель 2
+								option(value="Производитель 3") Производитель 3
+								option(value="Производитель 4") Производитель 4
+								option(value="Производитель 5") Производитель 5
+						div.tire-selection-line
+							select(class="tire-selection-line-small" title="Диаметр")
+								option(value="Диаметр 1") Диаметр 1
+								option(value="Диаметр 2") Диаметр 2
+								option(value="Диаметр 3") Диаметр 3
+								option(value="Диаметр 4") Диаметр 4
+								option(value="Диаметр 5") Диаметр 5
+							select(class="tire-selection-line-small" title="PCD")
+								option(value="PCD 1") PCD 1
+								option(value="PCD 2") PCD 2
+								option(value="PCD 3") PCD 3
+								option(value="PCD 4") PCD 4
+								option(value="PCD 5") PCD 5
+						div.tire-selection-line
+							select(class="tire-selection-line-small" title="ET-вылет")
+								option(value="ET-вылет 1") ET-вылет 1
+								option(value="ET-вылет 2") ET-вылет 2
+								option(value="ET-вылет 3") ET-вылет 3
+								option(value="ET-вылет 4") ET-вылет 4
+								option(value="ET-вылет 5") ET-вылет 5
+							select(class="tire-selection-line-small" title="Ступица")
+								option(value="Ступица 1") Ступица 1
+								option(value="Ступица 2") Ступица 2
+								option(value="Ступица 3") Ступица 3
+								option(value="Ступица 4") Ступица 4
+								option(value="Ступица 5") Ступица 5
+						div.tire-selection-radios
+							label.tire-selection-radios-label
+								input(type="radio" name="type-disk")
+								span.tire-selection-radios-label-span Все
+							label.tire-selection-radios-label
+								input(type="radio" name="type-disk")
+								span.tire-selection-radios-label-span Литые
+							label.tire-selection-radios-label
+								input(type="radio" name="type-disk")
+								span.tire-selection-radios-label-span Штампованные
+						div.tire-selection-buttons-bottom
+							a.tire-selection-bottom-btn(href="#")
+								i.tire-selection-bottom-btn-icon
+									img(src="local/templates/kolesatyt/img/car-wheel.png")
+								span подобрать диски
+				div.tire-selection-block-section
+					div.tire-selection-content-lines
+						div.tire-selection-line
+							select(class="tire-selection-line-big" title="Производитель")
+								option(value="Производитель 1") Производитель 1
+								option(value="Производитель 2") Производитель 2
+								option(value="Производитель 3") Производитель 3
+								option(value="Производитель 4") Производитель 4
+								option(value="Производитель 5") Производитель 5
+						div.tire-selection-line
+							select(class="tire-selection-line-small" title="Ширина")
+								option(value="Ширина 1") Ширина 1
+								option(value="Ширина 2") Ширина 2
+								option(value="Ширина 3") Ширина 3
+								option(value="Ширина 4") Ширина 4
+								option(value="Ширина 5") Ширина 5
+							select(class="tire-selection-line-small" title="Высота")
+								option(value="Высота 1") Высота 1
+								option(value="Высота 2") Высота 2
+								option(value="Высота 3") Высота 3
+								option(value="Высота 4") Высота 4
+								option(value="Высота 5") Высота 5
+						div.tire-selection-line
+							select(class="tire-selection-line-small" title="Диаметр")
+								option(value="Диаметр 1") Диаметр 1
+								option(value="Диаметр 2") Диаметр 2
+								option(value="Диаметр 3") Диаметр 3
+								option(value="Диаметр 4") Диаметр 4
+								option(value="Диаметр 5") Диаметр 5
+							select(class="tire-selection-line-small" title="Сезон")
+								option(value="Сезон 1") Сезон 1
+								option(value="Сезон 2") Сезон 2
+								option(value="Сезон 3") Сезон 3
+								option(value="Сезон 4") Сезон 4
+								option(value="Сезон 5") Сезон 5
+						div.tire-selection-radios
+							label.tire-selection-radios-label
+								input(type="radio" name="type-disk")
+								span.tire-selection-radios-label-span Все
+							label.tire-selection-radios-label
+								input(type="radio" name="type-disk")
+								span.tire-selection-radios-label-span Литые
+							label.tire-selection-radios-label
+								input(type="radio" name="type-disk")
+								span.tire-selection-radios-label-span Штампованные
+						div.tire-selection-buttons-bottom
+							a.tire-selection-bottom-btn(href="#")
+								i.tire-selection-bottom-btn-icon
+									img(src="local/templates/kolesatyt/img/Tyre.png")
+								span подобрать шины
+			div.col-lg-offset-1.col-lg-5.col-md-5.col-md-offset-1#myCarouselPC.carousel.fade.about-text-slider(data-interval="5000" data-ride="carousel")
+				ol.carousel-indicators.about-text-slider-indicators
+					li(data-target="#myCarouselPC" data-slide-to="0" class="active")
+					li(data-target="#myCarouselPC" data-slide-to="1")
+				div.carousel-inner
+					div.active.item
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/wheel.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Большой ассортимент
+								span.about-text-slider-description
+									|Более 3 000 моделей дисков и 1 000 моделей шин с подробным описанием и фотографиями на сайте.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/wallet-with-bill.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Без предоплаты
+								span.about-text-slider-description
+									|Мы доверяем нашим клиентам. Вы можете заказывать любой товар и оплачивать при получении.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/rouble-symbol.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Цены от производителя
+								span.about-text-slider-description
+									|Нашел диски по более выгодной цене? Покажи нам и мы продадим по двойной разницей в твою пользу.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/car.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Онлайн примерка дисков
+								span.about-text-slider-description
+									|Примерь диски на машину до покупки на сайте! Заодно мы проверим совместимость с вашим авто.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/box.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Весь товар в каталоге — в наличии
+								span.about-text-slider-description
+									|Весь товар, указанный на сайте в наличии у нас на складе. Заказывай и мы доставим в ближайшее время.
+					div.item
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/worldwide.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Пункты самовывоза по всей России
+								span.about-text-slider-description
+									|КОЛЕСАТУТ доставит куда угодно! Пункты самовывоза товара по всей России и в ближнем зарубежье.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/thumb-up.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Высокие оценки наших покупателей
+								span.about-text-slider-description
+									|Пять звезд на ЯндексМаркет! Мы делаем все возможное для вашего удобства.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/circular-wall-clock.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Быстрая доставка
+								span.about-text-slider-description
+									|Нужно срочно? Закажи с пометкой «быстрая доставка» и получи товар в ближайшее время..
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/manager-profile.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Высокий уровень обслуживания
+								span.about-text-slider-description
+									|В КОЛЕСАТУТ работают лучшие. Компетентные менеджеры проконсультируют по любым вопросам.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/network.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Свободный возврат
+								span.about-text-slider-description
+									|Заказал не то, что хотел или просто передумал? Ничего страшного, верни товар и получи деньги обратно.
+
+		div.row.show-mobile.show-tablet
+			div.col-md-12.carousel.fade.about-text-slider.show-mobile#myCarouselMobile(data-interval="5000" data-ride="carousel")
+				ol.carousel-indicators.about-text-slider-indicators
+					li(data-target="#myCarouselMobile" data-slide-to="0" class="active")
+					li(data-target="#myCarouselMobile" data-slide-to="1")
+					li(data-target="#myCarouselMobile" data-slide-to="2")
+					li(data-target="#myCarouselMobile" data-slide-to="3")
+					li(data-target="#myCarouselMobile" data-slide-to="4")
+				div.carousel-inner
+					div.active.item
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/wheel.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Большой ассортимент
+								span.about-text-slider-description
+									|Более 3 000 моделей дисков и 1 000 моделей шин с подробным описанием и фотографиями на сайте.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/wallet-with-bill.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Без предоплаты
+								span.about-text-slider-description
+									|Мы доверяем нашим клиентам. Вы можете заказывать любой товар и оплачивать при получении.
+					div.item
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/rouble-symbol.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Цены от производителя
+								span.about-text-slider-description
+									|Нашел диски по более выгодной цене? Покажи нам и мы продадим по двойной разницей в твою пользу.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/car.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Онлайн примерка дисков
+								span.about-text-slider-description
+									|Примерь диски на машину до покупки на сайте! Заодно мы проверим совместимость с вашим авто.
+					div.item
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/box.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Весь товар в каталоге — в наличии
+								span.about-text-slider-description
+									|Весь товар, указанный на сайте в наличии у нас на складе. Заказывай и мы доставим в ближайшее время.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/worldwide.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Пункты самовывоза по всей России
+								span.about-text-slider-description
+									|КОЛЕСАТУТ доставит куда угодно! Пункты самовывоза товара по всей России и в ближнем зарубежье.
+					div.item
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/thumb-up.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Высокие оценки наших покупателей
+								span.about-text-slider-description
+									|Пять звезд на ЯндексМаркет! Мы делаем все возможное для вашего удобства.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/circular-wall-clock.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Быстрая доставка
+								span.about-text-slider-description
+									|Нужно срочно? Закажи с пометкой «быстрая доставка» и получи товар в ближайшее время..
+					div.item
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/manager-profile.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Высокий уровень обслуживания
+								span.about-text-slider-description
+									|В КОЛЕСАТУТ работают лучшие. Компетентные менеджеры проконсультируют по любым вопросам.
+						div.about-text-slider-item
+							object(id="svg-tirs" class="about-text-icon about-icon" name="graph" type="image/svg+xml" class="" data="local/templates/kolesatyt/svg/network.svg" width="100%" height="100%")
+							div.about-text-slider-text
+								span.about-text-slider-title
+									|Свободный возврат
+								span.about-text-slider-description
+									|Заказал не то, что хотел или просто передумал? Ничего страшного, верни товар и получи деньги обратно.
